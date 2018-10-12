@@ -1,0 +1,10 @@
+E:\FCIS ASU\Projects\IS\Nursery Managemet System\Nursery Managemet System\bin\Debug\Nursery Managemet System.exe.config
+E:\FCIS ASU\Projects\IS\Nursery Managemet System\Nursery Managemet System\bin\Debug\Nursery Managemet System.exe
+E:\FCIS ASU\Projects\IS\Nursery Managemet System\Nursery Managemet System\bin\Debug\Nursery Managemet System.pdb
+E:\FCIS ASU\Projects\IS\Nursery Managemet System\Nursery Managemet System\obj\Debug\Nursery Managemet System.csprojResolveAssemblyReference.cache
+E:\FCIS ASU\Projects\IS\Nursery Managemet System\Nursery Managemet System\obj\Debug\Nursery_Managemet_System.Properties.Resources.resources
+E:\FCIS ASU\Projects\IS\Nursery Managemet System\Nursery Managemet System\obj\Debug\Nursery_Managemet_System.Sign.resources
+E:\FCIS ASU\Projects\IS\Nursery Managemet System\Nursery Managemet System\obj\Debug\Nursery Managemet System.csproj.GenerateResource.Cache
+E:\FCIS ASU\Projects\IS\Nursery Managemet System\Nursery Managemet System\obj\Debug\Nursery Managemet System.exe
+E:\FCIS ASU\Projects\IS\Nursery Managemet System\Nursery Managemet System\obj\Debug\Nursery Managemet System.pdb
+E:\FCIS ASU\Projects\IS\Nursery Managemet System\Nursery Managemet System\obj\Debug\Nursery_Managemet_System.signUp.resources
