@@ -37,7 +37,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(220, 493);
+            this.panel1.Size = new System.Drawing.Size(220, 540);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -45,18 +45,20 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(220, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(682, 493);
+            this.panel2.Size = new System.Drawing.Size(700, 540);
             this.panel2.TabIndex = 1;
             // 
             // signUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(902, 493);
+            this.ClientSize = new System.Drawing.Size(920, 540);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "signUp";
-            this.Text = "Sign_Up";
+            this.Text = "Sign Up";
+            this.Load += new System.EventHandler(this.signUp_Load);
             this.ResumeLayout(false);
 
         }

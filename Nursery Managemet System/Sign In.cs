@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Nursery_Managemet_System
 {
-    public partial class signUp : Form
+    public partial class signIn : Form
     {
-        public signUp()
+        public signIn()
         {
             InitializeComponent();
-        }
-
-        private void signUp_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

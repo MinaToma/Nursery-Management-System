@@ -17,6 +17,8 @@ namespace Nursery_Managemet_System
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Sign());
+            Application.Run(new signIn());
+            Application.Run(new signUp());
         }
     }
 }

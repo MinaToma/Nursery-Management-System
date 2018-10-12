@@ -47,7 +47,7 @@
             // 
             // signUpButton
             // 
-            this.signUpButton.BackColor = System.Drawing.Color.OliveDrab;
+            this.signUpButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(225)))), ((int)(((byte)(100)))));
             this.signUpButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.signUpButton.Dock = System.Windows.Forms.DockStyle.Right;
             this.signUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -63,7 +63,7 @@
             // 
             // signInButton
             // 
-            this.signInButton.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.signInButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(70)))), ((int)(((byte)(150)))));
             this.signInButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.signInButton.Dock = System.Windows.Forms.DockStyle.Left;
             this.signInButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
