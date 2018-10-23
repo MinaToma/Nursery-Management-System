@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nursery Management System", "Nursery Managemet System\Nursery Management System.csproj", "{162A245C-1727-4B4E-AB62-D7277AF5A723}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nursery Management System", "Nursery Management System\Nursery Management System.csproj", "{162A245C-1727-4B4E-AB62-D7277AF5A723}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
