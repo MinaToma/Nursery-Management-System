@@ -9,3 +9,6 @@ E:\FCIS ASU\Projects\IS\Nursery Managemet System\Nursery Managemet System\obj\De
 E:\FCIS ASU\Projects\IS\Nursery Managemet System\Nursery Managemet System\obj\Debug\Nursery Managemet System.pdb
 E:\FCIS ASU\Projects\IS\Nursery Managemet System\Nursery Managemet System\obj\Debug\Nursery_Managemet_System.signUp.resources
 E:\FCIS ASU\Projects\IS\Nursery Managemet System\Nursery Managemet System\obj\Debug\Nursery_Managemet_System.signIn.resources
+E:\FCIS ASU\Projects\IS\Nursery Management System\Nursery Managemet System\bin\Debug\Nursery Managemet System.exe.config
+E:\FCIS ASU\Projects\IS\Nursery Management System\Nursery Managemet System\obj\Debug\Nursery Managemet System.exe
+E:\FCIS ASU\Projects\IS\Nursery Management System\Nursery Managemet System\obj\Debug\Nursery Managemet System.pdb

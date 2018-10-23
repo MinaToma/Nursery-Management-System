@@ -11,14 +11,15 @@ namespace Nursery_Managemet_System
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        public static Sign signForm = new Sign();
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Sign());
-            Application.Run(new signIn());
-            Application.Run(new signUp());
+            //Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(/*new Sign()*/ signForm);
+           // Application.Run(new signIn());
+           // Application.Run(new signUp());
         }
     }
 }

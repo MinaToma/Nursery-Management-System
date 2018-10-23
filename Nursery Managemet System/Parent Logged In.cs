@@ -10,21 +10,14 @@ using System.Windows.Forms;
 
 namespace Nursery_Managemet_System
 {
-    public partial class Sign : Form
+    public partial class parentLoggedIn : Form
     {
-        public Sign()
+        public parentLoggedIn()
         {
             InitializeComponent();
         }
 
-        private void signIn_Click(object sender, EventArgs e)
-        {
-            Program.signForm.Hide();
-            signIn signInForm = new signIn();
-            signInForm.Show();
-        }
-
-        private void signUpButton_Click(object sender, EventArgs e)
+        private void Parent_Logged_In_Load(object sender, EventArgs e)
         {
 
         }

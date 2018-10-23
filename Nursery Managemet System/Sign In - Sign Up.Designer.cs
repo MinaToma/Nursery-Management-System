@@ -47,7 +47,7 @@
             // 
             // signUpButton
             // 
-            this.signUpButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(225)))), ((int)(((byte)(100)))));
+            this.signUpButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
             this.signUpButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.signUpButton.Dock = System.Windows.Forms.DockStyle.Right;
             this.signUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -58,12 +58,13 @@
             this.signUpButton.Size = new System.Drawing.Size(460, 540);
             this.signUpButton.TabIndex = 1;
             this.signUpButton.Text = "Sign Up";
-            this.signUpButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.signUpButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.signUpButton.UseVisualStyleBackColor = false;
+            this.signUpButton.Click += new System.EventHandler(this.signUpButton_Click);
             // 
             // signInButton
             // 
-            this.signInButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(70)))), ((int)(((byte)(150)))));
+            this.signInButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(187)))), ((int)(((byte)(173)))));
             this.signInButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.signInButton.Dock = System.Windows.Forms.DockStyle.Left;
             this.signInButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -75,7 +76,7 @@
             this.signInButton.Size = new System.Drawing.Size(460, 540);
             this.signInButton.TabIndex = 0;
             this.signInButton.Text = "Sign In";
-            this.signInButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.signInButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.signInButton.UseVisualStyleBackColor = false;
             this.signInButton.Click += new System.EventHandler(this.signIn_Click);
             // 
@@ -89,6 +90,7 @@
             this.Controls.Add(this.signButtons);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Sign";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nursery Management";
             this.signButtons.ResumeLayout(false);
             this.ResumeLayout(false);

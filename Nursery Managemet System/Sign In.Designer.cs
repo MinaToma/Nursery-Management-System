@@ -106,6 +106,7 @@
             this.Controls.Add(this.usernameInput);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "signIn";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sign In";
             this.ResumeLayout(false);
             this.PerformLayout();

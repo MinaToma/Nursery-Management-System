@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Parent Logged In.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parent Logged In.Designer.cs">
+      <DependentUpon>Parent Logged In.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sign In - Sign Up.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     <Compile Include="Sign Up.Designer.cs">
       <DependentUpon>Sign Up.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Parent Logged In.resx">
+      <DependentUpon>Parent Logged In.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
