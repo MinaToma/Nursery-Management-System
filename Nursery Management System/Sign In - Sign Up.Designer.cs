@@ -58,7 +58,7 @@
             this.signUpButton.Size = new System.Drawing.Size(460, 540);
             this.signUpButton.TabIndex = 1;
             this.signUpButton.Text = "Sign Up";
-            this.signUpButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.signUpButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.signUpButton.UseVisualStyleBackColor = false;
             this.signUpButton.Click += new System.EventHandler(this.signUpButton_Click);
             // 
@@ -76,7 +76,7 @@
             this.signInButton.Size = new System.Drawing.Size(460, 540);
             this.signInButton.TabIndex = 0;
             this.signInButton.Text = "Sign In";
-            this.signInButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.signInButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.signInButton.UseVisualStyleBackColor = false;
             this.signInButton.Click += new System.EventHandler(this.signIn_Click);
             // 
