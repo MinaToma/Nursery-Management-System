@@ -1,0 +1,7 @@
+
+	dark pink 		#f2bbad 	rgb(242, 187, 173)	
+	light pink		#fbdcce		rgb(251, 220, 206)
+	pale pinkishblue	#eceae5		rgb(236, 234, 229)
+	light teal		#afdfdb		rgb(175, 223, 219)
+	teal			#75c9cc		rgb(117, 201, 204)
+
