@@ -16,5 +16,15 @@ namespace Nursery_Management_System
         {
             InitializeComponent();
         }
+
+        private void loginButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void signIn_Load(object sender, EventArgs e)
+        {
+                
+        }
     }
 }

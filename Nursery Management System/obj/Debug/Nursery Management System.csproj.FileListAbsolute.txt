@@ -13,3 +13,15 @@ E:\FCIS ASU\Projects\IS\Nursery Management System\Nursery Management System\obj\
 E:\FCIS ASU\Projects\IS\Nursery-Management-System\Nursery Management System\bin\Debug\Nursery Management System.exe.config
 E:\FCIS ASU\Projects\IS\Nursery-Management-System\Nursery Management System\obj\Debug\Nursery Management System.exe
 E:\FCIS ASU\Projects\IS\Nursery-Management-System\Nursery Management System\obj\Debug\Nursery Management System.pdb
+E:\IS Project\Nursery-Management-System\Nursery Management System\bin\Debug\Nursery Management System.exe.config
+E:\IS Project\Nursery-Management-System\Nursery Management System\obj\Debug\Nursery Management System.exe
+E:\IS Project\Nursery-Management-System\Nursery Management System\obj\Debug\Nursery Management System.pdb
+E:\IS Project\Nursery-Management-System\Nursery Management System\bin\Debug\Nursery Management System.exe
+E:\IS Project\Nursery-Management-System\Nursery Management System\bin\Debug\Nursery Management System.pdb
+E:\IS Project\Nursery-Management-System\Nursery Management System\obj\Debug\Nursery Management System.csprojResolveAssemblyReference.cache
+E:\IS Project\Nursery-Management-System\Nursery Management System\obj\Debug\Nursery_Management_System.parentLoggedIn.resources
+E:\IS Project\Nursery-Management-System\Nursery Management System\obj\Debug\Nursery_Management_System.Properties.Resources.resources
+E:\IS Project\Nursery-Management-System\Nursery Management System\obj\Debug\Nursery_Management_System.Sign.resources
+E:\IS Project\Nursery-Management-System\Nursery Management System\obj\Debug\Nursery_Management_System.signIn.resources
+E:\IS Project\Nursery-Management-System\Nursery Management System\obj\Debug\Nursery_Management_System.signUp.resources
+E:\IS Project\Nursery-Management-System\Nursery Management System\obj\Debug\Nursery Management System.csproj.GenerateResource.Cache

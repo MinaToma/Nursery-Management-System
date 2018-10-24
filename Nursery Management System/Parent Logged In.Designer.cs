@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(parentLoggedIn));
             this.parentProfileButton = new System.Windows.Forms.Button();
             this.childrenButton = new System.Windows.Forms.Button();
             this.parentFeedbackButton = new System.Windows.Forms.Button();
@@ -37,56 +38,69 @@
             // parentProfileButton
             // 
             this.parentProfileButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
+            this.parentProfileButton.FlatAppearance.BorderSize = 0;
             this.parentProfileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.parentProfileButton.Font = new System.Drawing.Font("Bebas Neue", 15F);
+            this.parentProfileButton.Image = ((System.Drawing.Image)(resources.GetObject("parentProfileButton.Image")));
             this.parentProfileButton.Location = new System.Drawing.Point(0, 0);
             this.parentProfileButton.Name = "parentProfileButton";
-            this.parentProfileButton.Size = new System.Drawing.Size(460, 270);
+            this.parentProfileButton.Size = new System.Drawing.Size(402, 270);
             this.parentProfileButton.TabIndex = 0;
             this.parentProfileButton.Text = "Profile";
+            this.parentProfileButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.parentProfileButton.UseVisualStyleBackColor = false;
             // 
             // childrenButton
             // 
             this.childrenButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(187)))), ((int)(((byte)(173)))));
+            this.childrenButton.FlatAppearance.BorderSize = 0;
             this.childrenButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.childrenButton.Font = new System.Drawing.Font("Bebas Neue", 15F);
-            this.childrenButton.Location = new System.Drawing.Point(460, 0);
+            this.childrenButton.Image = ((System.Drawing.Image)(resources.GetObject("childrenButton.Image")));
+            this.childrenButton.Location = new System.Drawing.Point(402, 0);
             this.childrenButton.Name = "childrenButton";
-            this.childrenButton.Size = new System.Drawing.Size(460, 270);
+            this.childrenButton.Size = new System.Drawing.Size(402, 270);
             this.childrenButton.TabIndex = 1;
             this.childrenButton.Text = "Children";
+            this.childrenButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.childrenButton.UseVisualStyleBackColor = false;
             // 
             // parentFeedbackButton
             // 
             this.parentFeedbackButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(220)))), ((int)(((byte)(206)))));
+            this.parentFeedbackButton.FlatAppearance.BorderSize = 0;
             this.parentFeedbackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.parentFeedbackButton.Font = new System.Drawing.Font("Bebas Neue", 15F);
+            this.parentFeedbackButton.Image = ((System.Drawing.Image)(resources.GetObject("parentFeedbackButton.Image")));
             this.parentFeedbackButton.Location = new System.Drawing.Point(0, 270);
             this.parentFeedbackButton.Name = "parentFeedbackButton";
-            this.parentFeedbackButton.Size = new System.Drawing.Size(460, 270);
+            this.parentFeedbackButton.Size = new System.Drawing.Size(402, 270);
             this.parentFeedbackButton.TabIndex = 2;
             this.parentFeedbackButton.Text = "Feedback";
+            this.parentFeedbackButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.parentFeedbackButton.UseVisualStyleBackColor = false;
             // 
             // settingsButton
             // 
             this.settingsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(201)))), ((int)(((byte)(204)))));
+            this.settingsButton.FlatAppearance.BorderSize = 0;
             this.settingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.settingsButton.Font = new System.Drawing.Font("Bebas Neue", 15F);
-            this.settingsButton.Location = new System.Drawing.Point(460, 270);
+            this.settingsButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.settingsButton.Image = ((System.Drawing.Image)(resources.GetObject("settingsButton.Image")));
+            this.settingsButton.Location = new System.Drawing.Point(402, 270);
             this.settingsButton.Name = "settingsButton";
-            this.settingsButton.Size = new System.Drawing.Size(460, 270);
+            this.settingsButton.Size = new System.Drawing.Size(402, 270);
             this.settingsButton.TabIndex = 3;
             this.settingsButton.Text = "Settings";
+            this.settingsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.settingsButton.UseVisualStyleBackColor = false;
             // 
             // parentLoggedIn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(920, 540);
+            this.ClientSize = new System.Drawing.Size(805, 540);
             this.Controls.Add(this.settingsButton);
             this.Controls.Add(this.parentFeedbackButton);
             this.Controls.Add(this.childrenButton);
