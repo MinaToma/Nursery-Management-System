@@ -8,29 +8,19 @@ namespace Nursery_Management_System
 {
     class People
     {
-        private int id;
-        private String name;
+        public int id {get;set;}
+        public String name { get; set; }
 
         protected People() {}
-        public People(int _id , String _name)
+        protected People(int _id , String _name)
         {
             id = _id;
             name = _name;
         }
-
-        public int getId()
-        {
-            return id;
-        }
-
+        
         public String className()
         {
             return GetType().ToString();
-        }
-
-        public String getName()
-        {
-            return name;
         }
     }
 }

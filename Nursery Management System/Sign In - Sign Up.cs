@@ -19,9 +19,6 @@ namespace Nursery_Management_System
 
         private void signIn_Click(object sender, EventArgs e)
         {
-            People p = new Parent(3 , "3");
-            Console.WriteLine(p.className());
-
             Program.signForm.Hide();
             signIn signInForm = new signIn();
             signInForm.Show();

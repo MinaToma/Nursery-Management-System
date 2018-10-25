@@ -8,6 +8,8 @@ namespace Nursery_Management_System
 {
     class Admin : People
     {
+
+        public Admin() { }
         public Admin(int _id, String _name) : base(_id , _name)
         {
 
