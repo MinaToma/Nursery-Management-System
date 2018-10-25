@@ -1,11 +1,11 @@
-﻿﻿<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{162A245C-1727-4B4E-AB62-D7277AF5A723}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Nursery_Management_System</RootNamespace>
     <AssemblyName>Nursery Management System</AssemblyName>
@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Compile Include="Address.cs" />
     <Compile Include="Admin.cs" />
     <Compile Include="Child.cs" />
@@ -59,6 +60,17 @@
       <DependentUpon>Child.cs</DependentUpon>
     </Compile>
 >>>>>>> parent of 97f8bb7... Merge branch 'BackEnd'
+=======
+    <Compile Include="Child.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Child.Designer.cs">
+      <DependentUpon>Child.cs</DependentUpon>
+    </Compile>
+=======
+    <Compile Include="Admin.cs" />
+>>>>>>> BackEnd
+>>>>>>> parent of 7786bb7... .
     <Compile Include="Parent Logged In.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,12 +98,21 @@
       <DependentUpon>Sign Up.cs</DependentUpon>
     </Compile>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Compile Include="Staff.cs" />
 =======
     <EmbeddedResource Include="Child.resx">
       <DependentUpon>Child.cs</DependentUpon>
     </EmbeddedResource>
 >>>>>>> parent of 97f8bb7... Merge branch 'BackEnd'
+=======
+    <EmbeddedResource Include="Child.resx">
+      <DependentUpon>Child.cs</DependentUpon>
+    </EmbeddedResource>
+=======
+    <Compile Include="Staff.cs" />
+>>>>>>> BackEnd
+>>>>>>> parent of 7786bb7... .
     <EmbeddedResource Include="Parent Logged In.resx">
       <DependentUpon>Parent Logged In.cs</DependentUpon>
     </EmbeddedResource>
