@@ -48,7 +48,6 @@
             this.backButton = new System.Windows.Forms.Button();
             this.roomNumberLabel = new System.Windows.Forms.Label();
             this.roomNumber = new System.Windows.Forms.TextBox();
-            this.childImageButton = new System.Windows.Forms.Button();
             this.note = new System.Windows.Forms.Label();
             this.saveButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -61,9 +60,9 @@
             this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.checkBox8 = new System.Windows.Forms.CheckBox();
             this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.importImageButton = new System.Windows.Forms.Button();
+            this.childImageButton = new System.Windows.Forms.Button();
             this.groupedFeatures.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -285,19 +284,6 @@
             this.roomNumber.TabIndex = 7;
             this.roomNumber.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // childImageButton
-            // 
-            this.childImageButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(234)))), ((int)(((byte)(229)))));
-            this.childImageButton.FlatAppearance.BorderSize = 0;
-            this.childImageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.childImageButton.Image = ((System.Drawing.Image)(resources.GetObject("childImageButton.Image")));
-            this.childImageButton.Location = new System.Drawing.Point(644, 12);
-            this.childImageButton.Name = "childImageButton";
-            this.childImageButton.Size = new System.Drawing.Size(248, 288);
-            this.childImageButton.TabIndex = 8;
-            this.childImageButton.UseVisualStyleBackColor = true;
-            this.childImageButton.Click += new System.EventHandler(this.childImageButton_Click);
-            // 
             // note
             // 
             this.note.AutoSize = true;
@@ -312,6 +298,7 @@
             // 
             // saveButton
             // 
+            this.saveButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.saveButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlText;
             this.saveButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.saveButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -438,19 +425,6 @@
             this.checkBox9.Text = "Feature";
             this.checkBox9.UseVisualStyleBackColor = true;
             // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(234)))), ((int)(((byte)(229)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(644, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(248, 288);
-            this.button1.TabIndex = 8;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.childImageButton_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -463,20 +437,34 @@
             this.label1.Text = "*click the image for details of the day.";
             this.label1.Click += new System.EventHandler(this.note_Click);
             // 
-            // button2
+            // importImageButton
             // 
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Bebas Neue", 15F);
-            this.button2.ForeColor = System.Drawing.Color.DimGray;
-            this.button2.Location = new System.Drawing.Point(644, 303);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(248, 44);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Import Image";
-            this.button2.UseVisualStyleBackColor = true;
+            this.importImageButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.importImageButton.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.importImageButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.importImageButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.importImageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.importImageButton.Font = new System.Drawing.Font("Bebas Neue", 15F);
+            this.importImageButton.ForeColor = System.Drawing.Color.DimGray;
+            this.importImageButton.Location = new System.Drawing.Point(644, 303);
+            this.importImageButton.Name = "importImageButton";
+            this.importImageButton.Size = new System.Drawing.Size(248, 44);
+            this.importImageButton.TabIndex = 10;
+            this.importImageButton.Text = "Import Image";
+            this.importImageButton.UseVisualStyleBackColor = true;
+            // 
+            // childImageButton
+            // 
+            this.childImageButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(234)))), ((int)(((byte)(229)))));
+            this.childImageButton.FlatAppearance.BorderSize = 0;
+            this.childImageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.childImageButton.Image = ((System.Drawing.Image)(resources.GetObject("childImageButton.Image")));
+            this.childImageButton.Location = new System.Drawing.Point(644, 12);
+            this.childImageButton.Name = "childImageButton";
+            this.childImageButton.Size = new System.Drawing.Size(248, 256);
+            this.childImageButton.TabIndex = 8;
+            this.childImageButton.UseVisualStyleBackColor = true;
+            this.childImageButton.Click += new System.EventHandler(this.childImageButton_Click);
             // 
             // Child
             // 
@@ -486,10 +474,9 @@
             this.CancelButton = this.backButton;
             this.ClientSize = new System.Drawing.Size(920, 540);
             this.Controls.Add(this.saveButton);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.importImageButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.note);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.childImageButton);
             this.Controls.Add(this.roomNumberLabel);
             this.Controls.Add(this.backButton);
@@ -537,7 +524,6 @@
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Label roomNumberLabel;
         private System.Windows.Forms.TextBox roomNumber;
-        private System.Windows.Forms.Button childImageButton;
         private System.Windows.Forms.Label note;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -550,8 +536,8 @@
         private System.Windows.Forms.CheckBox checkBox7;
         private System.Windows.Forms.CheckBox checkBox8;
         private System.Windows.Forms.CheckBox checkBox9;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button importImageButton;
+        private System.Windows.Forms.Button childImageButton;
     }
 }
