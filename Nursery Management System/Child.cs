@@ -61,5 +61,15 @@ namespace Nursery_Management_System
         {
 
         }
+
+        private void note_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Child_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
