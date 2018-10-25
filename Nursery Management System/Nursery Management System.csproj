@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{162A245C-1727-4B4E-AB62-D7277AF5A723}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Nursery_Management_System</RootNamespace>
     <AssemblyName>Nursery Management System</AssemblyName>
@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,12 +49,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin.cs" />
     <Compile Include="Parent Logged In.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Parent Logged In.Designer.cs">
       <DependentUpon>Parent Logged In.cs</DependentUpon>
     </Compile>
+    <Compile Include="Parent.cs" />
+    <Compile Include="People.cs" />
     <Compile Include="Sign In - Sign Up.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,7 @@
     <Compile Include="Sign Up.Designer.cs">
       <DependentUpon>Sign Up.cs</DependentUpon>
     </Compile>
+    <Compile Include="Staff.cs" />
     <EmbeddedResource Include="Parent Logged In.resx">
       <DependentUpon>Parent Logged In.cs</DependentUpon>
     </EmbeddedResource>
