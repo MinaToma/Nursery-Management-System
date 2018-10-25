@@ -44,7 +44,7 @@
             this.parentProfileButton.Image = ((System.Drawing.Image)(resources.GetObject("parentProfileButton.Image")));
             this.parentProfileButton.Location = new System.Drawing.Point(0, 0);
             this.parentProfileButton.Name = "parentProfileButton";
-            this.parentProfileButton.Size = new System.Drawing.Size(402, 270);
+            this.parentProfileButton.Size = new System.Drawing.Size(460, 270);
             this.parentProfileButton.TabIndex = 0;
             this.parentProfileButton.Text = "Profile";
             this.parentProfileButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -57,9 +57,9 @@
             this.childrenButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.childrenButton.Font = new System.Drawing.Font("Bebas Neue", 15F);
             this.childrenButton.Image = ((System.Drawing.Image)(resources.GetObject("childrenButton.Image")));
-            this.childrenButton.Location = new System.Drawing.Point(402, 0);
+            this.childrenButton.Location = new System.Drawing.Point(459, 0);
             this.childrenButton.Name = "childrenButton";
-            this.childrenButton.Size = new System.Drawing.Size(402, 270);
+            this.childrenButton.Size = new System.Drawing.Size(460, 270);
             this.childrenButton.TabIndex = 1;
             this.childrenButton.Text = "Children";
             this.childrenButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -74,7 +74,7 @@
             this.parentFeedbackButton.Image = ((System.Drawing.Image)(resources.GetObject("parentFeedbackButton.Image")));
             this.parentFeedbackButton.Location = new System.Drawing.Point(0, 270);
             this.parentFeedbackButton.Name = "parentFeedbackButton";
-            this.parentFeedbackButton.Size = new System.Drawing.Size(402, 270);
+            this.parentFeedbackButton.Size = new System.Drawing.Size(460, 270);
             this.parentFeedbackButton.TabIndex = 2;
             this.parentFeedbackButton.Text = "Feedback";
             this.parentFeedbackButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -88,9 +88,9 @@
             this.settingsButton.Font = new System.Drawing.Font("Bebas Neue", 15F);
             this.settingsButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.settingsButton.Image = ((System.Drawing.Image)(resources.GetObject("settingsButton.Image")));
-            this.settingsButton.Location = new System.Drawing.Point(402, 270);
+            this.settingsButton.Location = new System.Drawing.Point(459, 270);
             this.settingsButton.Name = "settingsButton";
-            this.settingsButton.Size = new System.Drawing.Size(402, 270);
+            this.settingsButton.Size = new System.Drawing.Size(460, 270);
             this.settingsButton.TabIndex = 3;
             this.settingsButton.Text = "Settings";
             this.settingsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -98,15 +98,16 @@
             // 
             // parentLoggedIn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(805, 540);
+            this.ClientSize = new System.Drawing.Size(920, 540);
             this.Controls.Add(this.settingsButton);
             this.Controls.Add(this.parentFeedbackButton);
             this.Controls.Add(this.childrenButton);
             this.Controls.Add(this.parentProfileButton);
             this.Name = "parentLoggedIn";
-            this.Text = "Nursery Management System";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Nursery Management System - Logged In as Parent";
             this.Load += new System.EventHandler(this.Parent_Logged_In_Load);
             this.ResumeLayout(false);
 

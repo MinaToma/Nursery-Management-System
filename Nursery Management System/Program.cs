@@ -18,8 +18,10 @@ namespace Nursery_Management_System
             Application.EnableVisualStyles();
             //Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(/*new Sign()*/ signForm);
-           // Application.Run(new signIn());
-           // Application.Run(new signUp());
+            // Application.Run(new signIn());
+            // Application.Run(new signUp());
+            //System.Environment.Exit(1);
+            Application.Run(new Child());
         }
     }
 }

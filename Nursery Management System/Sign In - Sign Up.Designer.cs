@@ -91,7 +91,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Sign";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Nursery Management";
+            this.Text = "Nursery Management System - Welcome!";
             this.signButtons.ResumeLayout(false);
             this.ResumeLayout(false);
 
