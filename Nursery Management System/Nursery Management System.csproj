@@ -32,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -49,18 +46,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Address.cs" />
     <Compile Include="Admin.cs" />
     <Compile Include="Child.cs" />
     <Compile Include="DOB.cs" />
+=======
+    <Compile Include="Child.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Child.Designer.cs">
+      <DependentUpon>Child.cs</DependentUpon>
+    </Compile>
+>>>>>>> parent of 97f8bb7... Merge branch 'BackEnd'
     <Compile Include="Parent Logged In.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Parent Logged In.Designer.cs">
       <DependentUpon>Parent Logged In.cs</DependentUpon>
     </Compile>
-    <Compile Include="Parent.cs" />
-    <Compile Include="People.cs" />
     <Compile Include="Sign In - Sign Up.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,7 +85,13 @@
     <Compile Include="Sign Up.Designer.cs">
       <DependentUpon>Sign Up.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Staff.cs" />
+=======
+    <EmbeddedResource Include="Child.resx">
+      <DependentUpon>Child.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> parent of 97f8bb7... Merge branch 'BackEnd'
     <EmbeddedResource Include="Parent Logged In.resx">
       <DependentUpon>Parent Logged In.cs</DependentUpon>
     </EmbeddedResource>
