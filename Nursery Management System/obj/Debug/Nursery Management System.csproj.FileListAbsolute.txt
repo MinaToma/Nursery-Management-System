@@ -34,4 +34,7 @@ E:\FCIS ASU\Projects\IS\Nursery-Management-System\Nursery Management System\obj\
 E:\FCIS ASU\Projects\IS\Nursery-Management-System\Nursery Management System\obj\Debug\Nursery_Management_System.signIn.resources
 E:\FCIS ASU\Projects\IS\Nursery-Management-System\Nursery Management System\obj\Debug\Nursery_Management_System.signUp.resources
 E:\FCIS ASU\Projects\IS\Nursery-Management-System\Nursery Management System\obj\Debug\Nursery Management System.csproj.GenerateResource.Cache
+<<<<<<< HEAD
 E:\FCIS ASU\Projects\IS\Nursery-Management-System\Nursery Management System\obj\Debug\Nursery_Management_System.Child.resources
+=======
+>>>>>>> BackEnd
