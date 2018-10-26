@@ -71,5 +71,10 @@ namespace Nursery_Management_System
         {
 
         }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

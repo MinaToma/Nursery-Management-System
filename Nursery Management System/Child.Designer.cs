@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Child));
             this.childNameLabel = new System.Windows.Forms.Label();
             this.childName = new System.Windows.Forms.TextBox();
-            this.DOB = new System.Windows.Forms.TextBox();
             this.childDOBLabel = new System.Windows.Forms.Label();
             this.groupedFeatures = new System.Windows.Forms.GroupBox();
             this.feature9 = new System.Windows.Forms.CheckBox();
@@ -43,7 +42,6 @@
             this.feature3 = new System.Windows.Forms.CheckBox();
             this.feature2 = new System.Windows.Forms.CheckBox();
             this.feature1 = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.genderLabel = new System.Windows.Forms.Label();
             this.backButton = new System.Windows.Forms.Button();
             this.roomNumberLabel = new System.Windows.Forms.Label();
@@ -63,8 +61,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.importImageButton = new System.Windows.Forms.Button();
             this.childImageButton = new System.Windows.Forms.Button();
+            this.female = new System.Windows.Forms.RadioButton();
+            this.male = new System.Windows.Forms.RadioButton();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.genderPanel = new System.Windows.Forms.Panel();
             this.groupedFeatures.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.genderPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // childNameLabel
@@ -72,7 +75,7 @@
             this.childNameLabel.AutoSize = true;
             this.childNameLabel.Enabled = false;
             this.childNameLabel.Font = new System.Drawing.Font("Bebas Neue", 15F);
-            this.childNameLabel.Location = new System.Drawing.Point(169, 72);
+            this.childNameLabel.Location = new System.Drawing.Point(169, 49);
             this.childNameLabel.Name = "childNameLabel";
             this.childNameLabel.Size = new System.Drawing.Size(62, 30);
             this.childNameLabel.TabIndex = 0;
@@ -82,29 +85,18 @@
             // childName
             // 
             this.childName.Enabled = false;
-            this.childName.Location = new System.Drawing.Point(308, 72);
+            this.childName.Location = new System.Drawing.Point(308, 49);
             this.childName.Name = "childName";
-            this.childName.ReadOnly = true;
-            this.childName.Size = new System.Drawing.Size(261, 22);
+            this.childName.Size = new System.Drawing.Size(280, 22);
             this.childName.TabIndex = 0;
             this.childName.TextChanged += new System.EventHandler(this.childName_TextChanged);
-            // 
-            // DOB
-            // 
-            this.DOB.Enabled = false;
-            this.DOB.Location = new System.Drawing.Point(308, 166);
-            this.DOB.Name = "DOB";
-            this.DOB.ReadOnly = true;
-            this.DOB.Size = new System.Drawing.Size(261, 22);
-            this.DOB.TabIndex = 1;
-            this.DOB.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // childDOBLabel
             // 
             this.childDOBLabel.AutoSize = true;
             this.childDOBLabel.Enabled = false;
             this.childDOBLabel.Font = new System.Drawing.Font("Bebas Neue", 15F);
-            this.childDOBLabel.Location = new System.Drawing.Point(169, 166);
+            this.childDOBLabel.Location = new System.Drawing.Point(169, 178);
             this.childDOBLabel.Name = "childDOBLabel";
             this.childDOBLabel.Size = new System.Drawing.Size(127, 30);
             this.childDOBLabel.TabIndex = 1;
@@ -223,22 +215,12 @@
             this.feature1.Text = "Feature";
             this.feature1.UseVisualStyleBackColor = true;
             // 
-            // textBox1
-            // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(308, 118);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(261, 22);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
             // genderLabel
             // 
             this.genderLabel.AutoSize = true;
             this.genderLabel.Enabled = false;
             this.genderLabel.Font = new System.Drawing.Font("Bebas Neue", 15F);
-            this.genderLabel.Location = new System.Drawing.Point(169, 118);
+            this.genderLabel.Location = new System.Drawing.Point(169, 107);
             this.genderLabel.Name = "genderLabel";
             this.genderLabel.Size = new System.Drawing.Size(77, 30);
             this.genderLabel.TabIndex = 5;
@@ -268,7 +250,7 @@
             this.roomNumberLabel.AutoSize = true;
             this.roomNumberLabel.Enabled = false;
             this.roomNumberLabel.Font = new System.Drawing.Font("Bebas Neue", 15F);
-            this.roomNumberLabel.Location = new System.Drawing.Point(169, 213);
+            this.roomNumberLabel.Location = new System.Drawing.Point(169, 237);
             this.roomNumberLabel.Name = "roomNumberLabel";
             this.roomNumberLabel.Size = new System.Drawing.Size(76, 30);
             this.roomNumberLabel.TabIndex = 6;
@@ -277,10 +259,9 @@
             // roomNumber
             // 
             this.roomNumber.Enabled = false;
-            this.roomNumber.Location = new System.Drawing.Point(308, 213);
+            this.roomNumber.Location = new System.Drawing.Point(308, 237);
             this.roomNumber.Name = "roomNumber";
-            this.roomNumber.ReadOnly = true;
-            this.roomNumber.Size = new System.Drawing.Size(261, 22);
+            this.roomNumber.Size = new System.Drawing.Size(280, 22);
             this.roomNumber.TabIndex = 7;
             this.roomNumber.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
@@ -466,6 +447,57 @@
             this.childImageButton.UseVisualStyleBackColor = true;
             this.childImageButton.Click += new System.EventHandler(this.childImageButton_Click);
             // 
+            // female
+            // 
+            this.female.AutoSize = true;
+            this.female.Enabled = false;
+            this.female.Font = new System.Drawing.Font("Bebas Neue", 15F);
+            this.female.Image = ((System.Drawing.Image)(resources.GetObject("female.Image")));
+            this.female.Location = new System.Drawing.Point(7, 20);
+            this.female.Name = "female";
+            this.female.Padding = new System.Windows.Forms.Padding(3);
+            this.female.Size = new System.Drawing.Size(129, 40);
+            this.female.TabIndex = 12;
+            this.female.Text = "Female";
+            this.female.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.female.UseVisualStyleBackColor = true;
+            this.female.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // male
+            // 
+            this.male.AutoSize = true;
+            this.male.Checked = true;
+            this.male.Enabled = false;
+            this.male.Font = new System.Drawing.Font("Bebas Neue", 15F);
+            this.male.Image = ((System.Drawing.Image)(resources.GetObject("male.Image")));
+            this.male.Location = new System.Drawing.Point(157, 20);
+            this.male.Name = "male";
+            this.male.Padding = new System.Windows.Forms.Padding(3);
+            this.male.Size = new System.Drawing.Size(111, 40);
+            this.male.TabIndex = 13;
+            this.male.TabStop = true;
+            this.male.Text = "Male";
+            this.male.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.male.UseVisualStyleBackColor = true;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Enabled = false;
+            this.dateTimePicker1.Location = new System.Drawing.Point(308, 177);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(280, 22);
+            this.dateTimePicker1.TabIndex = 14;
+            // 
+            // genderPanel
+            // 
+            this.genderPanel.Controls.Add(this.male);
+            this.genderPanel.Controls.Add(this.female);
+            this.genderPanel.Enabled = false;
+            this.genderPanel.Location = new System.Drawing.Point(308, 77);
+            this.genderPanel.Name = "genderPanel";
+            this.genderPanel.Size = new System.Drawing.Size(280, 82);
+            this.genderPanel.TabIndex = 15;
+            // 
             // Child
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -473,6 +505,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
             this.CancelButton = this.backButton;
             this.ClientSize = new System.Drawing.Size(920, 540);
+            this.Controls.Add(this.genderPanel);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.importImageButton);
             this.Controls.Add(this.label1);
@@ -482,8 +516,6 @@
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.roomNumber);
             this.Controls.Add(this.childNameLabel);
-            this.Controls.Add(this.DOB);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupedFeatures);
             this.Controls.Add(this.childName);
@@ -498,6 +530,8 @@
             this.groupedFeatures.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.genderPanel.ResumeLayout(false);
+            this.genderPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -507,7 +541,6 @@
 
         private System.Windows.Forms.Label childNameLabel;
         private System.Windows.Forms.TextBox childName;
-        private System.Windows.Forms.TextBox DOB;
         private System.Windows.Forms.Label childDOBLabel;
         private System.Windows.Forms.GroupBox groupedFeatures;
         private System.Windows.Forms.CheckBox feature9;
@@ -519,7 +552,6 @@
         private System.Windows.Forms.CheckBox feature3;
         private System.Windows.Forms.CheckBox feature2;
         private System.Windows.Forms.CheckBox feature1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label genderLabel;
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Label roomNumberLabel;
@@ -539,5 +571,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button importImageButton;
         private System.Windows.Forms.Button childImageButton;
+        private System.Windows.Forms.RadioButton female;
+        private System.Windows.Forms.RadioButton male;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Panel genderPanel;
     }
 }
