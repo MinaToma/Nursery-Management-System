@@ -21,6 +21,8 @@ namespace Nursery_Management_System
             // Application.Run(new signIn());
             // Application.Run(new signUp());
             //System.Environment.Exit(1);
+            Application.Run(new signUp());
+            Application.Run(new ParentForm());
             Application.Run(new Child());
         }
     }

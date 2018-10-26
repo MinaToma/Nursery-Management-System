@@ -68,12 +68,21 @@
     <EmbeddedResource Include="Parent Logged In.resx">
       <DependentUpon>Parent Logged In.cs</DependentUpon>
     </EmbeddedResource>
+    <Compile Include="ParentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParentForm.Designer.cs">
+      <DependentUpon>ParentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sign In - Sign Up.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Sign In - Sign Up.Designer.cs">
       <DependentUpon>Sign In - Sign Up.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ParentForm.resx">
+      <DependentUpon>ParentForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sign In - Sign Up.resx">
       <DependentUpon>Sign In - Sign Up.cs</DependentUpon>
     </EmbeddedResource>
@@ -104,6 +113,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Sign Up.resx">
+      <DependentUpon>Sign Up.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

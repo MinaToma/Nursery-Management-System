@@ -28,44 +28,73 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.staffSignUp = new System.Windows.Forms.Button();
+            this.parentSignUp = new System.Windows.Forms.Button();
+            this.signButtons = new System.Windows.Forms.Panel();
+            this.signButtons.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // staffSignUp
             // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(220, 540);
-            this.panel1.TabIndex = 0;
+            this.staffSignUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(187)))), ((int)(((byte)(173)))));
+            this.staffSignUp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.staffSignUp.Dock = System.Windows.Forms.DockStyle.Right;
+            this.staffSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.staffSignUp.Font = new System.Drawing.Font("Bebas", 15F);
+            this.staffSignUp.Location = new System.Drawing.Point(460, 0);
+            this.staffSignUp.Name = "staffSignUp";
+            this.staffSignUp.Size = new System.Drawing.Size(460, 540);
+            this.staffSignUp.TabIndex = 1;
+            this.staffSignUp.Text = "Staff";
+            this.staffSignUp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.staffSignUp.UseVisualStyleBackColor = false;
             // 
-            // panel2
+            // parentSignUp
             // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(220, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(700, 540);
-            this.panel2.TabIndex = 1;
+            this.parentSignUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(228)))), ((int)(((byte)(220)))));
+            this.parentSignUp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.parentSignUp.Dock = System.Windows.Forms.DockStyle.Left;
+            this.parentSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.parentSignUp.Font = new System.Drawing.Font("Bebas", 15F);
+            this.parentSignUp.ForeColor = System.Drawing.Color.Black;
+            this.parentSignUp.Location = new System.Drawing.Point(0, 0);
+            this.parentSignUp.Name = "parentSignUp";
+            this.parentSignUp.Size = new System.Drawing.Size(460, 540);
+            this.parentSignUp.TabIndex = 0;
+            this.parentSignUp.Text = "Parent";
+            this.parentSignUp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.parentSignUp.UseVisualStyleBackColor = false;
+            this.parentSignUp.Click += new System.EventHandler(this.signInButton_Click);
+            // 
+            // signButtons
+            // 
+            this.signButtons.Controls.Add(this.staffSignUp);
+            this.signButtons.Controls.Add(this.parentSignUp);
+            this.signButtons.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.signButtons.Location = new System.Drawing.Point(0, 0);
+            this.signButtons.Name = "signButtons";
+            this.signButtons.Size = new System.Drawing.Size(920, 540);
+            this.signButtons.TabIndex = 3;
             // 
             // signUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(920, 540);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.signButtons);
             this.Name = "signUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sign Up";
             this.Load += new System.EventHandler(this.signUp_Load);
+            this.signButtons.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button staffSignUp;
+        private System.Windows.Forms.Button parentSignUp;
+        private System.Windows.Forms.Panel signButtons;
     }
 }
