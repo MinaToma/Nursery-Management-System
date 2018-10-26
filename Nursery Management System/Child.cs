@@ -17,42 +17,12 @@ namespace Nursery_Management_System
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
+        private void nameLabel_Click(object sender, EventArgs e)
         {
 
         }
 
         private void childName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -72,9 +42,20 @@ namespace Nursery_Management_System
 
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void childProfilePanel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void female_CheckedChanged(object sender, EventArgs e)
+        {
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(220)))), ((int)(((byte)(206)))));
+
+        }
+
+        private void male_CheckedChanged(object sender, EventArgs e)
+        {
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
         }
     }
 }
