@@ -23,7 +23,6 @@ E:\IS Project\Nursery-Management-System\Nursery Management System\obj\Debug\Nurs
 E:\IS Project\Nursery-Management-System\Nursery Management System\obj\Debug\Nursery_Management_System.Properties.Resources.resources
 E:\IS Project\Nursery-Management-System\Nursery Management System\obj\Debug\Nursery_Management_System.Sign.resources
 E:\IS Project\Nursery-Management-System\Nursery Management System\obj\Debug\Nursery_Management_System.signIn.resources
-E:\IS Project\Nursery-Management-System\Nursery Management System\obj\Debug\Nursery_Management_System.signUp.resources
 E:\IS Project\Nursery-Management-System\Nursery Management System\obj\Debug\Nursery Management System.csproj.GenerateResource.Cache
 E:\FCIS ASU\Projects\IS\Nursery-Management-System\Nursery Management System\bin\Debug\Nursery Management System.exe
 E:\FCIS ASU\Projects\IS\Nursery-Management-System\Nursery Management System\bin\Debug\Nursery Management System.pdb
@@ -34,3 +33,4 @@ E:\FCIS ASU\Projects\IS\Nursery-Management-System\Nursery Management System\obj\
 E:\FCIS ASU\Projects\IS\Nursery-Management-System\Nursery Management System\obj\Debug\Nursery_Management_System.signIn.resources
 E:\FCIS ASU\Projects\IS\Nursery-Management-System\Nursery Management System\obj\Debug\Nursery Management System.csproj.GenerateResource.Cache
 E:\FCIS ASU\Projects\IS\Nursery-Management-System\Nursery Management System\obj\Debug\Nursery_Management_System.Child.resources
+E:\IS Project\Nursery-Management-System\Nursery Management System\obj\Debug\Nursery_Management_System.Child.resources
