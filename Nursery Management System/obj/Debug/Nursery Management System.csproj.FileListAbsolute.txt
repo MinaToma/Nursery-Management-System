@@ -33,4 +33,9 @@ E:\FCIS ASU\Projects\IS\Nursery-Management-System\Nursery Management System\obj\
 E:\FCIS ASU\Projects\IS\Nursery-Management-System\Nursery Management System\obj\Debug\Nursery_Management_System.signIn.resources
 E:\FCIS ASU\Projects\IS\Nursery-Management-System\Nursery Management System\obj\Debug\Nursery Management System.csproj.GenerateResource.Cache
 E:\FCIS ASU\Projects\IS\Nursery-Management-System\Nursery Management System\obj\Debug\Nursery_Management_System.Child.resources
+<<<<<<< HEAD
 E:\IS Project\Nursery-Management-System\Nursery Management System\obj\Debug\Nursery_Management_System.Child.resources
+=======
+E:\FCIS ASU\Projects\IS\Nursery-Management-System\Nursery Management System\obj\Debug\Nursery_Management_System.ParentForm.resources
+E:\FCIS ASU\Projects\IS\Nursery-Management-System\Nursery Management System\obj\Debug\Nursery_Management_System.signUp.resources
+>>>>>>> d277bf84b2da855b06257d84170da7fb154852c7
