@@ -59,6 +59,7 @@
     <EmbeddedResource Include="Child.resx">
       <DependentUpon>Child.cs</DependentUpon>
     </EmbeddedResource>
+    <Compile Include="ImageRead.cs" />
     <Compile Include="Parent Logged In.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +104,7 @@
     <Compile Include="Sign Up.Designer.cs">
       <DependentUpon>Sign Up.cs</DependentUpon>
     </Compile>
+    <Compile Include="SQL.cs" />
     <Compile Include="Staff.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

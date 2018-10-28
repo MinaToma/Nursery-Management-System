@@ -13,9 +13,17 @@ namespace Nursery_Management_System
 {
     public partial class Child : Form
     {
+        string Gender, PicLocation;
+        PictureBox PicBox = new PictureBox();
         public Child()
         {
             InitializeComponent();
+            PicBox.Image = childImageButton.BackgroundImage;
+            SQL Q = new SQL();
+
+           // last two number the id of parent and the number of his childeren 
+           //Q.laodChildData(ref PicBox, ref childName, ref roomNumber, 1, 0);
+           // childImageButton.BackgroundImage = PicBox.Image;
         }
 
         private void nameLabel_Click(object sender, EventArgs e)
@@ -59,28 +67,28 @@ namespace Nursery_Management_System
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
             Gender = "Male";
         }
-        public string cString = "Data Source=ADEL;Initial Catalog=Nursery;Integrated Security=True";
-        string Gender;
+
+
         private void saveButton_Click(object sender, EventArgs e)
         {
-            string Query = "insert into Nursery.dbo.Child (Name, Gender, DOB, RoomID) values (' " + this.childName.Text + " ' , '" + Gender + " ' , ' " + this.DOBpicker.Value + " ' , ' " + this.roomNumber.Text + " ' );   ";
-            SqlConnection connectionDataBase = new SqlConnection(cString);
-            SqlCommand commandDataBase = new SqlCommand(Query, connectionDataBase);
-            SqlDataReader myReader;
-            try
-            {
-                connectionDataBase.Open();
-                myReader = commandDataBase.ExecuteReader();
-                MessageBox.Show("Information saved successfully ! ");
-                while (myReader.Read())
-                {
+            SQL Q = new SQL();
+            Q.saveChilddata(childName.Text, Gender, DOBpicker.Value, roomNumber.Text, PicLocation);
+        }
 
-                }
-            }
-            catch (Exception except)
-            {
-                MessageBox.Show(except.Message);
-            }
+        private void childName_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void childImageButton_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void importImageButton_Click(object sender, EventArgs e)
+        {
+            ImageRead img = new ImageRead();
+            PicLocation = img.PICc(ref PicBox);
         }
     }
 }
