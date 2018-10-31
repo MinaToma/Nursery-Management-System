@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Nursery_Management_System
 {
-    class ChildClass : People
+    class ChildClass : Human
     {
         public int parentId { get; set; }
         public int roomId { get; set; }

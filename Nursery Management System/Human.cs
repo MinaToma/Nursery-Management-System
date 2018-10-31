@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Nursery_Management_System
 {
-    class People
+    class Human
     {
         public int id {get;set;}
         public String name { get; set; }
 
-        protected People() {}
-        protected People(int _id , String _name)
+        protected Human() {}
+        protected Human(int _id , String _name)
         {
             id = _id;
             name = _name;

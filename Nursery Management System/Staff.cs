@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Nursery_Management_System
 {
-    class Staff : People
+    class Staff : Human
     {
         public long phoneNumber { get; set; }
         public String email { get; set; }

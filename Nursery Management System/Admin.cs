@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Nursery_Management_System
 {
-    class Admin : People
+    class Admin : Human
     {
 
         public Admin() { }

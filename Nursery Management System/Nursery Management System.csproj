@@ -128,7 +128,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Admin.cs" />
-    <Compile Include="People.cs" />
+    <Compile Include="Human.cs" />
     <Compile Include="Address.cs" />
     <Compile Include="DOB.cs" />
   </ItemGroup>

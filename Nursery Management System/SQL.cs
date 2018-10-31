@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Sql;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,52 +17,50 @@ namespace Nursery_Management_System
     class SQL
 
     {
-        public string Query;
-        public SqlConnection connectionDataBase = new SqlConnection(@"Server=DESKTOP-QSKFJLO; DataBase=Nursery; Integrated Security=true;");
-        public SqlCommand commandDataBase;
-        public SqlDataReader myReader;
+        private string Query { set; get; }
+        private SqlConnection connectionDataBase { set; get; }
+        private SqlCommand commandDataBase { set; get; }
+        private SqlDataReader myReader { set; get; }
 
-        public SqlCommandBuilder cmdb;
-        public SqlDataAdapter Da;
-        public DataSet ds = new DataSet();
-        public DataTable Dt = new DataTable();
-        public CurrencyManager cm;
+        public SQL()
+        {
+            connectionDataBase = new SqlConnection(@"Server=DESKTOP-2OGA27F; DataBase=Nursery; Integrated Security=true;");
+        }
 
-        public int convert(string name)
+        private int convert(string name)
         {
             int x = Int32.Parse(name);
             return x;
         }
-        public void saveChilddata(string Name, string Gender, DateTime dob, string romenumber, string PicLocation)
+        public void saveChildData(string parentID , string name, string gender, DateTime DOB, string roomID, string picLocation)
         {
-
             try
             {
                 byte[] img = null;
 
-                FileStream fs = new FileStream(PicLocation, FileMode.Open, FileAccess.Read);
-                BinaryReader br = new BinaryReader(fs);
-                img = br.ReadBytes((int)fs.Length);
-                Query = "insert into Child (Name, Gender, DOB ,  RoomID,ParentID , Image) values (' " + Name + " ' , '" + Gender + " ' , ' " + dob + " ' , ' " + convert(romenumber) + " ', '" + 1 + " ',@img );   ";
+                FileStream imageLocation = new FileStream(picLocation, FileMode.Open, FileAccess.Read);
+                BinaryReader imageToBinaryCode = new BinaryReader(imageLocation);
+                img = imageToBinaryCode.ReadBytes((int)imageLocation.Length);
+
+                Query = "insert into Child (childName , parentID , DOB , gender , roomID , image) values (' " + name + " ' , '" + parentID + " '  , ' " + DOB + " ' , '" + gender + " '  ,  ' " + convert(roomID) + " ' ,@img ); ";
                 commandDataBase = new SqlCommand(Query, connectionDataBase);
                 commandDataBase.Parameters.Add(new SqlParameter("@img", img));
+    
                 connectionDataBase.Open();
                 commandDataBase.ExecuteReader();
-
-
-                MessageBox.Show("Information saved successfully ! ");
-
+                
+                MessageBox.Show("Information saved successfully !");
             }
-            catch (Exception except)
+            catch
             {
-                MessageBox.Show(except.Message);
+                MessageBox.Show("Data Not Saved", "Error"  , MessageBoxButtons.OK , MessageBoxIcon.Error);
             }
             finally
             {
                 connectionDataBase.Close();
             }
         }
-        public void laodChildData(ref PictureBox Pic, ref TextBox name, ref TextBox room, int ParentID, int numOfChild)
+        public void laodChildData(ref PictureBox Pic , ref TextBox name, ref TextBox room, int ParentID, int numOfChild)
         {
             try
             {
