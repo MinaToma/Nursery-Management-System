@@ -56,6 +56,7 @@
             this.childName = new System.Windows.Forms.TextBox();
             this.childDOBLabel = new System.Windows.Forms.Label();
             this.genderLabel = new System.Windows.Forms.Label();
+            this.editButton = new System.Windows.Forms.Button();
             this.childProfilePanel.SuspendLayout();
             this.genderPanel.SuspendLayout();
             this.groupedFeatures.SuspendLayout();
@@ -73,10 +74,10 @@
             this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backButton.Font = new System.Drawing.Font("Bebas Neue", 15F);
             this.backButton.Image = ((System.Drawing.Image)(resources.GetObject("backButton.Image")));
-            this.backButton.Location = new System.Drawing.Point(-2, -3);
+            this.backButton.Location = new System.Drawing.Point(0, 0);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(108, 90);
-            this.backButton.TabIndex = 0;
+            this.backButton.TabIndex = 18;
             this.backButton.UseVisualStyleBackColor = false;
             // 
             // childProfilePanel
@@ -95,10 +96,11 @@
             this.childProfilePanel.Controls.Add(this.childName);
             this.childProfilePanel.Controls.Add(this.childDOBLabel);
             this.childProfilePanel.Controls.Add(this.genderLabel);
+            this.childProfilePanel.Enabled = false;
             this.childProfilePanel.Location = new System.Drawing.Point(0, 0);
             this.childProfilePanel.Name = "childProfilePanel";
             this.childProfilePanel.Size = new System.Drawing.Size(920, 540);
-            this.childProfilePanel.TabIndex = 1;
+            this.childProfilePanel.TabIndex = 29;
             this.childProfilePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.childProfilePanel_Paint);
             // 
             // genderPanel
@@ -114,7 +116,6 @@
             // male
             // 
             this.male.AutoSize = true;
-            this.male.Checked = true;
             this.male.Cursor = System.Windows.Forms.Cursors.Hand;
             this.male.Font = new System.Drawing.Font("Bebas Neue", 15F);
             this.male.Image = ((System.Drawing.Image)(resources.GetObject("male.Image")));
@@ -122,8 +123,7 @@
             this.male.Name = "male";
             this.male.Padding = new System.Windows.Forms.Padding(3);
             this.male.Size = new System.Drawing.Size(111, 40);
-            this.male.TabIndex = 13;
-            this.male.TabStop = true;
+            this.male.TabIndex = 1;
             this.male.Text = "Male";
             this.male.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.male.UseVisualStyleBackColor = true;
@@ -132,6 +132,7 @@
             // female
             // 
             this.female.AutoSize = true;
+            this.female.Checked = true;
             this.female.Cursor = System.Windows.Forms.Cursors.Hand;
             this.female.Font = new System.Drawing.Font("Bebas Neue", 15F);
             this.female.Image = ((System.Drawing.Image)(resources.GetObject("female.Image")));
@@ -139,7 +140,8 @@
             this.female.Name = "female";
             this.female.Padding = new System.Windows.Forms.Padding(3);
             this.female.Size = new System.Drawing.Size(129, 40);
-            this.female.TabIndex = 12;
+            this.female.TabIndex = 2;
+            this.female.TabStop = true;
             this.female.Text = "Female";
             this.female.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.female.UseVisualStyleBackColor = true;
@@ -157,7 +159,7 @@
             this.childImageButton.Location = new System.Drawing.Point(639, 25);
             this.childImageButton.Name = "childImageButton";
             this.childImageButton.Size = new System.Drawing.Size(248, 256);
-            this.childImageButton.TabIndex = 23;
+            this.childImageButton.TabIndex = 5;
             this.childImageButton.UseVisualStyleBackColor = true;
             // 
             // saveButton
@@ -172,9 +174,10 @@
             this.saveButton.Location = new System.Drawing.Point(639, 472);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(248, 44);
-            this.saveButton.TabIndex = 27;
+            this.saveButton.TabIndex = 17;
             this.saveButton.Text = "Save";
             this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Visible = false;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // importImageButton
@@ -189,9 +192,10 @@
             this.importImageButton.Location = new System.Drawing.Point(639, 316);
             this.importImageButton.Name = "importImageButton";
             this.importImageButton.Size = new System.Drawing.Size(248, 44);
-            this.importImageButton.TabIndex = 26;
+            this.importImageButton.TabIndex = 6;
             this.importImageButton.Text = "Import Image";
             this.importImageButton.UseVisualStyleBackColor = true;
+            this.importImageButton.Visible = false;
             // 
             // detailsOfTheDayLabel
             // 
@@ -221,7 +225,7 @@
             this.DOBpicker.Location = new System.Drawing.Point(303, 190);
             this.DOBpicker.Name = "DOBpicker";
             this.DOBpicker.Size = new System.Drawing.Size(280, 22);
-            this.DOBpicker.TabIndex = 28;
+            this.DOBpicker.TabIndex = 3;
             // 
             // roomNumberLabel
             // 
@@ -238,7 +242,7 @@
             this.roomNumber.Location = new System.Drawing.Point(303, 250);
             this.roomNumber.Name = "roomNumber";
             this.roomNumber.Size = new System.Drawing.Size(280, 22);
-            this.roomNumber.TabIndex = 22;
+            this.roomNumber.TabIndex = 4;
             // 
             // childNameLabel
             // 
@@ -265,7 +269,7 @@
             this.groupedFeatures.Location = new System.Drawing.Point(23, 316);
             this.groupedFeatures.Name = "groupedFeatures";
             this.groupedFeatures.Size = new System.Drawing.Size(600, 200);
-            this.groupedFeatures.TabIndex = 19;
+            this.groupedFeatures.TabIndex = 7;
             this.groupedFeatures.TabStop = false;
             this.groupedFeatures.Text = "Features";
             // 
@@ -275,7 +279,7 @@
             this.feature9.Location = new System.Drawing.Point(343, 146);
             this.feature9.Name = "feature9";
             this.feature9.Size = new System.Drawing.Size(100, 34);
-            this.feature9.TabIndex = 8;
+            this.feature9.TabIndex = 16;
             this.feature9.Text = "Feature";
             this.feature9.UseVisualStyleBackColor = true;
             // 
@@ -285,7 +289,7 @@
             this.feature8.Location = new System.Drawing.Point(343, 97);
             this.feature8.Name = "feature8";
             this.feature8.Size = new System.Drawing.Size(100, 34);
-            this.feature8.TabIndex = 7;
+            this.feature8.TabIndex = 13;
             this.feature8.Text = "Feature";
             this.feature8.UseVisualStyleBackColor = true;
             // 
@@ -295,7 +299,7 @@
             this.feature7.Location = new System.Drawing.Point(343, 49);
             this.feature7.Name = "feature7";
             this.feature7.Size = new System.Drawing.Size(100, 34);
-            this.feature7.TabIndex = 6;
+            this.feature7.TabIndex = 10;
             this.feature7.Text = "Feature";
             this.feature7.UseVisualStyleBackColor = true;
             // 
@@ -305,7 +309,7 @@
             this.feature6.Location = new System.Drawing.Point(194, 146);
             this.feature6.Name = "feature6";
             this.feature6.Size = new System.Drawing.Size(100, 34);
-            this.feature6.TabIndex = 5;
+            this.feature6.TabIndex = 15;
             this.feature6.Text = "Feature";
             this.feature6.UseVisualStyleBackColor = true;
             // 
@@ -315,7 +319,7 @@
             this.feature5.Location = new System.Drawing.Point(194, 97);
             this.feature5.Name = "feature5";
             this.feature5.Size = new System.Drawing.Size(100, 34);
-            this.feature5.TabIndex = 4;
+            this.feature5.TabIndex = 12;
             this.feature5.Text = "Feature";
             this.feature5.UseVisualStyleBackColor = true;
             // 
@@ -325,7 +329,7 @@
             this.feature4.Location = new System.Drawing.Point(194, 49);
             this.feature4.Name = "feature4";
             this.feature4.Size = new System.Drawing.Size(100, 34);
-            this.feature4.TabIndex = 3;
+            this.feature4.TabIndex = 9;
             this.feature4.Text = "Feature";
             this.feature4.UseVisualStyleBackColor = true;
             // 
@@ -335,7 +339,7 @@
             this.feature3.Location = new System.Drawing.Point(30, 146);
             this.feature3.Name = "feature3";
             this.feature3.Size = new System.Drawing.Size(100, 34);
-            this.feature3.TabIndex = 2;
+            this.feature3.TabIndex = 14;
             this.feature3.Text = "Feature";
             this.feature3.UseVisualStyleBackColor = true;
             // 
@@ -345,7 +349,7 @@
             this.feature2.Location = new System.Drawing.Point(30, 97);
             this.feature2.Name = "feature2";
             this.feature2.Size = new System.Drawing.Size(100, 34);
-            this.feature2.TabIndex = 1;
+            this.feature2.TabIndex = 11;
             this.feature2.Text = "Feature";
             this.feature2.UseVisualStyleBackColor = true;
             // 
@@ -357,7 +361,7 @@
             this.feature1.Location = new System.Drawing.Point(30, 49);
             this.feature1.Name = "feature1";
             this.feature1.Size = new System.Drawing.Size(100, 34);
-            this.feature1.TabIndex = 0;
+            this.feature1.TabIndex = 9;
             this.feature1.Text = "Feature";
             this.feature1.UseVisualStyleBackColor = true;
             // 
@@ -366,7 +370,7 @@
             this.childName.Location = new System.Drawing.Point(303, 62);
             this.childName.Name = "childName";
             this.childName.Size = new System.Drawing.Size(280, 22);
-            this.childName.TabIndex = 17;
+            this.childName.TabIndex = 0;
             // 
             // childDOBLabel
             // 
@@ -388,14 +392,35 @@
             this.genderLabel.TabIndex = 20;
             this.genderLabel.Text = "Gender:";
             // 
+            // editButton
+            // 
+            this.editButton.AutoSize = true;
+            this.editButton.BackColor = System.Drawing.Color.Transparent;
+            this.editButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.editButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.editButton.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.editButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.editButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.editButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editButton.Font = new System.Drawing.Font("Bebas Neue", 15F);
+            this.editButton.ForeColor = System.Drawing.Color.DimGray;
+            this.editButton.Location = new System.Drawing.Point(639, 316);
+            this.editButton.Name = "editButton";
+            this.editButton.Size = new System.Drawing.Size(248, 44);
+            this.editButton.TabIndex = 18;
+            this.editButton.Text = "Edit";
+            this.editButton.UseVisualStyleBackColor = false;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
+            // 
             // Child
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(220)))), ((int)(((byte)(206)))));
             this.CancelButton = this.backButton;
             this.ClientSize = new System.Drawing.Size(920, 540);
             this.Controls.Add(this.backButton);
+            this.Controls.Add(this.editButton);
             this.Controls.Add(this.childProfilePanel);
             this.HelpButton = true;
             this.Name = "Child";
@@ -441,5 +466,6 @@
         private System.Windows.Forms.RadioButton female;
         private System.Windows.Forms.RadioButton male;
         private System.Windows.Forms.Panel genderPanel;
+        private System.Windows.Forms.Button editButton;
     }
 }

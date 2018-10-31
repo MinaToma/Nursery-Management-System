@@ -59,7 +59,7 @@ namespace Nursery_Management_System
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
             Gender = "Male";
         }
-        public string cString = "Data Source=ADEL;Initial Catalog=Nursery;Integrated Security=True";
+        public string cString = "Data Source=MARIAMS-LAPTOP;Initial Catalog = Nursery; Integrated Security = True";
         string Gender;
         private void saveButton_Click(object sender, EventArgs e)
         {
@@ -81,6 +81,14 @@ namespace Nursery_Management_System
             {
                 MessageBox.Show(except.Message);
             }
+        }
+
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            this.editButton.Visible = false;
+            this.childProfilePanel.Enabled = true;
+            this.importImageButton.Visible = true;
+            this.saveButton.Visible = true;
         }
     }
 }
