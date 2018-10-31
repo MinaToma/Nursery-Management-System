@@ -6,16 +6,18 @@ using System.Threading.Tasks;
 
 namespace Nursery_Management_System
 {
-    class People
+    class Human
     {
         public int id {get;set;}
-        public String name { get; set; }
+        public String firstName { get; set; }
+        public String lastName { get; set; }
+        protected Human() {}
 
-        protected People() {}
-        protected People(int _id , String _name)
+        protected Human(int _id , String _firstName , string _lastName)
         {
             id = _id;
-            name = _name;
+            firstName = _firstName;
+            lastName = lastName;
         }
         
         public String className()

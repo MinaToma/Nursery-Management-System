@@ -89,6 +89,7 @@
             this.Name = "Sign";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nursery Management System - Welcome!";
+            this.Load += new System.EventHandler(this.Sign_Load);
             this.signButtons.ResumeLayout(false);
             this.ResumeLayout(false);
 
