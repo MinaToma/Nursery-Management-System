@@ -130,7 +130,6 @@
     <Compile Include="Admin.cs" />
     <Compile Include="Human.cs" />
     <Compile Include="Address.cs" />
-    <Compile Include="DOB.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -8,18 +8,21 @@ namespace Nursery_Management_System
 {
     class ChildClass : Human
     {
-        public int parentId { get; set; }
-        public int roomId { get; set; }
+        public int parentID { get; set; }
+        public int roomID { get; set; }
         public string gender { get; set; }
-        public DOB dateOfBirt { get; set; }
+        public DateTime DOB { get; set; }
+        public string image { get; set; }
 
-        public ChildClass()
+        public ChildClass() {}
+        public ChildClass(int _id , String _firstName , string _lastName , int _parentID , int _roomID , string _gender , DateTime _DOB , string _image) : 
+            base(_id , _firstName , _lastName)
         {
-            dateOfBirt = new DOB();
-        }
-        public ChildClass(int _id, String _name) : base(_id, _name)
-        {
-            dateOfBirt = new DOB();
+            parentID = _parentID;
+            roomID = _roomID;
+            gender = _gender;
+            DOB = _DOB;
+            image = _image;
         }
     }
 }

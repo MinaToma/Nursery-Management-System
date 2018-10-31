@@ -17,32 +17,28 @@ namespace Nursery_Management_System
     class SQL
 
     {
-        private string Query { set; get; }
-        private SqlConnection connectionDataBase { set; get; }
-        private SqlCommand commandDataBase { set; get; }
-        private SqlDataReader myReader { set; get; }
+        public string Query { set; get; }
+        public SqlConnection connectionDataBase { set; get; }
+        public SqlCommand commandDataBase { set; get; }
+        public SqlDataReader myReader { set; get; }
 
         public SQL()
         {
             connectionDataBase = new SqlConnection(@"Server=DESKTOP-2OGA27F; DataBase=Nursery; Integrated Security=true;");
         }
 
-        private int convert(string name)
-        {
-            int x = Int32.Parse(name);
-            return x;
-        }
-        public void saveChildData(string parentID , string name, string gender, DateTime DOB, string roomID, string picLocation)
+        
+        public void saveChildData(ChildClass child)
         {
             try
             {
                 byte[] img = null;
-
-                FileStream imageLocation = new FileStream(picLocation, FileMode.Open, FileAccess.Read);
+                
+                FileStream imageLocation = new FileStream(child.image , FileMode.Open, FileAccess.Read);
                 BinaryReader imageToBinaryCode = new BinaryReader(imageLocation);
                 img = imageToBinaryCode.ReadBytes((int)imageLocation.Length);
 
-                Query = "insert into Child (childName , parentID , DOB , gender , roomID , image) values (' " + name + " ' , '" + parentID + " '  , ' " + DOB + " ' , '" + gender + " '  ,  ' " + convert(roomID) + " ' ,@img ); ";
+                Query = "insert into Child (childName , parentID , DOB , gender , roomID , image) values (' " + child.firstName + " ' , '" + child.parentID + " '  , ' " + child.DOB + " ' , '" + child.gender + " '  ,  ' " + child.roomID + " ' ,@img ); ";
                 commandDataBase = new SqlCommand(Query, connectionDataBase);
                 commandDataBase.Parameters.Add(new SqlParameter("@img", img));
     
@@ -73,7 +69,6 @@ namespace Nursery_Management_System
                 {
                     if (numOfChild == 0)
                     {
-                        // load img from db
                         byte[] img = (byte[])(myReader["Image"]);
                         if (img == null)
                             Pic.Image = null;
