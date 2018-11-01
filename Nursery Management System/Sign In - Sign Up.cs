@@ -8,7 +8,6 @@ using System.Text;
 using System.Data.SqlClient;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
 
 namespace Nursery_Management_System
 {
@@ -16,12 +15,8 @@ namespace Nursery_Management_System
     {
         public Sign()
         {
-<<<<<<< HEAD
-            InitializeComponent();
-=======
-            InitializeComponent();              
+            InitializeComponent();           
             SQL mSql = new SQL();
->>>>>>> 41aad06b5daeeb277b2f5f9edc51445e02898023
         }
 
         private void signIn_Click(object sender, EventArgs e)
