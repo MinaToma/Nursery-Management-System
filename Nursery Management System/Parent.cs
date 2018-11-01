@@ -6,19 +6,22 @@ using System.Threading.Tasks;
 
 namespace Nursery_Management_System
 {
-    class Parent : People
+    class Parent : Human
     {
-        public long phoneNumber { get; set;}
-        public String creditCard { get; set; }
-        public Address address { get; set; }
+        public string phoneNumber { get; set; }
+        public string email { get; set; }
+        public string address { get; set; }
+        public string creditCard { get; set; }
 
-        public Parent()
+        public Parent() { }
+
+        public Parent(int _id , String _firstName, string _lastName, string _phoneNumber, string _email, string _address , string _creditCard ) :
+            base(_id, _firstName, _lastName)
         {
-            address = new Address();
-        }
-        public Parent(int _id , String _name) : base(_id , _name)
-        {
-            address = new Address();
+            phoneNumber = _phoneNumber;
+            email = _email;
+            address = _address;
+            creditCard = _creditCard;
         }
     }
 }

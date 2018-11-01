@@ -71,8 +71,7 @@ namespace Nursery_Management_System
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            SQL Q = new SQL();
-            Q.saveChildData(new ChildClass( -1 , childName.Text , "parentName" , 1 /*parentID*/ , Int32.Parse(roomNumber.Text)  , Gender , DOBpicker.Value , PicLocation) );
+       
         }
 
         private void childName_TextChanged_1(object sender, EventArgs e)
