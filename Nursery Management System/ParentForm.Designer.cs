@@ -36,16 +36,16 @@
             this.parentNameLabel = new System.Windows.Forms.Label();
             this.backButton = new System.Windows.Forms.Button();
             this.parentProfilePanel = new System.Windows.Forms.Panel();
-            this.creditCardLabel = new System.Windows.Forms.Label();
-            this.creditcard = new System.Windows.Forms.TextBox();
-            this.passwordLabel = new System.Windows.Forms.Label();
-            this.password = new System.Windows.Forms.TextBox();
-            this.addressLabel = new System.Windows.Forms.Label();
-            this.address = new System.Windows.Forms.TextBox();
-            this.phoneNumberLabel = new System.Windows.Forms.Label();
-            this.phoneNumber = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.addChildButton = new System.Windows.Forms.Button();
+            this.phoneNumberLabel = new System.Windows.Forms.Label();
+            this.phoneNumber = new System.Windows.Forms.TextBox();
+            this.addressLabel = new System.Windows.Forms.Label();
+            this.address = new System.Windows.Forms.TextBox();
+            this.passwordLabel = new System.Windows.Forms.Label();
+            this.password = new System.Windows.Forms.TextBox();
+            this.creditCardLabel = new System.Windows.Forms.Label();
+            this.creditcard = new System.Windows.Forms.TextBox();
             this.parentProfilePanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -153,56 +153,30 @@
             this.parentProfilePanel.Size = new System.Drawing.Size(920, 540);
             this.parentProfilePanel.TabIndex = 3;
             // 
-            // creditCardLabel
+            // panel1
             // 
-            this.creditCardLabel.AutoSize = true;
-            this.creditCardLabel.Font = new System.Drawing.Font("Bebas Neue", 15F);
-            this.creditCardLabel.Location = new System.Drawing.Point(166, 251);
-            this.creditCardLabel.Name = "creditCardLabel";
-            this.creditCardLabel.Size = new System.Drawing.Size(115, 30);
-            this.creditCardLabel.TabIndex = 28;
-            this.creditCardLabel.Text = "Credit Card:";
+            this.panel1.Controls.Add(this.addChildButton);
+            this.panel1.Location = new System.Drawing.Point(0, 320);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(633, 212);
+            this.panel1.TabIndex = 36;
             // 
-            // creditcard
+            // addChildButton
             // 
-            this.creditcard.Location = new System.Drawing.Point(305, 251);
-            this.creditcard.Name = "creditcard";
-            this.creditcard.Size = new System.Drawing.Size(280, 22);
-            this.creditcard.TabIndex = 29;
-            // 
-            // passwordLabel
-            // 
-            this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Font = new System.Drawing.Font("Bebas Neue", 15F);
-            this.passwordLabel.Location = new System.Drawing.Point(166, 192);
-            this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(99, 30);
-            this.passwordLabel.TabIndex = 30;
-            this.passwordLabel.Text = "Password:";
-            // 
-            // password
-            // 
-            this.password.Location = new System.Drawing.Point(305, 192);
-            this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(280, 22);
-            this.password.TabIndex = 31;
-            // 
-            // addressLabel
-            // 
-            this.addressLabel.AutoSize = true;
-            this.addressLabel.Font = new System.Drawing.Font("Bebas Neue", 15F);
-            this.addressLabel.Location = new System.Drawing.Point(166, 138);
-            this.addressLabel.Name = "addressLabel";
-            this.addressLabel.Size = new System.Drawing.Size(85, 30);
-            this.addressLabel.TabIndex = 32;
-            this.addressLabel.Text = "Address:";
-            // 
-            // address
-            // 
-            this.address.Location = new System.Drawing.Point(305, 138);
-            this.address.Name = "address";
-            this.address.Size = new System.Drawing.Size(280, 22);
-            this.address.TabIndex = 33;
+            this.addChildButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addChildButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.addChildButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.addChildButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.addChildButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addChildButton.Font = new System.Drawing.Font("Bebas Neue", 13F);
+            this.addChildButton.Image = ((System.Drawing.Image)(resources.GetObject("addChildButton.Image")));
+            this.addChildButton.Location = new System.Drawing.Point(28, 29);
+            this.addChildButton.Name = "addChildButton";
+            this.addChildButton.Size = new System.Drawing.Size(200, 167);
+            this.addChildButton.TabIndex = 37;
+            this.addChildButton.Text = "add child";
+            this.addChildButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.addChildButton.UseVisualStyleBackColor = true;
             // 
             // phoneNumberLabel
             // 
@@ -221,31 +195,56 @@
             this.phoneNumber.Size = new System.Drawing.Size(280, 22);
             this.phoneNumber.TabIndex = 35;
             // 
-            // panel1
+            // addressLabel
             // 
-            this.panel1.Controls.Add(this.addChildButton);
-            this.panel1.Location = new System.Drawing.Point(0, 320);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(633, 212);
-            this.panel1.TabIndex = 36;
+            this.addressLabel.AutoSize = true;
+            this.addressLabel.Font = new System.Drawing.Font("Bebas Neue", 15F);
+            this.addressLabel.Location = new System.Drawing.Point(166, 138);
+            this.addressLabel.Name = "addressLabel";
+            this.addressLabel.Size = new System.Drawing.Size(85, 30);
+            this.addressLabel.TabIndex = 32;
+            this.addressLabel.Text = "Address:";
             // 
-            // addChildButton
+            // address
             // 
-            this.addChildButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addChildButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(234)))), ((int)(((byte)(229)))));
-            this.addChildButton.FlatAppearance.BorderSize = 0;
-            this.addChildButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.addChildButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.addChildButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addChildButton.Font = new System.Drawing.Font("Bebas Neue", 13F);
-            this.addChildButton.Image = ((System.Drawing.Image)(resources.GetObject("addChildButton.Image")));
-            this.addChildButton.Location = new System.Drawing.Point(28, 32);
-            this.addChildButton.Name = "addChildButton";
-            this.addChildButton.Size = new System.Drawing.Size(200, 139);
-            this.addChildButton.TabIndex = 37;
-            this.addChildButton.Text = "add child";
-            this.addChildButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.addChildButton.UseVisualStyleBackColor = true;
+            this.address.Location = new System.Drawing.Point(305, 138);
+            this.address.Name = "address";
+            this.address.Size = new System.Drawing.Size(280, 22);
+            this.address.TabIndex = 33;
+            // 
+            // passwordLabel
+            // 
+            this.passwordLabel.AutoSize = true;
+            this.passwordLabel.Font = new System.Drawing.Font("Bebas Neue", 15F);
+            this.passwordLabel.Location = new System.Drawing.Point(166, 192);
+            this.passwordLabel.Name = "passwordLabel";
+            this.passwordLabel.Size = new System.Drawing.Size(99, 30);
+            this.passwordLabel.TabIndex = 30;
+            this.passwordLabel.Text = "Password:";
+            // 
+            // password
+            // 
+            this.password.Location = new System.Drawing.Point(305, 192);
+            this.password.Name = "password";
+            this.password.Size = new System.Drawing.Size(280, 22);
+            this.password.TabIndex = 31;
+            // 
+            // creditCardLabel
+            // 
+            this.creditCardLabel.AutoSize = true;
+            this.creditCardLabel.Font = new System.Drawing.Font("Bebas Neue", 15F);
+            this.creditCardLabel.Location = new System.Drawing.Point(166, 251);
+            this.creditCardLabel.Name = "creditCardLabel";
+            this.creditCardLabel.Size = new System.Drawing.Size(115, 30);
+            this.creditCardLabel.TabIndex = 28;
+            this.creditCardLabel.Text = "Credit Card:";
+            // 
+            // creditcard
+            // 
+            this.creditcard.Location = new System.Drawing.Point(305, 251);
+            this.creditcard.Name = "creditcard";
+            this.creditcard.Size = new System.Drawing.Size(280, 22);
+            this.creditcard.TabIndex = 29;
             // 
             // ParentForm
             // 
@@ -256,6 +255,7 @@
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.parentProfilePanel);
             this.Name = "ParentForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nursery Management System - Sign Up as Parent";
             this.parentProfilePanel.ResumeLayout(false);
             this.parentProfilePanel.PerformLayout();

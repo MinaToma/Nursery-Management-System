@@ -326,3 +326,6 @@ ASALocalRun/
 
 # Local History for Visual Studio
 .localhistory/
+
+#photothumb.db
+*.db
