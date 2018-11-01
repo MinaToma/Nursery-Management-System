@@ -15,88 +15,59 @@ using System.Drawing.Imaging;
 namespace Nursery_Management_System
 {
     class SQL
-
     {
-        public string Query { set; get; }
-        public SqlConnection connectionDataBase { set; get; }
-        public SqlCommand commandDataBase { set; get; }
-        public SqlDataReader myReader { set; get; }
+        private SqlConnection mConnection;
+        public SqlCommand mCommand;
+        public SqlDataReader mReader;
+        private SqlDataAdapter mAdapter;
 
         public SQL()
         {
-            connectionDataBase = new SqlConnection(@"Server=DESKTOP-2OGA27F; DataBase=Nursery; Integrated Security=true;");
+            mConnection = new SqlConnection(@"Server=DESKTOP-2OGA27F; DataBase=Nursery; Integrated Security=true;");
         }
 
+        public DataTable retrieveQuery(string query)
+        {
+            DataTable mDataTable = new DataTable();
+            try
+            {
+                mCommand = new SqlCommand(query, mConnection);
+                mConnection.Open();
+                mAdapter = new SqlDataAdapter(mCommand);
+                mAdapter.Fill(mDataTable);
+            }
+            catch
+            {
+                MessageBox.Show("There was an error while connecting to data base , please check your connection and try again", "Sql Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                mConnection.Close();
+                mAdapter.Dispose();
+            }
+
+            return mDataTable ;
+        }
         
-        public void saveChildData(ChildClass child)
+        public void insertQuery(SqlCommand command)
         {
+            mCommand = command;
+            mCommand.Connection = mConnection;
             try
             {
-                byte[] img = null;
-                
-                FileStream imageLocation = new FileStream(child.image , FileMode.Open, FileAccess.Read);
-                BinaryReader imageToBinaryCode = new BinaryReader(imageLocation);
-                img = imageToBinaryCode.ReadBytes((int)imageLocation.Length);
-
-                Query = "insert into Child (childName , parentID , DOB , gender , roomID , image) values (' " + child.firstName + " ' , '" + child.parentID + " '  , ' " + child.DOB + " ' , '" + child.gender + " '  ,  ' " + child.roomID + " ' ,@img ); ";
-                commandDataBase = new SqlCommand(Query, connectionDataBase);
-                commandDataBase.Parameters.Add(new SqlParameter("@img", img));
-    
-                connectionDataBase.Open();
-                commandDataBase.ExecuteReader();
-                
-                MessageBox.Show("Information saved successfully !");
+                mConnection.Open();
+                mCommand.ExecuteNonQuery();
             }
             catch
             {
-                MessageBox.Show("Data Not Saved", "Error"  , MessageBoxButtons.OK , MessageBoxIcon.Error);
+                
+                MessageBox.Show("There was an error while connecting to data base , please check your connection and try again", "Sql Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
-                connectionDataBase.Close();
+                mConnection.Close();
             }
+            return;
         }
-        public void laodChildData(ref PictureBox Pic , ref TextBox name, ref TextBox room, int ParentID, int numOfChild)
-        {
-            try
-            {
-                Query = "Select * from Child where ParentID='" + ParentID + "'   ";
-                commandDataBase = new SqlCommand(Query, connectionDataBase);
-                connectionDataBase.Open();
-
-                myReader = commandDataBase.ExecuteReader();
-                while (myReader.Read())
-                {
-                    if (numOfChild == 0)
-                    {
-                        byte[] img = (byte[])(myReader["Image"]);
-                        if (img == null)
-                            Pic.Image = null;
-                        else
-                        {
-                            MemoryStream ms = new MemoryStream(img);
-                            Pic.Image = Image.FromStream(ms);
-                            Pic.SizeMode = PictureBoxSizeMode.StretchImage;
-                        }
-                    }
-                    name.Text = myReader["Name"].ToString();
-                    room.Text = myReader["RoomID"].ToString();
-
-                    numOfChild--;
-                }
-            }
-            catch
-            {
-                MessageBox.Show("ERROR!");
-            }
-            finally
-            {
-                connectionDataBase.Close();
-
-            }
-
-
-        }
-
     }
 }
