@@ -68,6 +68,8 @@ namespace Nursery_Management_System
             Gender = "Male";
         }
 
+        //string Gender;
+        public string cString = "Data Source=MARIAMS-LAPTOP;Initial Catalog = Nursery; Integrated Security = True";
 
         private void saveButton_Click(object sender, EventArgs e)
         {
@@ -88,6 +90,14 @@ namespace Nursery_Management_System
         {
             ImageRead img = new ImageRead();
             PicLocation = img.PICc(ref PicBox);
+        }
+
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            this.editButton.Visible = false;
+            this.childProfilePanel.Enabled = true;
+            this.importImageButton.Visible = true;
+            this.saveButton.Visible = true;
         }
     }
 }

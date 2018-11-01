@@ -16,7 +16,12 @@ namespace Nursery_Management_System
     {
         public Sign()
         {
+<<<<<<< HEAD
             InitializeComponent();
+=======
+            InitializeComponent();              
+            SQL mSql = new SQL();
+>>>>>>> 41aad06b5daeeb277b2f5f9edc51445e02898023
         }
 
         private void signIn_Click(object sender, EventArgs e)
@@ -27,6 +32,11 @@ namespace Nursery_Management_System
         }
 
         private void signUpButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Sign_Load(object sender, EventArgs e)
         {
 
         }
