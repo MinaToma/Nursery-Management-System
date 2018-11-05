@@ -50,15 +50,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChildClass.cs" />
-    <Compile Include="Child.cs">
+    <Compile Include="Child.cs" />
+    <Compile Include="ChildForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Child.Designer.cs">
-      <DependentUpon>Child.cs</DependentUpon>
+    <Compile Include="ChildForm.Designer.cs">
+      <DependentUpon>ChildForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Child.resx">
-      <DependentUpon>Child.cs</DependentUpon>
+    <EmbeddedResource Include="ChildForm.resx">
+      <DependentUpon>ChildForm.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="ImageRead.cs" />
     <Compile Include="Parent Logged In.cs">

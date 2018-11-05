@@ -18,7 +18,7 @@ namespace Nursery_Management_System
             Application.EnableVisualStyles();
             //Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(/*new Sign()*/ signForm);
-            Application.Run(new ParentForm());
+            Application.Run(new ChildForm());
         }
     }
 }
