@@ -12,13 +12,16 @@ namespace Nursery_Management_System
     {
         public SQLQuery() { }
 
-
+        /****************  USER AUTHENTICATION  ****************/
 
         public void serachForUser(string name , string password)
         {
 
         }
 
+        /****************  INSERTING DATA INTO DATABASE  ****************/
+
+        //child data insertion
         public void insertChildData(Child child)
         {
             SQL mSQL = new SQL();
@@ -37,6 +40,7 @@ namespace Nursery_Management_System
             return;
         }
 
+        //parent data insertion
         public void insertParentData(Parent parent)
         {
             SQL mSQL = new SQL();
@@ -55,6 +59,8 @@ namespace Nursery_Management_System
 
             return;
         }
+
+        //staff data insertion
         public void insertStaffData(Staff staff, string department)
         {
             SQL mSQL = new SQL();
@@ -73,6 +79,8 @@ namespace Nursery_Management_System
 
             return;
         }
+
+        //room data insertion
         public void insertRoomData(Room room)
         {
             SQL mSQL = new SQL();
@@ -89,8 +97,7 @@ namespace Nursery_Management_System
             return;
         }
 
-
-
+        /****************  RETRIEVING CHILD DATA FROM DATABASE  ****************/
 
         private LinkedList<Child> getChild(string query)
         {
@@ -119,41 +126,42 @@ namespace Nursery_Management_System
             return child;
         }
 
-        public LinkedList<Child> getChildByID(int id)
-        {
-            string query = "";
-            return getChild(query);
-        }
-
+        //uses specific query to select all children from database
         public LinkedList<Child> getAllChildren()
         {
             string query = "";
             return getChild(query);
         }
 
+        //uses specific query to select child by ID from database
+        public LinkedList<Child> getChildByID(int id)
+        {
+            string query = "";
+            return getChild(query);
+        }
+
+        //uses specific query to select child by parent's ID from database
         public LinkedList<Child> getChildByParentID(int id)
         {
             string query = "";
             return getChild(query);
         }
 
+        //uses specific query to select child by room's ID from database
         public LinkedList<Child> getChildByRoomID(int id)
         {
             string query = "";
             return getChild(query);
         }
 
+        //uses specific query to select pending child by parent's ID from database
         public LinkedList<Child> getPendingChildByParentID(int id)
         {
             string query = "";
             return getChild(query);
         }
 
-
-
-
-
-
+        /****************  RETRIEVING PARENT DATA FROM DATABASE  ****************/
 
         private LinkedList<Parent> getParent(string query)
         {
@@ -182,27 +190,28 @@ namespace Nursery_Management_System
             return parent;
         }
 
+        //uses specific query to select all parents from database
         public LinkedList<Parent> getAllParent()
         {
             string query = "";
             return getParent(query);
         }
 
+        //uses specific query to select parent by ID from database
         public LinkedList<Parent> getParentByID(int id)
         {
             string query = "";
             return getParent(query);
         }
 
+        //uses specific query to select pending parents from database
         public LinkedList<Parent> getPendingParent()
         {
             string query = "";
             return getParent(query);
         }
 
-    
-
-        
+        /****************  RETRIEVING STAFF DATA FROM DATABASE  ****************/
 
         private LinkedList<Staff> getStaff(string query)
         {
@@ -231,42 +240,42 @@ namespace Nursery_Management_System
             return staff;
         }
 
-        public LinkedList<Staff> getStaffByID(int id)
-        {
-            string query = "";
-            return getStaff(query);
-        }
-
+        //uses specific query to select all staff members from database
         public LinkedList<Staff> getAllStaff()
         {
             string query = "";
             return getStaff(query);
         }
 
-        public LinkedList<Staff> getPendingStaff()
-        {
-            string query = "";
-            return getStaff(query);
-        }
-
+        //uses specific query to select staff member type from database (admin, staff)
         public LinkedList<Staff> getStaffByType(string type)
         {
             string query = "";
             return getStaff(query);
         }
 
+        //uses specific query to select staff member by ID from database
+        public LinkedList<Staff> getStaffByID(int id)
+        {
+            string query = "";
+            return getStaff(query);
+        }
+
+        //uses specific query to select staff member by room ID from database
         public LinkedList<Staff> getStaffByRoomID(int id)
         {
             string query = "";
             return getStaff(query);
         }
 
+        //uses specific query to select pending staff member requests from database
+        public LinkedList<Staff> getPendingStaff()
+        {
+            string query = "";
+            return getStaff(query);
+        }
 
-
-
-
-
-
+        /****************  RETRIEVING ROOM DATA FROM DATABASE  ****************/
 
         private LinkedList<Room> getRoom(string query)
         {
@@ -289,28 +298,28 @@ namespace Nursery_Management_System
             return room;
         }
 
-        public LinkedList<Room> getRoomByID(int id)
-        {
-            string query = "";
-            return getRoom(query);
-        }
-
+        //uses specific query to select all rooms from database
         public LinkedList<Room> getAllRooms()
         {
             string query = "";
             return getRoom(query);
         }
 
+        //uses specific query to select room by ID from database
+        public LinkedList<Room> getRoomByID(int id)
+        {
+            string query = "";
+            return getRoom(query);
+        }
+
+        //uses specific query to select room by staff member's ID from database
         public LinkedList<Room> getRoomByStaffID(int id)
         {
             string query = "";
             return getRoom(query);
         }
 
-
-
-
-
+        /****************  UPDATING ROOM DATA FROM DATABASE  ****************/
 
         public void updateChildData(Child child)
         {
