@@ -30,14 +30,20 @@ namespace Nursery_Management_System
             if (type == "Parent")
             {
                 Program.globalParent = getParentByID(id).ElementAt(0);
+                if (Program.globalParent.pending == 1)
+                    return false;
             }
             else if (type == "Staff")
             {
                 Program.globalStaff = getStaffByID(id).ElementAt(0);
+                if (Program.globalStaff.pending == 1)
+                    return false;
             }
             else if(type == "Admin")
             {
                 Program.globalAdmin = (Admin)getStaffByID(id).ElementAt(0);
+                if (Program.globalAdmin.pending == 1)
+                    return false;
             }
 
             return true;
@@ -122,6 +128,21 @@ namespace Nursery_Management_System
             mSQL.insertQuery(mCommand);
 
             return;
+        }
+
+        //insert User
+        public void insertUser(string name , string password , string type , int id)
+        {
+            SQL mSQL = new SQL();
+            SqlCommand mCommand = new SqlCommand("insertUser");
+            mCommand.CommandType = CommandType.StoredProcedure;
+
+            mCommand.Parameters.AddWithValue("@userName", name);
+            mCommand.Parameters.AddWithValue("@userPassword", password);
+            mCommand.Parameters.AddWithValue("@userId", id);
+            mCommand.Parameters.AddWithValue("@userType", type);
+
+            mSQL.insertQuery(mCommand);
         }
 
         /****************  RETRIEVING CHILD DATA FROM DATABASE  ****************/
@@ -428,7 +449,6 @@ namespace Nursery_Management_System
 
             return;
         }
-
 
         /****************  DELETING DATA FROM DATABASE  ****************/
 
