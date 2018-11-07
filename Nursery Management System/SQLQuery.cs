@@ -34,6 +34,7 @@ namespace Nursery_Management_System
             mCommand.Parameters.AddWithValue("@gender", child.gender);
             mCommand.Parameters.AddWithValue("@picture", child.image);
             mCommand.Parameters.AddWithValue("@roomID", child.roomID);
+            mCommand.Parameters.AddWithValue("@childPending", child.pending);
 
             mSQL.insertQuery(mCommand);
 
@@ -54,6 +55,7 @@ namespace Nursery_Management_System
             mCommand.Parameters.AddWithValue("@parentPhoneNumber", parent.phoneNumber);
             mCommand.Parameters.AddWithValue("@parentCreditCard", parent.creditCard);
             mCommand.Parameters.AddWithValue("@parentEmail", parent.email);
+            mCommand.Parameters.AddWithValue("@parentPending", parent.pending);
 
             mSQL.insertQuery(mCommand);
 
@@ -74,6 +76,7 @@ namespace Nursery_Management_System
             mCommand.Parameters.AddWithValue("@staffEmail", staff.email);
             mCommand.Parameters.AddWithValue("@staffSalary", staff.salary);
             mCommand.Parameters.AddWithValue("@staffType", department);
+            mCommand.Parameters.AddWithValue("@staffPending", staff.pending);
 
             mSQL.insertQuery(mCommand);
 
@@ -329,6 +332,7 @@ namespace Nursery_Management_System
 
         public void updateChildData(Child child)
         {
+            
 
         }
 
@@ -345,9 +349,6 @@ namespace Nursery_Management_System
         {
 
         }
-
-
-
 
         private void delete()
         {
@@ -379,6 +380,5 @@ namespace Nursery_Management_System
             SQL mSql = new SQL();
             mSql.deleteQuery(query);
         }      
-
      }
 }
