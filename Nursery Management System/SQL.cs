@@ -46,7 +46,7 @@ namespace Nursery_Management_System
                 mAdapter.Dispose();
             }
 
-            return mDataTable ;
+            return mDataTable;
         }
         
         public void insertQuery(SqlCommand command)
@@ -59,8 +59,7 @@ namespace Nursery_Management_System
                 mCommand.ExecuteNonQuery();
             }
             catch
-            {
-                
+            {   
                 MessageBox.Show("There was an error while connecting to data base , please check your connection and try again", "Sql Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
@@ -88,6 +87,26 @@ namespace Nursery_Management_System
             {
                 mConnection.Close();
             }
+            return;
+        }
+
+        public void deleteQuery(string query)
+        {
+            try
+            {
+                mCommand = new SqlCommand(query, mConnection);
+                mConnection.Open();
+                mCommand.ExecuteNonQuery();
+            }
+            catch
+            {
+                MessageBox.Show("There was an error while connecting to data base , please check your connection and try again", "Sql Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                mConnection.Close();
+            }
+
             return;
         }
     }

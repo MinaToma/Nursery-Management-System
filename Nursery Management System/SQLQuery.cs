@@ -11,11 +11,11 @@ namespace Nursery_Management_System
     class SQLQuery
     {
         public SQLQuery() { }
-        /*
+
         public void insertChildData(Child child)
         {
             SQL mSQL = new SQL();
-            SqlCommand mCommand = new SqlCommand("insertChildData");    
+            SqlCommand mCommand = new SqlCommand("insertChildData");
             mCommand.CommandType = CommandType.StoredProcedure;
 
             mCommand.Parameters.AddWithValue("@childName", child.firstName);
@@ -28,11 +28,11 @@ namespace Nursery_Management_System
             mSQL.insertQuery(mCommand);
 
             return;
-        }*/
+        }
 
         public void retrieveChildData()
         {
-            
+
         }
 
         public void insertParentData(Parent parent)
@@ -54,7 +54,7 @@ namespace Nursery_Management_System
             return;
         }
 
-        public void insertStaffData(Staff staff , int department)
+        public void insertStaffData(Staff staff, int department)
         {
             SQL mSQL = new SQL();
             SqlCommand mCommand = new SqlCommand("insertStaffData");
@@ -102,7 +102,7 @@ namespace Nursery_Management_System
             mCommand.CommandType = CommandType.StoredProcedure;
 
             mCommand.Parameters.AddWithValue("@roomNumber", room.number);
-            if(room.staffID == -1)
+            if (room.staffID == -1)
                 mCommand.Parameters.AddWithValue("@roomStaffID", DBNull.Value);
             else
                 mCommand.Parameters.AddWithValue("@roomStaffID", room.staffID);
