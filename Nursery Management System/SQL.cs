@@ -105,7 +105,6 @@ namespace Nursery_Management_System
             finally
             {
                 mConnection.Close();
-                mAdapter.Dispose();
             }
 
             return;
