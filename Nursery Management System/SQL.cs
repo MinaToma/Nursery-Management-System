@@ -19,7 +19,7 @@ namespace Nursery_Management_System
     {
         private Server server  = new Server();
         private SqlConnection mConnection;
-        public SqlCommand mCommand;
+        public SqlCommand mCommand; 
         private SqlDataAdapter mAdapter;
 
         public SQL()
