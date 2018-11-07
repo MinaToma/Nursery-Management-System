@@ -67,7 +67,7 @@ namespace Nursery_Management_System
 
             return;
         }
-
+    
         public void insertRoomData(Room room)
         {
             SQL mSQL = new SQL();
@@ -84,127 +84,86 @@ namespace Nursery_Management_System
             return;
         }
 
-        /*public LinkedList<Child> getChildByID(string query)
+        public LinkedList<Child> getChild(string query)
         {
             SQL sql = new SQL();
 
             DataTable dt = new DataTable();
             dt = sql.retrieveQuery(query);
 
-
-            LinkedList<ChildClass> ccc = new LinkedList<ChildClass>();
+            LinkedList<Child> child = new LinkedList<Child>();
             foreach(DataRow dr in dt.Rows)
             {
-                ChildClass cs = new ChildClass();
-                
-                fillAll Data of cs from dt;
+                Child currentChild = new Child();
 
-                ccc.AddAfter(cs);
+                currentChild.id = Convert.ToInt32(dr["childID"].ToString());
+                currentChild.firstName = dr["childName"].ToString();
+                currentChild.parentID = Convert.ToInt32(dr["parentID"].ToString());
+                currentChild.DOB = Convert.ToDateTime(dr["DOB"].ToString());
+                currentChild.gender = dr["gender"].ToString();
+                currentChild.roomID = Convert.ToInt32(dr["roomID"].ToString());
+                currentChild.image = dr["picture"].ToString();
+                currentChild.pending = Convert.ToInt32(dr["childIsPending"].ToString());   
+
+                child.AddLast(currentChild);
             }
             
-            return ccc;
-        }*/
-
-        public LinkedList<Child> getChildByParentID(string query)
-        {
-            LinkedList<Child> child = new LinkedList<Child>();
             return child;
         }
 
-        public LinkedList<Child> getChildByRoomID(string query)
-        {
-            LinkedList<Child> child = new LinkedList<Child>();
-            return child;
-        }
-
-        public LinkedList<Child> getPendingChildByParentID(string query)
-        {
-            LinkedList<Child> child = new LinkedList<Child>();
-            return child;
-        }
-
-        public LinkedList<Parent> getParentByID(string query)
+        public LinkedList<Parent> getParent(string query)
         {
             LinkedList<Parent> parent = new LinkedList<Parent>();
             return parent;
         }
 
-        public LinkedList<Parent> getPendingParent(string query)
-        {
-            LinkedList<Parent> parent = new LinkedList<Parent>();
-            return parent;
-        }
-
-        public LinkedList<Staff> getStaffByID(string query)
+        public LinkedList<Staff> getStaff(string query)
         {
             LinkedList<Staff> staff = new LinkedList<Staff>();
             return staff;
         }
-
-        public LinkedList<Staff> getPendingStaff(string query)
-        {
-            LinkedList<Staff> staff = new LinkedList<Staff>();
-            return staff;
-        }
-
-        public LinkedList<Staff> getStaffByType(string query)
-        {
-            LinkedList<Staff> staff = new LinkedList<Staff>();
-            return staff;
-        }
-
-        public LinkedList<Staff> getStaffByRoomID(string query)
-        {
-            LinkedList<Staff> staff = new LinkedList<Staff>();
-            return staff;
-        }
-
-        public LinkedList<Room> getRoomByID(string query)
+     
+        public LinkedList<Room> getRoom(string query)
         {
             LinkedList<Room> room = new LinkedList<Room>();
             return room;
         }
 
-        public LinkedList<Room> getRoomByStaffID(string query)
-        {
-            LinkedList<Room> room = new LinkedList<Room>();
-            return room;
-        }
-
-        public void updateChildData()
+        public void updateChildData(Child child)
         {
 
         }
 
-        public void updateParentData()
+        public void updateParentData(Parent parent)
         {
 
         }
 
-        public void updateStaffData()
+        public void updateStaffData(Staff staff)
         {
             
         }
-        public void updateRoomData()
+        public void updateRoomData(Room room)
         {
 
         }
 
-        public void deleteChildData()
+        public void deleteChildData(string query)
         {
 
         }
 
-        public void deleteParentData()
+        public void deleteParentData(string query)
         {
 
         }
 
-        public void deleteStaffData()
+        public void deleteStaffData(string query)
         {
 
         }
-        public void deleteRoomData()
+
+        public void deleteRoomData(string query)
         {
 
         }
