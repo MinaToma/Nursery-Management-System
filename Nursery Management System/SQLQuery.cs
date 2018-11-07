@@ -328,7 +328,7 @@ namespace Nursery_Management_System
             return getRoom(query);
         }
 
-        /****************  UPDATING ROOM DATA FROM DATABASE  ****************/
+        /****************  UPDATING DATA FROM DATABASE  ****************/
 
         public void updateChildData(Child child)
         {
@@ -351,6 +351,7 @@ namespace Nursery_Management_System
         }
 
 
+        /****************  DELETING DATA FROM DATABASE  ****************/
 
 
         private void deleteUser(string query)
