@@ -11,14 +11,16 @@ namespace Nursery_Management_System
         public string phoneNumber { get; set; }
         public String email { get; set; }
         public double salary { get; set; }
+        public string type { get; set; }
 
         public Staff() { }
-        public Staff(int _id, String _firstName , string _lastName , string _phoneNumber , string _email , double _salary , int _pending) :
+        public Staff(int _id, string _firstName , string _lastName , string _phoneNumber , string _email , double _salary , int _pending , string _type) :
             base(_id , _firstName , _lastName , _pending)
         {
             phoneNumber = _phoneNumber;
             email = _email;
             salary = _salary;
+            type = _type;
         }
 
 

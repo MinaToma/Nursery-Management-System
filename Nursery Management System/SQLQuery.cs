@@ -113,13 +113,55 @@ namespace Nursery_Management_System
 
         public LinkedList<Parent> getParent(string query)
         {
+            SQL sql = new SQL();
+
+            DataTable dt = new DataTable();
+            dt = sql.retrieveQuery(query);
+
             LinkedList<Parent> parent = new LinkedList<Parent>();
+            foreach (DataRow dr in dt.Rows)
+            {
+                Parent currentParent = new Parent();
+
+                currentParent.id = Convert.ToInt32(dr["parentID"].ToString());
+                currentParent.firstName = dr["parentFirstName"].ToString();
+                currentParent.lastName = dr["parentLastName"].ToString();
+                currentParent.address = dr["parentAddress"].ToString();
+                currentParent.phoneNumber = dr["parentPhoneNumber"].ToString();
+                currentParent.creditCard = dr["parentCreditCard"].ToString();
+                currentParent.email = dr["parentEmail"].ToString();
+                currentParent.pending = Convert.ToInt32(dr["parentIsPending"].ToString());
+
+                parent.AddLast(currentParent);
+            }
+            
             return parent;
         }
 
         public LinkedList<Staff> getStaff(string query)
         {
+            SQL sql = new SQL();
+
+            DataTable dt = new DataTable();
+            dt = sql.retrieveQuery(query);
+
             LinkedList<Staff> staff = new LinkedList<Staff>();
+            foreach (DataRow dr in dt.Rows)
+            {
+                Staff currentStaff = new Staff();
+
+                currentStaff.id = Convert.ToInt32(dr["staffID"].ToString());
+                currentStaff.firstName = dr["staffFirstName"].ToString();
+                currentStaff.lastName = dr["staffLastName"].ToString();
+                currentStaff.phoneNumber = dr["staffPhoneNumber"].ToString();
+                currentStaff.email = dr["staffEmail"].ToString();
+                currentStaff.salary = Convert.ToDouble(dr["staffSalary"].ToString());
+                currentStaff.type = dr["staffType"].ToString();
+                currentStaff.pending = Convert.ToInt32(dr["staffIsPending"].ToString());
+
+                staff.AddLast(currentStaff);
+            }
+            
             return staff;
         }
      
