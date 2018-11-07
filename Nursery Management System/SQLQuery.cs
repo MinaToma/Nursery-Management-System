@@ -30,14 +30,20 @@ namespace Nursery_Management_System
             if (type == "Parent")
             {
                 Program.globalParent = getParentByID(id).ElementAt(0);
+                if (Program.globalParent.pending == 1)
+                    return false;
             }
             else if (type == "Staff")
             {
                 Program.globalStaff = getStaffByID(id).ElementAt(0);
+                if (Program.globalStaff.pending == 1)
+                    return false;
             }
             else if(type == "Admin")
             {
                 Program.globalAdmin = (Admin)getStaffByID(id).ElementAt(0);
+                if (Program.globalAdmin.pending == 1)
+                    return false;
             }
 
             return true;
