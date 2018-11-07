@@ -32,7 +32,7 @@
             this.parentProfileButton = new System.Windows.Forms.Button();
             this.childrenButton = new System.Windows.Forms.Button();
             this.parentFeedbackButton = new System.Windows.Forms.Button();
-            this.settingsButton = new System.Windows.Forms.Button();
+            this.signOutButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // parentProfileButton
@@ -80,28 +80,28 @@
             this.parentFeedbackButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.parentFeedbackButton.UseVisualStyleBackColor = false;
             // 
-            // settingsButton
+            // signOutButton
             // 
-            this.settingsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(201)))), ((int)(((byte)(204)))));
-            this.settingsButton.FlatAppearance.BorderSize = 0;
-            this.settingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.settingsButton.Font = new System.Drawing.Font("Bebas Neue", 15F);
-            this.settingsButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.settingsButton.Image = ((System.Drawing.Image)(resources.GetObject("settingsButton.Image")));
-            this.settingsButton.Location = new System.Drawing.Point(459, 270);
-            this.settingsButton.Name = "settingsButton";
-            this.settingsButton.Size = new System.Drawing.Size(460, 270);
-            this.settingsButton.TabIndex = 3;
-            this.settingsButton.Text = "Settings";
-            this.settingsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.settingsButton.UseVisualStyleBackColor = false;
+            this.signOutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(201)))), ((int)(((byte)(204)))));
+            this.signOutButton.FlatAppearance.BorderSize = 0;
+            this.signOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.signOutButton.Font = new System.Drawing.Font("Bebas Neue", 15F);
+            this.signOutButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.signOutButton.Image = ((System.Drawing.Image)(resources.GetObject("signOutButton.Image")));
+            this.signOutButton.Location = new System.Drawing.Point(459, 270);
+            this.signOutButton.Name = "signOutButton";
+            this.signOutButton.Size = new System.Drawing.Size(460, 270);
+            this.signOutButton.TabIndex = 3;
+            this.signOutButton.Text = "Sign Out";
+            this.signOutButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.signOutButton.UseVisualStyleBackColor = false;
             // 
             // parentLoggedIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(920, 540);
-            this.Controls.Add(this.settingsButton);
+            this.Controls.Add(this.signOutButton);
             this.Controls.Add(this.parentFeedbackButton);
             this.Controls.Add(this.childrenButton);
             this.Controls.Add(this.parentProfileButton);
@@ -118,6 +118,6 @@
         private System.Windows.Forms.Button parentProfileButton;
         private System.Windows.Forms.Button childrenButton;
         private System.Windows.Forms.Button parentFeedbackButton;
-        private System.Windows.Forms.Button settingsButton;
+        private System.Windows.Forms.Button signOutButton;
     }
 }

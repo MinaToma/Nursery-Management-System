@@ -1,6 +1,6 @@
 ﻿namespace Nursery_Management_System
 {
-    partial class Child
+    partial class ChildForm
     {
         /// <summary>
         /// Required designer variable.

@@ -15,9 +15,13 @@ namespace Nursery_Management_System
     {
         public Sign()
         {
+<<<<<<< HEAD
             InitializeComponent();
 
             InitializeComponent();              
+=======
+            InitializeComponent();           
+>>>>>>> d432d16c1edd303b8c99d4af3178c065e9de8102
             SQL mSql = new SQL();
         }
 

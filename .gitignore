@@ -328,4 +328,4 @@ ASALocalRun/
 .localhistory/
 
 #photothumb.db
-*.db
+images/*.db

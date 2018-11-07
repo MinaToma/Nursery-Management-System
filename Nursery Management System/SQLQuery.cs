@@ -11,8 +11,13 @@ namespace Nursery_Management_System
     class SQLQuery
     {
         public SQLQuery() { }
+<<<<<<< HEAD
 
         public void insertChildData(ChildClass child)
+=======
+        
+        public void insertChildData(Child child)
+>>>>>>> d432d16c1edd303b8c99d4af3178c065e9de8102
         {
             SQL mSQL = new SQL();
             SqlCommand mCommand = new SqlCommand("insertChildData");    
