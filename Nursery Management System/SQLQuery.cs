@@ -124,6 +124,21 @@ namespace Nursery_Management_System
             return;
         }
 
+        //insert User
+        public void insertUser(string name , string password , string type , int id)
+        {
+            SQL mSQL = new SQL();
+            SqlCommand mCommand = new SqlCommand("insertUser");
+            mCommand.CommandType = CommandType.StoredProcedure;
+
+            mCommand.Parameters.AddWithValue("@userName", name);
+            mCommand.Parameters.AddWithValue("@userPassword", password);
+            mCommand.Parameters.AddWithValue("@userId", id);
+            mCommand.Parameters.AddWithValue("@userType", type);
+
+            mSQL.insertQuery(mCommand);
+        }
+
         /****************  RETRIEVING CHILD DATA FROM DATABASE  ****************/
 
         private LinkedList<Child> getChild(string query)
@@ -428,7 +443,6 @@ namespace Nursery_Management_System
 
             return;
         }
-
 
         /****************  DELETING DATA FROM DATABASE  ****************/
 
