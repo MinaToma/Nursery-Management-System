@@ -356,27 +356,81 @@ namespace Nursery_Management_System
 
         public void updateChildData(Child child)
         {
-            
+            SQL mSQL = new SQL();
+            SqlCommand mCommand = new SqlCommand("updateChildData");
+            mCommand.CommandType = CommandType.StoredProcedure;
 
+            mCommand.Parameters.AddWithValue("@childName", child.firstName);
+            mCommand.Parameters.AddWithValue("@parentID", child.parentID);
+            mCommand.Parameters.AddWithValue("@DOB", child.DOB);
+            mCommand.Parameters.AddWithValue("@gender", child.gender);
+            mCommand.Parameters.AddWithValue("@picture", child.image);
+            mCommand.Parameters.AddWithValue("@roomID", child.roomID);
+            mCommand.Parameters.AddWithValue("@childPending", child.pending);
+
+            mSQL.insertQuery(mCommand);
+
+            return;
         }
 
         public void updateParentData(Parent parent)
         {
+            SQL mSQL = new SQL();
+            SqlCommand mCommand = new SqlCommand("updateParentData");
+            mCommand.CommandType = CommandType.StoredProcedure;
 
+            mCommand.Parameters.AddWithValue("@parentID", parent.id);
+            mCommand.Parameters.AddWithValue("@parentFirstName", parent.firstName);
+            mCommand.Parameters.AddWithValue("@parentLastName", parent.lastName);
+            mCommand.Parameters.AddWithValue("@parentAddress", parent.address);
+            mCommand.Parameters.AddWithValue("@parentPhoneNumber", parent.phoneNumber);
+            mCommand.Parameters.AddWithValue("@parentCreditCard", parent.creditCard);
+            mCommand.Parameters.AddWithValue("@parentEmail", parent.email);
+            mCommand.Parameters.AddWithValue("@parentPending", parent.pending);
+
+            mSQL.insertQuery(mCommand);
+
+            return;
         }
 
         public void updateStaffData(Staff staff)
         {
-            
+            SQL mSQL = new SQL();
+            SqlCommand mCommand = new SqlCommand("updateStaffData");
+            mCommand.CommandType = CommandType.StoredProcedure;
+
+            mCommand.Parameters.AddWithValue("@staffID", staff.id);
+            mCommand.Parameters.AddWithValue("@staffFirstName", staff.firstName);
+            mCommand.Parameters.AddWithValue("@staffLasttName", staff.lastName);
+            mCommand.Parameters.AddWithValue("@staffPhoneNumber", staff.phoneNumber);
+            mCommand.Parameters.AddWithValue("@staffEmail", staff.email);
+            mCommand.Parameters.AddWithValue("@staffSalary", staff.salary);
+            mCommand.Parameters.AddWithValue("@staffType", staff.type);
+            mCommand.Parameters.AddWithValue("@staffPending", staff.pending);
+
+            mSQL.insertQuery(mCommand);
+
+            return;
         }
+
         public void updateRoomData(Room room)
         {
+            SQL mSQL = new SQL();
+            SqlCommand mCommand = new SqlCommand("updateRoomData");
+            mCommand.CommandType = CommandType.StoredProcedure;
 
+            mCommand.Parameters.AddWithValue("@roomNumber", room.number);
+            if (room.staffID == -1)
+                mCommand.Parameters.AddWithValue("@roomStaffID", DBNull.Value);
+            else
+                mCommand.Parameters.AddWithValue("@roomStaffID", room.staffID);
+            mSQL.insertQuery(mCommand);
+
+            return;
         }
 
 
         /****************  DELETING DATA FROM DATABASE  ****************/
-
 
         private void deleteUser(string query)
         {
