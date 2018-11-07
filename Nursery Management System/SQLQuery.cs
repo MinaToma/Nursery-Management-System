@@ -129,35 +129,35 @@ namespace Nursery_Management_System
         //uses specific query to select all children from database
         public LinkedList<Child> getAllChildren()
         {
-            string query = "";
+            string query = "select * from Child";
             return getChild(query);
         }
 
         //uses specific query to select child by ID from database
         public LinkedList<Child> getChildByID(int id)
         {
-            string query = "";
+            string query = "select * from Child where childID = " + Convert.ToString(id);
             return getChild(query);
         }
 
         //uses specific query to select child by parent's ID from database
         public LinkedList<Child> getChildByParentID(int id)
         {
-            string query = "";
+            string query = "select * from Child where parentID = " + Convert.ToString(id);   
             return getChild(query);
         }
 
         //uses specific query to select child by room's ID from database
         public LinkedList<Child> getChildByRoomID(int id)
         {
-            string query = "";
+            string query = "select * from Child where roomID = " + Convert.ToString(id);
             return getChild(query);
         }
 
         //uses specific query to select pending child by parent's ID from database
         public LinkedList<Child> getPendingChildByParentID(int id)
         {
-            string query = "";
+            string query = "select * from Child where parentID = " + Convert.ToString(id) + " and childIsPending = 1";
             return getChild(query);
         }
 
@@ -243,28 +243,34 @@ namespace Nursery_Management_System
         //uses specific query to select all staff members from database
         public LinkedList<Staff> getAllStaff()
         {
-            string query = "";
+            string query = "select * from Staff";
             return getStaff(query);
         }
 
         //uses specific query to select staff member type from database (admin, staff)
         public LinkedList<Staff> getStaffByType(string type)
         {
-            string query = "";
+            string query = "select * from Staff where staffType = " + type;
             return getStaff(query);
         }
 
         //uses specific query to select staff member by ID from database
         public LinkedList<Staff> getStaffByID(int id)
         {
-            string query = "";
+            string query = "select * from Staff where staffID = " + Convert.ToString(id);
             return getStaff(query);
         }
 
         //uses specific query to select staff member by room ID from database
         public LinkedList<Staff> getStaffByRoomID(int id)
         {
-            string query = "";
+            LinkedList<Room> room = new LinkedList<Room>();
+            room = getRoomByID(id);
+
+            if (room.Count() == 0)
+                return new LinkedList<Staff>(); 
+
+            string query = "select * from Staff where staffID = " + Convert.ToString(room.ElementAt(0).staffID);
             return getStaff(query);
         }
 
