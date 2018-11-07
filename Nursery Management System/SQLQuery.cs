@@ -14,9 +14,33 @@ namespace Nursery_Management_System
 
         /****************  USER AUTHENTICATION  ****************/
 
-        public void serachForUser(string name , string password)
+        public bool serachForUser(string name , string password)
         {
+            SQL mSql = new SQL();
+            string query = "select * from User_Password where userName = " + name + " and userPassword = " + password;
+            DataTable dt = null;
+            dt = mSql.retrieveQuery(query);
 
+            if (dt == null)
+                return false;
+
+            int id = Convert.ToInt32(dt.Rows[0]["userID"].ToString());
+            string type = dt.Rows[0]["userType"].ToString();
+
+            if (type == "Parent")
+            {
+                Program.globalParent = getParentByID(id).ElementAt(0);
+            }
+            else if (type == "Staff")
+            {
+                Program.globalStaff = getStaffByID(id).ElementAt(0);
+            }
+            else if(type == "Admin")
+            {
+                Program.globalAdmin = (Admin)getStaffByID(id).ElementAt(0);
+            }
+
+            return true;
         }
 
         /****************  INSERTING DATA INTO DATABASE  ****************/
