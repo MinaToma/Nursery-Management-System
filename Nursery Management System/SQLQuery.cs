@@ -30,11 +30,6 @@ namespace Nursery_Management_System
             return;
         }
 
-        public void retrieveChildData()
-        {
-
-        }
-
         public void insertParentData(Parent parent)
         {
             SQL mSQL = new SQL();
@@ -54,7 +49,7 @@ namespace Nursery_Management_System
             return;
         }
 
-        public void insertStaffData(Staff staff, int department)
+        public void insertStaffData(Staff staff, string department)
         {
             SQL mSQL = new SQL();
             SqlCommand mCommand = new SqlCommand("insertStaffData");
@@ -66,14 +61,30 @@ namespace Nursery_Management_System
             mCommand.Parameters.AddWithValue("@staffPhoneNumber", staff.phoneNumber);
             mCommand.Parameters.AddWithValue("@staffEmail", staff.email);
             mCommand.Parameters.AddWithValue("@staffSalary", staff.salary);
-            mCommand.Parameters.AddWithValue("@staffDepartment", department);
+            mCommand.Parameters.AddWithValue("@staffType", department);
 
             mSQL.insertQuery(mCommand);
 
             return;
         }
 
-        /*public LinkedList<Child> getChild(string query)
+        public void insertRoomData(Room room)
+        {
+            SQL mSQL = new SQL();
+            SqlCommand mCommand = new SqlCommand("insertRoomData");
+            mCommand.CommandType = CommandType.StoredProcedure;
+
+            mCommand.Parameters.AddWithValue("@roomNumber", room.number);
+            if (room.staffID == -1)
+                mCommand.Parameters.AddWithValue("@roomStaffID", DBNull.Value);
+            else
+                mCommand.Parameters.AddWithValue("@roomStaffID", room.staffID);
+            mSQL.insertQuery(mCommand);
+
+            return;
+        }
+
+        /*public LinkedList<Child> getChildByID(string query)
         {
             SQL sql = new SQL();
 
@@ -94,21 +105,70 @@ namespace Nursery_Management_System
             return ccc;
         }*/
 
-
-        public void insertRoomData(Room room)
+        public LinkedList<Child> getChildByParentID(string query)
         {
-            SQL mSQL = new SQL();
-            SqlCommand mCommand = new SqlCommand("insertRoomData");
-            mCommand.CommandType = CommandType.StoredProcedure;
+            LinkedList<Child> child = new LinkedList<Child>();
+            return child;
+        }
 
-            mCommand.Parameters.AddWithValue("@roomNumber", room.number);
-            if (room.staffID == -1)
-                mCommand.Parameters.AddWithValue("@roomStaffID", DBNull.Value);
-            else
-                mCommand.Parameters.AddWithValue("@roomStaffID", room.staffID);
-            mSQL.insertQuery(mCommand);
+        public LinkedList<Child> getChildByRoomID(string query)
+        {
+            LinkedList<Child> child = new LinkedList<Child>();
+            return child;
+        }
 
-            return;
+        public LinkedList<Child> getPendingChildByParentID(string query)
+        {
+            LinkedList<Child> child = new LinkedList<Child>();
+            return child;
+        }
+
+        public LinkedList<Parent> getParentByID(string query)
+        {
+            LinkedList<Parent> parent = new LinkedList<Parent>();
+            return parent;
+        }
+
+        public LinkedList<Parent> getPendingParent(string query)
+        {
+            LinkedList<Parent> parent = new LinkedList<Parent>();
+            return parent;
+        }
+
+        public LinkedList<Staff> getStaffByID(string query)
+        {
+            LinkedList<Staff> staff = new LinkedList<Staff>();
+            return staff;
+        }
+
+        public LinkedList<Staff> getPendingStaff(string query)
+        {
+            LinkedList<Staff> staff = new LinkedList<Staff>();
+            return staff;
+        }
+
+        public LinkedList<Staff> getStaffByType(string query)
+        {
+            LinkedList<Staff> staff = new LinkedList<Staff>();
+            return staff;
+        }
+
+        public LinkedList<Staff> getStaffByRoomID(string query)
+        {
+            LinkedList<Staff> staff = new LinkedList<Staff>();
+            return staff;
+        }
+
+        public LinkedList<Room> getRoomByID(string query)
+        {
+            LinkedList<Room> room = new LinkedList<Room>();
+            return room;
+        }
+
+        public LinkedList<Room> getRoomByStaffID(string query)
+        {
+            LinkedList<Room> room = new LinkedList<Room>();
+            return room;
         }
 
         public void updateChildData()
@@ -126,6 +186,25 @@ namespace Nursery_Management_System
             
         }
         public void updateRoomData()
+        {
+
+        }
+
+        public void deleteChildData()
+        {
+
+        }
+
+        public void deleteParentData()
+        {
+
+        }
+
+        public void deleteStaffData()
+        {
+
+        }
+        public void deleteRoomData()
         {
 
         }
