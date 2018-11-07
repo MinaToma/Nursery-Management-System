@@ -12,6 +12,13 @@ namespace Nursery_Management_System
     {
         public SQLQuery() { }
 
+
+
+        public void serachForUser(string name , string password)
+        {
+
+        }
+
         public void insertChildData(Child child)
         {
             SQL mSQL = new SQL();
@@ -48,7 +55,6 @@ namespace Nursery_Management_System
 
             return;
         }
-
         public void insertStaffData(Staff staff, string department)
         {
             SQL mSQL = new SQL();
@@ -67,7 +73,6 @@ namespace Nursery_Management_System
 
             return;
         }
-    
         public void insertRoomData(Room room)
         {
             SQL mSQL = new SQL();
@@ -84,7 +89,10 @@ namespace Nursery_Management_System
             return;
         }
 
-        public LinkedList<Child> getChild(string query)
+
+
+
+        private LinkedList<Child> getChild(string query)
         {
             SQL sql = new SQL();
 
@@ -92,7 +100,7 @@ namespace Nursery_Management_System
             dt = sql.retrieveQuery(query);
 
             LinkedList<Child> child = new LinkedList<Child>();
-            foreach(DataRow dr in dt.Rows)
+            foreach (DataRow dr in dt.Rows)
             {
                 Child currentChild = new Child();
 
@@ -103,15 +111,51 @@ namespace Nursery_Management_System
                 currentChild.gender = dr["gender"].ToString();
                 currentChild.roomID = Convert.ToInt32(dr["roomID"].ToString());
                 currentChild.image = dr["picture"].ToString();
-                currentChild.pending = Convert.ToInt32(dr["childIsPending"].ToString());   
+                currentChild.pending = Convert.ToInt32(dr["childIsPending"].ToString());
 
                 child.AddLast(currentChild);
             }
-            
+
             return child;
         }
 
-        public LinkedList<Parent> getParent(string query)
+        public LinkedList<Child> getChildByID(int id)
+        {
+            string query = "";
+            return getChild(query);
+        }
+
+        public LinkedList<Child> getAllChildren()
+        {
+            string query = "";
+            return getChild(query);
+        }
+
+        public LinkedList<Child> getChildByParentID(int id)
+        {
+            string query = "";
+            return getChild(query);
+        }
+
+        public LinkedList<Child> getChildByRoomID(int id)
+        {
+            string query = "";
+            return getChild(query);
+        }
+
+        public LinkedList<Child> getPendingChildByParentID(int id)
+        {
+            string query = "";
+            return getChild(query);
+        }
+
+
+
+
+
+
+
+        private LinkedList<Parent> getParent(string query)
         {
             SQL sql = new SQL();
 
@@ -134,11 +178,33 @@ namespace Nursery_Management_System
 
                 parent.AddLast(currentParent);
             }
-            
+
             return parent;
         }
 
-        public LinkedList<Staff> getStaff(string query)
+        public LinkedList<Parent> getAllParent()
+        {
+            string query = "";
+            return getParent(query);
+        }
+
+        public LinkedList<Parent> getParentByID(int id)
+        {
+            string query = "";
+            return getParent(query);
+        }
+
+        public LinkedList<Parent> getPendingParent()
+        {
+            string query = "";
+            return getParent(query);
+        }
+
+    
+
+        
+
+        private LinkedList<Staff> getStaff(string query)
         {
             SQL sql = new SQL();
 
@@ -164,8 +230,45 @@ namespace Nursery_Management_System
             
             return staff;
         }
-     
-        public LinkedList<Room> getRoom(string query)
+
+        public LinkedList<Staff> getStaffByID(int id)
+        {
+            string query = "";
+            return getStaff(query);
+        }
+
+        public LinkedList<Staff> getAllStaff()
+        {
+            string query = "";
+            return getStaff(query);
+        }
+
+        public LinkedList<Staff> getPendingStaff()
+        {
+            string query = "";
+            return getStaff(query);
+        }
+
+        public LinkedList<Staff> getStaffByType(string type)
+        {
+            string query = "";
+            return getStaff(query);
+        }
+
+        public LinkedList<Staff> getStaffByRoomID(int id)
+        {
+            string query = "";
+            return getStaff(query);
+        }
+
+
+
+
+
+
+
+
+        private LinkedList<Room> getRoom(string query)
         {
             SQL sql = new SQL();
 
@@ -186,6 +289,29 @@ namespace Nursery_Management_System
             return room;
         }
 
+        public LinkedList<Room> getRoomByID(int id)
+        {
+            string query = "";
+            return getRoom(query);
+        }
+
+        public LinkedList<Room> getAllRooms()
+        {
+            string query = "";
+            return getRoom(query);
+        }
+
+        public LinkedList<Room> getRoomByStaffID(int id)
+        {
+            string query = "";
+            return getRoom(query);
+        }
+
+
+
+
+
+
         public void updateChildData(Child child)
         {
 
@@ -205,24 +331,41 @@ namespace Nursery_Management_System
 
         }
 
+
+
+
+
+
+
         public void deleteChildData(string query)
         {
-
+            SQL mSql = new SQL();
+            mSql.deleteQuery(query);
         }
 
         public void deleteParentData(string query)
         {
-
+            SQL mSql = new SQL();
+            mSql.deleteQuery(query);
         }
 
         public void deleteStaffData(string query)
         {
-
+            SQL mSql = new SQL();
+            mSql.deleteQuery(query);
         }
 
         public void deleteRoomData(string query)
         {
-
+            SQL mSql = new SQL();
+            mSql.deleteQuery(query);
         }
-    }
+
+        public void deleteUser(string query)
+        {
+            SQL mSql = new SQL();
+            mSql.deleteQuery(query);
+        }
+      
+     }
 }
