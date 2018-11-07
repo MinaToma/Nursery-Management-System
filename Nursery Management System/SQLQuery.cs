@@ -328,7 +328,7 @@ namespace Nursery_Management_System
             return getRoom(query);
         }
 
-        /****************  UPDATING ROOM DATA FROM DATABASE  ****************/
+        /****************  UPDATING DATA FROM DATABASE  ****************/
 
         public void updateChildData(Child child)
         {
@@ -350,14 +350,9 @@ namespace Nursery_Management_System
 
         }
 
-<<<<<<< HEAD
-        private void delete()
-=======
-
-
-
+        /****************  DELETING DATA FROM DATABASE  ****************/
+        
         private void deleteUser(string query)
->>>>>>> c6326bad761ce21d0686c49bd76dd245cec46084
         {
             SQL mSql = new SQL();
             mSql.deleteQuery(query);
