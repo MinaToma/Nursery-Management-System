@@ -17,34 +17,49 @@ namespace Nursery_Management_System
         public bool serachForUser(string name , string password)
         {
             SQL mSql = new SQL();
-            string query = "select * from User_Password where userName = " + name + " and userPassword = " + password;
+            string query = "select * from User_Password where userName like '" + name + "' and userPassword like '" + password + "'";
             DataTable dt = null;
             dt = mSql.retrieveQuery(query);
 
-            if (dt == null)
+            if (dt.Rows.Count == 0)
                 return false;
 
-            int id = Convert.ToInt32(dt.Rows[0]["userID"].ToString());
             string type = dt.Rows[0]["userType"].ToString();
 
             if (type == "Parent")
             {
+                Int64 id = Convert.ToInt64(dt.Rows[0]["parentID"].ToString());
                 Program.globalParent = getParentByID(id).ElementAt(0);
                 if (Program.globalParent.pending == 1)
                     return false;
             }
             else if (type == "Staff")
             {
+                Int64 id = Convert.ToInt64(dt.Rows[0]["staffID"].ToString());
                 Program.globalStaff = getStaffByID(id).ElementAt(0);
                 if (Program.globalStaff.pending == 1)
                     return false;
             }
             else if(type == "Admin")
             {
-                Program.globalAdmin = (Admin)getStaffByID(id).ElementAt(0);
-                if (Program.globalAdmin.pending == 1)
+                Int64 id = Convert.ToInt64(dt.Rows[0]["staffID"].ToString());
+                Program.globalAdmin.ToAdmin(getStaffByID(id).ElementAt(0));
+                if (Program.globalStaff.pending == 1)
                     return false;
             }
+
+            return true;
+        }
+        
+        public bool checkForUsername(string username)
+        {
+            SQL mSql = new SQL();
+            string query = "select * from User_Password where userName like '" + username + "'";
+            DataTable dt = null;
+            dt = mSql.retrieveQuery(query);
+
+            if (dt.Rows.Count == 0)
+                return false;
 
             return true;
         }
@@ -101,10 +116,17 @@ namespace Nursery_Management_System
 
             mCommand.Parameters.AddWithValue("@staffID", staff.id);
             mCommand.Parameters.AddWithValue("@staffFirstName", staff.firstName);
-            mCommand.Parameters.AddWithValue("@staffLasttName", staff.lastName);
+            mCommand.Parameters.AddWithValue("@staffLastName", staff.lastName);
             mCommand.Parameters.AddWithValue("@staffPhoneNumber", staff.phoneNumber);
             mCommand.Parameters.AddWithValue("@staffEmail", staff.email);
-            mCommand.Parameters.AddWithValue("@staffSalary", staff.salary);
+            if(staff.salary == -1)
+            {
+                mCommand.Parameters.AddWithValue("@staffSalary", DBNull.Value);
+            }
+            else
+            {
+                mCommand.Parameters.AddWithValue("@staffSalary", staff.salary);
+            }
             mCommand.Parameters.AddWithValue("@staffType", department);
             mCommand.Parameters.AddWithValue("@staffPending", staff.pending);
 
@@ -131,15 +153,26 @@ namespace Nursery_Management_System
         }
 
         //insert User
-        public void insertUser(string name , string password , string type , int id)
+        public void insertUser(string name , string password , string type , Int64 id)
         {
             SQL mSQL = new SQL();
             SqlCommand mCommand = new SqlCommand("insertUser");
             mCommand.CommandType = CommandType.StoredProcedure;
 
             mCommand.Parameters.AddWithValue("@userName", name);
+
+            if(type == "Parent")
+            {
+                mCommand.Parameters.AddWithValue("@staffID",DBNull.Value);
+                mCommand.Parameters.AddWithValue("@parentID", id);
+            }
+            else
+            {
+                mCommand.Parameters.AddWithValue("@staffID", id);
+                mCommand.Parameters.AddWithValue("@parentID", DBNull.Value);
+            }
+
             mCommand.Parameters.AddWithValue("@userPassword", password);
-            mCommand.Parameters.AddWithValue("@userId", id);
             mCommand.Parameters.AddWithValue("@userType", type);
 
             mSQL.insertQuery(mCommand);
@@ -161,7 +194,7 @@ namespace Nursery_Management_System
 
                 currentChild.id = Convert.ToInt32(dr["childID"].ToString());
                 currentChild.firstName = dr["childName"].ToString();
-                currentChild.parentID = Convert.ToInt32(dr["parentID"].ToString());
+                currentChild.parentID = Convert.ToInt64(dr["parentID"].ToString());
                 currentChild.DOB = Convert.ToDateTime(dr["DOB"].ToString());
                 currentChild.gender = dr["gender"].ToString();
                 currentChild.roomID = Convert.ToInt32(dr["roomID"].ToString());
@@ -189,7 +222,7 @@ namespace Nursery_Management_System
         }
 
         //uses specific query to select child by parent's ID from database
-        public LinkedList<Child> getChildByParentID(int id)
+        public LinkedList<Child> getChildByParentID(Int64 id)
         {
             string query = "select * from Child where parentID = " + Convert.ToString(id);   
             return getChild(query);
@@ -203,7 +236,7 @@ namespace Nursery_Management_System
         }
 
         //uses specific query to select pending child by parent's ID from database
-        public LinkedList<Child> getPendingChildByParentID(int id)
+        public LinkedList<Child> getPendingChildByParentID(Int64 id)
         {
             string query = "select * from Child where parentID = " + Convert.ToString(id) + " and childIsPending = 1";
             return getChild(query);
@@ -246,7 +279,7 @@ namespace Nursery_Management_System
         }
 
         //uses specific query to select parent by ID from database
-        public LinkedList<Parent> getParentByID(int id)
+        public LinkedList<Parent> getParentByID(Int64 id)
         {
             string query = "select * from Parent where parentID = " + Convert.ToString(id);
             return getParent(query);
@@ -273,14 +306,21 @@ namespace Nursery_Management_System
             {
                 Staff currentStaff = new Staff();
 
-                currentStaff.id = Convert.ToInt32(dr["staffID"].ToString());
+                currentStaff.id = Convert.ToInt64(dr["staffID"].ToString());
                 currentStaff.firstName = dr["staffFirstName"].ToString();
                 currentStaff.lastName = dr["staffLastName"].ToString();
                 currentStaff.phoneNumber = dr["staffPhoneNumber"].ToString();
                 currentStaff.email = dr["staffEmail"].ToString();
-                currentStaff.salary = Convert.ToDouble(dr["staffSalary"].ToString());
                 currentStaff.type = dr["staffType"].ToString();
                 currentStaff.pending = Convert.ToInt32(dr["staffIsPending"].ToString());
+                if (currentStaff.pending == 1)
+                {
+                    currentStaff.salary = -1;
+                }
+                else
+                {
+                    currentStaff.salary = Convert.ToDouble(dr["staffSalary"].ToString());
+                }
 
                 staff.AddLast(currentStaff);
             }
@@ -303,7 +343,7 @@ namespace Nursery_Management_System
         }
 
         //uses specific query to select staff member by ID from database
-        public LinkedList<Staff> getStaffByID(int id)
+        public LinkedList<Staff> getStaffByID(Int64 id)
         {
             string query = "select * from Staff where staffID = " + Convert.ToString(id);
             return getStaff(query);
@@ -367,7 +407,7 @@ namespace Nursery_Management_System
         }
 
         //uses specific query to select room by staff member's ID from database
-        public LinkedList<Room> getRoomByStaffID(int id)
+        public LinkedList<Room> getRoomByStaffID(Int64 id)
         {
             string query = "select * from Room where roomStaffID = " + Convert.ToString(id);
             return getRoom(query);
@@ -450,6 +490,18 @@ namespace Nursery_Management_System
             return;
         }
 
+        public void updateUsername(Int64 id , string type)
+        {
+            /*SQL mSQL= new SQL();
+            string query = "select * from User_Password where " + Convert.ToString(id) + " and userType like '" + type + "'";
+
+            SqlCommand mCommand = new SqlCommand();
+
+
+
+            mSQL.updateQuery(mCommand);*/
+        }
+
         /****************  DELETING DATA FROM DATABASE  ****************/
 
         private void deleteUser(string query)
@@ -464,13 +516,13 @@ namespace Nursery_Management_System
             deleteUser(query);
         }
 
-        public void deleteParentData(LinkedList<int> parentIDs)
+        public void deleteParentData(LinkedList<Int64> parentIDs)
         {
             string query = "delete from Parent where parentID in(" + string.Join(",", parentIDs) + ")";
             deleteUser(query);
         }
 
-        public void deleteStaffData(LinkedList<int> staffIDs)
+        public void deleteStaffData(LinkedList<Int64> staffIDs)
         {
             string query = "delete from Staff where staffID in(" + string.Join(",", staffIDs) + ")";
             deleteUser(query);

@@ -16,8 +16,6 @@ namespace Nursery_Management_System
         public Sign()
         {
             InitializeComponent();
-            
-            SQL mSql = new SQL();
         }
 
         private void signIn_Click(object sender, EventArgs e)
@@ -32,7 +30,6 @@ namespace Nursery_Management_System
 
             if (e.CloseReason == CloseReason.WindowsShutDown) return;
 
-            // Confirm user wants to close
             switch (MessageBox.Show(this, "Are you sure you want to close?", "Closing", MessageBoxButtons.YesNo))
             {
                 case DialogResult.No:
@@ -45,7 +42,8 @@ namespace Nursery_Management_System
 
         private void signUpButton_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Program.signUpForm.Show();
         }
 
         private void Sign_Load(object sender, EventArgs e)

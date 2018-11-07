@@ -41,14 +41,15 @@
             this.staffSignUp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.staffSignUp.Dock = System.Windows.Forms.DockStyle.Right;
             this.staffSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.staffSignUp.Font = new System.Drawing.Font("Bebas", 15F);
+            this.staffSignUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.staffSignUp.Image = ((System.Drawing.Image)(resources.GetObject("staffSignUp.Image")));
-            this.staffSignUp.Location = new System.Drawing.Point(460, 0);
+            this.staffSignUp.Location = new System.Drawing.Point(403, 0);
             this.staffSignUp.Name = "staffSignUp";
-            this.staffSignUp.Size = new System.Drawing.Size(460, 540);
+            this.staffSignUp.Size = new System.Drawing.Size(402, 540);
             this.staffSignUp.TabIndex = 1;
             this.staffSignUp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.staffSignUp.UseVisualStyleBackColor = false;
+            this.staffSignUp.Click += new System.EventHandler(this.staffSignUp_Click);
             // 
             // parentSignUp
             // 
@@ -56,12 +57,12 @@
             this.parentSignUp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.parentSignUp.Dock = System.Windows.Forms.DockStyle.Left;
             this.parentSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.parentSignUp.Font = new System.Drawing.Font("Bebas", 15F);
+            this.parentSignUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.parentSignUp.ForeColor = System.Drawing.Color.Black;
             this.parentSignUp.Image = ((System.Drawing.Image)(resources.GetObject("parentSignUp.Image")));
             this.parentSignUp.Location = new System.Drawing.Point(0, 0);
             this.parentSignUp.Name = "parentSignUp";
-            this.parentSignUp.Size = new System.Drawing.Size(460, 540);
+            this.parentSignUp.Size = new System.Drawing.Size(402, 540);
             this.parentSignUp.TabIndex = 0;
             this.parentSignUp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.parentSignUp.UseVisualStyleBackColor = false;
@@ -74,14 +75,14 @@
             this.signButtons.Dock = System.Windows.Forms.DockStyle.Fill;
             this.signButtons.Location = new System.Drawing.Point(0, 0);
             this.signButtons.Name = "signButtons";
-            this.signButtons.Size = new System.Drawing.Size(920, 540);
+            this.signButtons.Size = new System.Drawing.Size(805, 540);
             this.signButtons.TabIndex = 3;
             // 
             // signUp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(920, 540);
+            this.ClientSize = new System.Drawing.Size(805, 540);
             this.Controls.Add(this.signButtons);
             this.Name = "signUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

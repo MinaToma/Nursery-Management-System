@@ -15,7 +15,7 @@ namespace Nursery_Management_System
 
         public Parent() { }
 
-        public Parent(int _id , string _firstName, string _lastName, string _phoneNumber, string _email, string _address , string _creditCard , int _pending) :
+        public Parent(Int64 _id , string _firstName, string _lastName, string _phoneNumber, string _email, string _address , string _creditCard , int _pending) :
             base(_id, _firstName, _lastName , _pending)
         {
             phoneNumber = _phoneNumber;

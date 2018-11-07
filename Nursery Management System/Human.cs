@@ -8,17 +8,17 @@ namespace Nursery_Management_System
 {
     class Human
     {
-        public int id {get;set;}
+        public Int64 id {get;set;}
         public String firstName { get; set; }
         public String lastName { get; set; }
         public int pending { get; set; }
         protected Human() {}
 
-        protected Human(int _id , String _firstName , string _lastName , int _pending)
+        protected Human(Int64 _id , String _firstName , string _lastName , int _pending)
         {
             id = _id;
             firstName = _firstName;
-            lastName = lastName;
+            lastName = _lastName;
             pending = _pending;
         }
         

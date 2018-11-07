@@ -58,6 +58,7 @@
             // 
             resources.ApplyResources(this.ID, "ID");
             this.ID.Name = "ID";
+            this.ID.UseWaitCursor = true;
             // 
             // lastNameLabel
             // 
@@ -78,6 +79,7 @@
             // 
             resources.ApplyResources(this.phoneNumber, "phoneNumber");
             this.phoneNumber.Name = "phoneNumber";
+            this.phoneNumber.UseWaitCursor = true;
             // 
             // emailLabel
             // 
@@ -88,6 +90,7 @@
             // 
             resources.ApplyResources(this.email, "email");
             this.email.Name = "email";
+            this.email.UseWaitCursor = true;
             // 
             // passwordLabel
             // 
@@ -119,6 +122,7 @@
             this.signUpButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.signUpButton.Name = "signUpButton";
             this.signUpButton.UseVisualStyleBackColor = true;
+            this.signUpButton.Click += new System.EventHandler(this.signUpButton_Click);
             // 
             // firstName
             // 
@@ -136,6 +140,7 @@
             this.backButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.backButton.Name = "backButton";
             this.backButton.UseVisualStyleBackColor = false;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // staffFirstNameLabel
             // 

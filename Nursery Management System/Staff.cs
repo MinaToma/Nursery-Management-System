@@ -14,7 +14,7 @@ namespace Nursery_Management_System
         public string type { get; set; }
 
         public Staff() { }
-        public Staff(int _id, string _firstName , string _lastName , string _phoneNumber , string _email , double _salary , int _pending , string _type) :
+        public Staff(Int64 _id, string _firstName , string _lastName , string _phoneNumber , string _email , double _salary , int _pending , string _type) :
             base(_id , _firstName , _lastName , _pending)
         {
             phoneNumber = _phoneNumber;

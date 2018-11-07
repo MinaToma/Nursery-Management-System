@@ -18,7 +18,6 @@ namespace Nursery_Management_System
     {
         private SqlConnection mConnection;
         public SqlCommand mCommand;
-        public SqlDataReader mReader;
         private SqlDataAdapter mAdapter;
 
         public SQL()

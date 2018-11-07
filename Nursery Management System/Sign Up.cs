@@ -22,9 +22,20 @@ namespace Nursery_Management_System
 
         }
 
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Program.signForm.Close();   
+        }
+
         private void signInButton_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void staffSignUp_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.staffSignUpForm.Show();
         }
     }
 }

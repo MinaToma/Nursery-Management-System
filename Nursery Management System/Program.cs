@@ -12,10 +12,13 @@ namespace Nursery_Management_System
         /// The main entry point for the application.
         /// </summary>
         public static Sign signForm = new Sign();
+        public static signUp signUpForm = new signUp();
+        public static StaffForm staffSignUpForm = new StaffForm();
         public static signIn signInForm = new signIn();
         public static Parent globalParent = new Parent();
         public static Staff globalStaff = new Staff();
         public static Admin globalAdmin = new Admin();
+        public static string globalType = "";
 
         [STAThread]
         static void Main()
