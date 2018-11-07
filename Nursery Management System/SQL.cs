@@ -25,7 +25,7 @@ namespace Nursery_Management_System
         {
             mConnection = new SqlConnection(@"Server=DESKTOP-2OGA27F; DataBase=Nursery; Integrated Security=true;");
         }
-
+            
         public DataTable retrieveQuery(string query)
         {
             DataTable mDataTable = new DataTable();
@@ -61,6 +61,27 @@ namespace Nursery_Management_System
             catch
             {
                 
+                MessageBox.Show("There was an error while connecting to data base , please check your connection and try again", "Sql Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                mConnection.Close();
+            }
+            return;
+        }
+
+        public void updateQuery(SqlCommand command)
+        {
+            mCommand = command;
+            mCommand.Connection = mConnection;
+            try
+            {
+                mConnection.Open();
+                mCommand.ExecuteNonQuery();
+            }
+            catch
+            {
+
                 MessageBox.Show("There was an error while connecting to data base , please check your connection and try again", "Sql Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally

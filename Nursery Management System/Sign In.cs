@@ -17,6 +17,11 @@ namespace Nursery_Management_System
             InitializeComponent();
         }
 
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Program.signForm.Close();
+        }
+
         private void loginButton_Click(object sender, EventArgs e)
         {
 
