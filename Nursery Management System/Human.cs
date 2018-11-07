@@ -11,13 +11,15 @@ namespace Nursery_Management_System
         public int id {get;set;}
         public String firstName { get; set; }
         public String lastName { get; set; }
+        public int pending { get; set; }
         protected Human() {}
 
-        protected Human(int _id , String _firstName , string _lastName)
+        protected Human(int _id , String _firstName , string _lastName , int _pending)
         {
             id = _id;
             firstName = _firstName;
             lastName = lastName;
+            pending = _pending;
         }
         
         public String className()

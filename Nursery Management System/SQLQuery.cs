@@ -11,13 +11,8 @@ namespace Nursery_Management_System
     class SQLQuery
     {
         public SQLQuery() { }
-<<<<<<< HEAD
-
-        public void insertChildData(ChildClass child)
-=======
-        
+        /*
         public void insertChildData(Child child)
->>>>>>> d432d16c1edd303b8c99d4af3178c065e9de8102
         {
             SQL mSQL = new SQL();
             SqlCommand mCommand = new SqlCommand("insertChildData");    
@@ -33,7 +28,7 @@ namespace Nursery_Management_System
             mSQL.insertQuery(mCommand);
 
             return;
-        }
+        }*/
 
         public void retrieveChildData()
         {
@@ -78,7 +73,7 @@ namespace Nursery_Management_System
             return;
         }
 
-        public LinkedList<ChildClass> getChild(string query)
+        /*public LinkedList<Child> getChild(string query)
         {
             SQL sql = new SQL();
 
@@ -95,9 +90,9 @@ namespace Nursery_Management_System
 
                 ccc.AddAfter(cs);
             }
-
+            
             return ccc;
-        }
+        }*/
 
 
         public void insertRoomData(Room room)

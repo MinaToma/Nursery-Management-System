@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Child));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChildForm));
             this.backButton = new System.Windows.Forms.Button();
             this.childProfilePanel = new System.Windows.Forms.Panel();
             this.genderPanel = new System.Windows.Forms.Panel();

@@ -13,7 +13,8 @@ namespace Nursery_Management_System
         public double salary { get; set; }
 
         public Staff() { }
-        public Staff(int _id, String _firstName , string _lastName , string _phoneNumber , string _email , double _salary) : base(_id , _firstName , _lastName)
+        public Staff(int _id, String _firstName , string _lastName , string _phoneNumber , string _email , double _salary , int _pending) :
+            base(_id , _firstName , _lastName , _pending)
         {
             phoneNumber = _phoneNumber;
             email = _email;
