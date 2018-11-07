@@ -125,7 +125,22 @@ namespace Nursery_Management_System
      
         public LinkedList<Room> getRoom(string query)
         {
+            SQL sql = new SQL();
+
+            DataTable dt = new DataTable();
+            dt = sql.retrieveQuery(query);
+
             LinkedList<Room> room = new LinkedList<Room>();
+            foreach (DataRow dr in dt.Rows)
+            {
+                Room currentRoom = new Room();
+
+                currentRoom.id = Convert.ToInt32(dr["roomID"].ToString());
+                currentRoom.number = Convert.ToInt32(dr["roomNumber"].ToString()); 
+                currentRoom.staffID = Convert.ToInt32(dr["roomStaffID"].ToString());
+
+                room.AddLast(currentRoom);
+            }
             return room;
         }
 
