@@ -57,7 +57,7 @@ namespace Nursery_Management_System
         public void insertStaffData(Staff staff, int department)
         {
             SQL mSQL = new SQL();
-            SqlCommand mCommand = new SqlCommand("insertParentData");
+            SqlCommand mCommand = new SqlCommand("insertStaffData");
             mCommand.CommandType = CommandType.StoredProcedure;
 
             mCommand.Parameters.AddWithValue("@staffID", staff.id);
