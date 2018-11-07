@@ -13,6 +13,10 @@ namespace Nursery_Management_System
         /// </summary>
         public static Sign signForm = new Sign();
         public static signIn signInForm = new signIn();
+        public static Parent globalParent = new Parent();
+        public static Staff globalStaff = new Staff();
+        public static Admin globalAdmin = new Admin();
+
         [STAThread]
         static void Main()
         {
