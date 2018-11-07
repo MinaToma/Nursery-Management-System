@@ -193,21 +193,21 @@ namespace Nursery_Management_System
         //uses specific query to select all parents from database
         public LinkedList<Parent> getAllParent()
         {
-            string query = "";
+            string query = "select * from Parent";
             return getParent(query);
         }
 
         //uses specific query to select parent by ID from database
         public LinkedList<Parent> getParentByID(int id)
         {
-            string query = "";
+            string query = "select * from Parent where parentID = " + Convert.ToString(id);
             return getParent(query);
         }
 
         //uses specific query to select pending parents from database
         public LinkedList<Parent> getPendingParent()
         {
-            string query = "";
+            string query = "select * from Parent where parentIsPending = 1";
             return getParent(query);
         }
 
@@ -301,21 +301,21 @@ namespace Nursery_Management_System
         //uses specific query to select all rooms from database
         public LinkedList<Room> getAllRooms()
         {
-            string query = "";
+            string query = "select * from Room";
             return getRoom(query);
         }
 
         //uses specific query to select room by ID from database
         public LinkedList<Room> getRoomByID(int id)
         {
-            string query = "";
+            string query = "select * from Room where roomID = " + Convert.ToString(id);
             return getRoom(query);
         }
 
         //uses specific query to select room by staff member's ID from database
         public LinkedList<Room> getRoomByStaffID(int id)
         {
-            string query = "";
+            string query = "select * from Room where roomStaffID = " + Convert.ToString(id);
             return getRoom(query);
         }
 
