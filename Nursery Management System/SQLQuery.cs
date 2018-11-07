@@ -387,15 +387,9 @@ namespace Nursery_Management_System
             mCommand.Parameters.AddWithValue("@parentCreditCard", parent.creditCard);
             mCommand.Parameters.AddWithValue("@parentEmail", parent.email);
             mCommand.Parameters.AddWithValue("@parentPending", parent.pending);
-<<<<<<< HEAD
-
+            
             mSQL.insertQuery(mCommand);
 
-=======
-
-            mSQL.insertQuery(mCommand);
-
->>>>>>> 0e1944fd7d68e4cc52964995c85278fb452fd9aa
             return;
         }
 
