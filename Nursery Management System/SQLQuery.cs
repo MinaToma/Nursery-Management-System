@@ -387,7 +387,7 @@ namespace Nursery_Management_System
             mCommand.Parameters.AddWithValue("@parentCreditCard", parent.creditCard);
             mCommand.Parameters.AddWithValue("@parentEmail", parent.email);
             mCommand.Parameters.AddWithValue("@parentPending", parent.pending);
-
+            
             mSQL.insertQuery(mCommand);
 
             return;
@@ -431,7 +431,6 @@ namespace Nursery_Management_System
 
 
         /****************  DELETING DATA FROM DATABASE  ****************/
-
 
         private void deleteUser(string query)
         {
