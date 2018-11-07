@@ -350,35 +350,41 @@ namespace Nursery_Management_System
 
         }
 
+<<<<<<< HEAD
         private void delete()
-        {
-            SQL mSql = new SQL();
-            string query = "";
-            mSql.deleteQuery(query);
-        }
+=======
 
-        public void deleteChildData(LinkedList<int> childIds)
-        {
-            SQL mSql = new SQL();
-            mSql.deleteQuery(query);
-        }
 
-        public void deleteParentData(LinkedList<int> parentIds)
+
+        private void deleteUser(string query)
+>>>>>>> c6326bad761ce21d0686c49bd76dd245cec46084
         {
             SQL mSql = new SQL();
             mSql.deleteQuery(query);
         }
 
-        public void deleteStaffData(LinkedList<int> staffIds)
+        public void deleteChildData(LinkedList<int> childIDs)
         {
-            SQL mSql = new SQL();
-            mSql.deleteQuery(query);
+            string query = "delete from Child where childID in(" + string.Join(",", childIDs) + ")";
+            deleteUser(query);
         }
 
-        public void deleteRoomData(LinkedList<int> roomIds)
+        public void deleteParentData(LinkedList<int> parentIDs)
         {
-            SQL mSql = new SQL();
-            mSql.deleteQuery(query);
+            string query = "delete from Parent where parentID in(" + string.Join(",", parentIDs) + ")";
+            deleteUser(query);
+        }
+
+        public void deleteStaffData(LinkedList<int> staffIDs)
+        {
+            string query = "delete from Staff where staffID in(" + string.Join(",", staffIDs) + ")";
+            deleteUser(query);
+        }
+
+        public void deleteRoomData(LinkedList<int> roomIDs)
+        {
+            string query = "delete from Room where roomID in(" + string.Join(",", roomIDs) + ")";
+            deleteUser(query);
         }      
      }
 }
