@@ -349,38 +349,36 @@ namespace Nursery_Management_System
 
 
 
+        private void delete()
+        {
+            SQL mSql = new SQL();
+            string query = "";
+            mSql.deleteQuery(query);
+        }
 
-
-
-        public void deleteChildData(string query)
+        public void deleteChildData(LinkedList<int> childIds)
         {
             SQL mSql = new SQL();
             mSql.deleteQuery(query);
         }
 
-        public void deleteParentData(string query)
+        public void deleteParentData(LinkedList<int> parentIds)
         {
             SQL mSql = new SQL();
             mSql.deleteQuery(query);
         }
 
-        public void deleteStaffData(string query)
+        public void deleteStaffData(LinkedList<int> staffIds)
         {
             SQL mSql = new SQL();
             mSql.deleteQuery(query);
         }
 
-        public void deleteRoomData(string query)
+        public void deleteRoomData(LinkedList<int> roomIds)
         {
             SQL mSql = new SQL();
             mSql.deleteQuery(query);
-        }
+        }      
 
-        public void deleteUser(string query)
-        {
-            SQL mSql = new SQL();
-            mSql.deleteQuery(query);
-        }
-      
      }
 }
