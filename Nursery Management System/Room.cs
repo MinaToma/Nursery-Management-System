@@ -13,7 +13,7 @@ namespace Nursery_Management_System
         public int staffID { get; set; }
 
         public Room() { }
-        public Room(int _id , int _number , int _staffID)
+        public Room(int _id , int _number , int _staffID = -1)
         {
             id = _id;
             number = _number;
