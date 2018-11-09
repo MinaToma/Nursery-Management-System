@@ -26,13 +26,13 @@ namespace Nursery_Management_System
         {
             SQLQuery mSqlQuery = new SQLQuery();
             
-            if(mSqlQuery.serachForUser(usernameInput.Text , passwordInput.Text) == false)
+            if(mSqlQuery.serachForUser(username.Text , password.Text) == false)
             {
                 MessageBox.Show("Username doesn't exist", "Wrong Username or Password", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show("Hello, " + usernameInput.Text + "!" , "Logged In Successfully", MessageBoxButtons.OK, MessageBoxIcon.None);
+                MessageBox.Show("Hello, " + username.Text + "!" , "Logged In Successfully", MessageBoxButtons.OK, MessageBoxIcon.None);
                 if (Program.globalType == "Staff")
                 {
                     //open staff form
@@ -44,6 +44,8 @@ namespace Nursery_Management_System
                 else if(Program.globalType == "Parent")
                 {
                     //open parent form
+                    this.Hide();
+                    Program.parentLoggedInForm.Show();
                 }
             }
         }

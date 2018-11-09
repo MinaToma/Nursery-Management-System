@@ -29,31 +29,31 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(signIn));
-            this.usernameInput = new System.Windows.Forms.TextBox();
-            this.passwordInput = new System.Windows.Forms.TextBox();
+            this.username = new System.Windows.Forms.TextBox();
+            this.password = new System.Windows.Forms.TextBox();
             this.usernameLabel = new System.Windows.Forms.Label();
             this.passwordLabel = new System.Windows.Forms.Label();
             this.loginButton = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // usernameInput
+            // username
             // 
-            this.usernameInput.Font = new System.Drawing.Font("Consolas", 13F);
-            this.usernameInput.Location = new System.Drawing.Point(184, 316);
-            this.usernameInput.Name = "usernameInput";
-            this.usernameInput.Size = new System.Drawing.Size(350, 33);
-            this.usernameInput.TabIndex = 0;
+            this.username.Font = new System.Drawing.Font("Consolas", 13F);
+            this.username.Location = new System.Drawing.Point(184, 316);
+            this.username.Name = "username";
+            this.username.Size = new System.Drawing.Size(350, 33);
+            this.username.TabIndex = 0;
             // 
-            // passwordInput
+            // password
             // 
-            this.passwordInput.Font = new System.Drawing.Font("Consolas", 13F);
-            this.passwordInput.Location = new System.Drawing.Point(184, 377);
-            this.passwordInput.Name = "passwordInput";
-            this.passwordInput.PasswordChar = '*';
-            this.passwordInput.Size = new System.Drawing.Size(350, 33);
-            this.passwordInput.TabIndex = 1;
-            this.passwordInput.UseSystemPasswordChar = true;
+            this.password.Font = new System.Drawing.Font("Consolas", 13F);
+            this.password.Location = new System.Drawing.Point(184, 377);
+            this.password.Name = "password";
+            this.password.PasswordChar = '*';
+            this.password.Size = new System.Drawing.Size(350, 33);
+            this.password.TabIndex = 1;
+            this.password.UseSystemPasswordChar = true;
             // 
             // usernameLabel
             // 
@@ -123,7 +123,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(920, 540);
@@ -131,8 +130,8 @@
             this.Controls.Add(this.passwordLabel);
             this.Controls.Add(this.usernameLabel);
             this.Controls.Add(this.loginButton);
-            this.Controls.Add(this.passwordInput);
-            this.Controls.Add(this.usernameInput);
+            this.Controls.Add(this.password);
+            this.Controls.Add(this.username);
             this.Font = new System.Drawing.Font("Helvetica", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "signIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -145,8 +144,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox passwordInput;
-        private System.Windows.Forms.TextBox usernameInput;
+        private System.Windows.Forms.TextBox password;
+        private System.Windows.Forms.TextBox username;
         private System.Windows.Forms.Label usernameLabel;
         private System.Windows.Forms.Label passwordLabel;
         private System.Windows.Forms.Button loginButton;

@@ -29,14 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(parentForm));
-            this.parentImageButton = new System.Windows.Forms.Button();
-            this.saveButton = new System.Windows.Forms.Button();
-            this.importImageButton = new System.Windows.Forms.Button();
-            this.parentName = new System.Windows.Forms.TextBox();
-            this.parentNameLabel = new System.Windows.Forms.Label();
+            this.firstName = new System.Windows.Forms.TextBox();
+            this.firstNameLabel = new System.Windows.Forms.Label();
             this.backButton = new System.Windows.Forms.Button();
             this.parentProfilePanel = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.childrenPanel = new System.Windows.Forms.Panel();
             this.addChildButton = new System.Windows.Forms.Button();
             this.phoneNumberLabel = new System.Windows.Forms.Label();
             this.phoneNumber = new System.Windows.Forms.TextBox();
@@ -45,74 +42,36 @@
             this.passwordLabel = new System.Windows.Forms.Label();
             this.password = new System.Windows.Forms.TextBox();
             this.creditCardLabel = new System.Windows.Forms.Label();
-            this.creditcard = new System.Windows.Forms.TextBox();
+            this.creditCard = new System.Windows.Forms.TextBox();
+            this.lastNameLabel = new System.Windows.Forms.Label();
+            this.lastName = new System.Windows.Forms.TextBox();
+            this.usernameLabel = new System.Windows.Forms.Label();
+            this.username = new System.Windows.Forms.TextBox();
+            this.emailLabel = new System.Windows.Forms.Label();
+            this.email = new System.Windows.Forms.TextBox();
+            this.signUpButton = new System.Windows.Forms.Button();
             this.parentProfilePanel.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.childrenPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // parentImageButton
+            // firstName
             // 
-            this.parentImageButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.parentImageButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(234)))), ((int)(((byte)(229)))));
-            this.parentImageButton.FlatAppearance.BorderSize = 0;
-            this.parentImageButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.parentImageButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.parentImageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.parentImageButton.Image = ((System.Drawing.Image)(resources.GetObject("parentImageButton.Image")));
-            this.parentImageButton.Location = new System.Drawing.Point(639, 25);
-            this.parentImageButton.Name = "parentImageButton";
-            this.parentImageButton.Size = new System.Drawing.Size(248, 256);
-            this.parentImageButton.TabIndex = 23;
-            this.parentImageButton.UseVisualStyleBackColor = true;
+            this.firstName.Location = new System.Drawing.Point(285, 53);
+            this.firstName.Name = "firstName";
+            this.firstName.Size = new System.Drawing.Size(200, 22);
+            this.firstName.TabIndex = 0;
             // 
-            // saveButton
+            // firstNameLabel
             // 
-            this.saveButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.saveButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlText;
-            this.saveButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.saveButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveButton.Font = new System.Drawing.Font("Bebas Neue", 15F);
-            this.saveButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.saveButton.Location = new System.Drawing.Point(639, 472);
-            this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(248, 44);
-            this.saveButton.TabIndex = 27;
-            this.saveButton.Text = "Save";
-            this.saveButton.UseVisualStyleBackColor = true;
-            // 
-            // importImageButton
-            // 
-            this.importImageButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.importImageButton.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.importImageButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.importImageButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.importImageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.importImageButton.Font = new System.Drawing.Font("Bebas Neue", 15F);
-            this.importImageButton.ForeColor = System.Drawing.Color.DimGray;
-            this.importImageButton.Location = new System.Drawing.Point(639, 287);
-            this.importImageButton.Name = "importImageButton";
-            this.importImageButton.Size = new System.Drawing.Size(248, 44);
-            this.importImageButton.TabIndex = 26;
-            this.importImageButton.Text = "Import Image";
-            this.importImageButton.UseVisualStyleBackColor = true;
-            // 
-            // parentName
-            // 
-            this.parentName.Location = new System.Drawing.Point(305, 36);
-            this.parentName.Name = "parentName";
-            this.parentName.Size = new System.Drawing.Size(280, 22);
-            this.parentName.TabIndex = 17;
-            // 
-            // parentNameLabel
-            // 
-            this.parentNameLabel.AutoSize = true;
-            this.parentNameLabel.Font = new System.Drawing.Font("Bebas Neue", 15F);
-            this.parentNameLabel.Location = new System.Drawing.Point(166, 36);
-            this.parentNameLabel.Name = "parentNameLabel";
-            this.parentNameLabel.Size = new System.Drawing.Size(62, 30);
-            this.parentNameLabel.TabIndex = 16;
-            this.parentNameLabel.Text = "Name:";
+            this.firstNameLabel.AutoSize = true;
+            this.firstNameLabel.Enabled = false;
+            this.firstNameLabel.Font = new System.Drawing.Font("Bebas Neue", 15F);
+            this.firstNameLabel.ForeColor = System.Drawing.Color.DimGray;
+            this.firstNameLabel.Location = new System.Drawing.Point(127, 53);
+            this.firstNameLabel.Name = "firstNameLabel";
+            this.firstNameLabel.Size = new System.Drawing.Size(112, 30);
+            this.firstNameLabel.TabIndex = 16;
+            this.firstNameLabel.Text = "First Name :";
             // 
             // backButton
             // 
@@ -128,38 +87,45 @@
             this.backButton.Location = new System.Drawing.Point(2, 2);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(108, 90);
-            this.backButton.TabIndex = 2;
+            this.backButton.TabIndex = 10;
             this.backButton.UseVisualStyleBackColor = false;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // parentProfilePanel
             // 
-            this.parentProfilePanel.Controls.Add(this.panel1);
+            this.parentProfilePanel.BackColor = System.Drawing.Color.Transparent;
+            this.parentProfilePanel.Controls.Add(this.signUpButton);
+            this.parentProfilePanel.Controls.Add(this.firstNameLabel);
+            this.parentProfilePanel.Controls.Add(this.firstName);
+            this.parentProfilePanel.Controls.Add(this.lastNameLabel);
+            this.parentProfilePanel.Controls.Add(this.lastName);
+            this.parentProfilePanel.Controls.Add(this.usernameLabel);
+            this.parentProfilePanel.Controls.Add(this.username);
+            this.parentProfilePanel.Controls.Add(this.passwordLabel);
+            this.parentProfilePanel.Controls.Add(this.password);
+            this.parentProfilePanel.Controls.Add(this.emailLabel);
+            this.parentProfilePanel.Controls.Add(this.email);
+            this.parentProfilePanel.Controls.Add(this.creditCardLabel);
+            this.parentProfilePanel.Controls.Add(this.creditCard);
             this.parentProfilePanel.Controls.Add(this.phoneNumberLabel);
             this.parentProfilePanel.Controls.Add(this.phoneNumber);
             this.parentProfilePanel.Controls.Add(this.addressLabel);
             this.parentProfilePanel.Controls.Add(this.address);
-            this.parentProfilePanel.Controls.Add(this.passwordLabel);
-            this.parentProfilePanel.Controls.Add(this.password);
-            this.parentProfilePanel.Controls.Add(this.creditCardLabel);
-            this.parentProfilePanel.Controls.Add(this.creditcard);
-            this.parentProfilePanel.Controls.Add(this.parentImageButton);
-            this.parentProfilePanel.Controls.Add(this.saveButton);
-            this.parentProfilePanel.Controls.Add(this.importImageButton);
-            this.parentProfilePanel.Controls.Add(this.parentNameLabel);
-            this.parentProfilePanel.Controls.Add(this.parentName);
-            this.parentProfilePanel.Location = new System.Drawing.Point(1, 2);
+            this.parentProfilePanel.Controls.Add(this.childrenPanel);
+            this.parentProfilePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.parentProfilePanel.Location = new System.Drawing.Point(0, 0);
             this.parentProfilePanel.Name = "parentProfilePanel";
             this.parentProfilePanel.Size = new System.Drawing.Size(920, 540);
             this.parentProfilePanel.TabIndex = 3;
             // 
-            // panel1
+            // childrenPanel
             // 
-            this.panel1.Controls.Add(this.addChildButton);
-            this.panel1.Location = new System.Drawing.Point(0, 320);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(633, 212);
-            this.panel1.TabIndex = 36;
+            this.childrenPanel.AutoScroll = true;
+            this.childrenPanel.Controls.Add(this.addChildButton);
+            this.childrenPanel.Location = new System.Drawing.Point(5, 320);
+            this.childrenPanel.Name = "childrenPanel";
+            this.childrenPanel.Size = new System.Drawing.Size(630, 210);
+            this.childrenPanel.TabIndex = 8;
             // 
             // addChildButton
             // 
@@ -170,87 +136,171 @@
             this.addChildButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addChildButton.Font = new System.Drawing.Font("Bebas Neue", 13F);
             this.addChildButton.Image = ((System.Drawing.Image)(resources.GetObject("addChildButton.Image")));
-            this.addChildButton.Location = new System.Drawing.Point(28, 29);
+            this.addChildButton.Location = new System.Drawing.Point(20, 30);
             this.addChildButton.Name = "addChildButton";
-            this.addChildButton.Size = new System.Drawing.Size(200, 167);
-            this.addChildButton.TabIndex = 37;
-            this.addChildButton.Text = "add child";
+            this.addChildButton.Size = new System.Drawing.Size(150, 150);
+            this.addChildButton.TabIndex = 0;
+            this.addChildButton.Text = " add child";
             this.addChildButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.addChildButton.UseVisualStyleBackColor = true;
             // 
             // phoneNumberLabel
             // 
             this.phoneNumberLabel.AutoSize = true;
+            this.phoneNumberLabel.Enabled = false;
             this.phoneNumberLabel.Font = new System.Drawing.Font("Bebas Neue", 15F);
-            this.phoneNumberLabel.Location = new System.Drawing.Point(166, 86);
+            this.phoneNumberLabel.ForeColor = System.Drawing.Color.DimGray;
+            this.phoneNumberLabel.Location = new System.Drawing.Point(127, 223);
             this.phoneNumberLabel.Name = "phoneNumberLabel";
-            this.phoneNumberLabel.Size = new System.Drawing.Size(136, 30);
+            this.phoneNumberLabel.Size = new System.Drawing.Size(140, 30);
             this.phoneNumberLabel.TabIndex = 34;
-            this.phoneNumberLabel.Text = "Phone Number:";
+            this.phoneNumberLabel.Text = "Phone Number :";
             // 
             // phoneNumber
             // 
-            this.phoneNumber.Location = new System.Drawing.Point(305, 86);
+            this.phoneNumber.Location = new System.Drawing.Point(285, 223);
             this.phoneNumber.Name = "phoneNumber";
             this.phoneNumber.Size = new System.Drawing.Size(280, 22);
-            this.phoneNumber.TabIndex = 35;
+            this.phoneNumber.TabIndex = 6;
             // 
             // addressLabel
             // 
             this.addressLabel.AutoSize = true;
+            this.addressLabel.Enabled = false;
             this.addressLabel.Font = new System.Drawing.Font("Bebas Neue", 15F);
-            this.addressLabel.Location = new System.Drawing.Point(166, 138);
+            this.addressLabel.ForeColor = System.Drawing.Color.DimGray;
+            this.addressLabel.Location = new System.Drawing.Point(127, 261);
             this.addressLabel.Name = "addressLabel";
-            this.addressLabel.Size = new System.Drawing.Size(85, 30);
+            this.addressLabel.Size = new System.Drawing.Size(89, 30);
             this.addressLabel.TabIndex = 32;
-            this.addressLabel.Text = "Address:";
+            this.addressLabel.Text = "Address :";
             // 
             // address
             // 
-            this.address.Location = new System.Drawing.Point(305, 138);
+            this.address.Location = new System.Drawing.Point(285, 261);
             this.address.Name = "address";
             this.address.Size = new System.Drawing.Size(280, 22);
-            this.address.TabIndex = 33;
+            this.address.TabIndex = 7;
             // 
             // passwordLabel
             // 
             this.passwordLabel.AutoSize = true;
+            this.passwordLabel.Enabled = false;
             this.passwordLabel.Font = new System.Drawing.Font("Bebas Neue", 15F);
-            this.passwordLabel.Location = new System.Drawing.Point(166, 192);
+            this.passwordLabel.ForeColor = System.Drawing.Color.DimGray;
+            this.passwordLabel.Location = new System.Drawing.Point(506, 98);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(99, 30);
+            this.passwordLabel.Size = new System.Drawing.Size(103, 30);
             this.passwordLabel.TabIndex = 30;
-            this.passwordLabel.Text = "Password:";
+            this.passwordLabel.Text = "Password :";
             // 
             // password
             // 
-            this.password.Location = new System.Drawing.Point(305, 192);
+            this.password.Location = new System.Drawing.Point(652, 98);
             this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(280, 22);
-            this.password.TabIndex = 31;
+            this.password.Size = new System.Drawing.Size(200, 22);
+            this.password.TabIndex = 3;
+            this.password.UseSystemPasswordChar = true;
             // 
             // creditCardLabel
             // 
             this.creditCardLabel.AutoSize = true;
+            this.creditCardLabel.Enabled = false;
             this.creditCardLabel.Font = new System.Drawing.Font("Bebas Neue", 15F);
-            this.creditCardLabel.Location = new System.Drawing.Point(166, 251);
+            this.creditCardLabel.ForeColor = System.Drawing.Color.DimGray;
+            this.creditCardLabel.Location = new System.Drawing.Point(127, 185);
             this.creditCardLabel.Name = "creditCardLabel";
-            this.creditCardLabel.Size = new System.Drawing.Size(115, 30);
+            this.creditCardLabel.Size = new System.Drawing.Size(119, 30);
             this.creditCardLabel.TabIndex = 28;
-            this.creditCardLabel.Text = "Credit Card:";
+            this.creditCardLabel.Text = "Credit Card :";
             // 
-            // creditcard
+            // creditCard
             // 
-            this.creditcard.Location = new System.Drawing.Point(305, 251);
-            this.creditcard.Name = "creditcard";
-            this.creditcard.Size = new System.Drawing.Size(280, 22);
-            this.creditcard.TabIndex = 29;
+            this.creditCard.Location = new System.Drawing.Point(285, 185);
+            this.creditCard.Name = "creditCard";
+            this.creditCard.Size = new System.Drawing.Size(280, 22);
+            this.creditCard.TabIndex = 5;
+            // 
+            // lastNameLabel
+            // 
+            this.lastNameLabel.AutoSize = true;
+            this.lastNameLabel.Enabled = false;
+            this.lastNameLabel.Font = new System.Drawing.Font("Bebas Neue", 15F);
+            this.lastNameLabel.ForeColor = System.Drawing.Color.DimGray;
+            this.lastNameLabel.Location = new System.Drawing.Point(506, 53);
+            this.lastNameLabel.Name = "lastNameLabel";
+            this.lastNameLabel.Size = new System.Drawing.Size(106, 30);
+            this.lastNameLabel.TabIndex = 37;
+            this.lastNameLabel.Text = "Last Name :";
+            // 
+            // lastName
+            // 
+            this.lastName.Location = new System.Drawing.Point(652, 53);
+            this.lastName.Name = "lastName";
+            this.lastName.Size = new System.Drawing.Size(200, 22);
+            this.lastName.TabIndex = 1;
+            // 
+            // usernameLabel
+            // 
+            this.usernameLabel.AutoSize = true;
+            this.usernameLabel.Enabled = false;
+            this.usernameLabel.Font = new System.Drawing.Font("Bebas Neue", 15F);
+            this.usernameLabel.ForeColor = System.Drawing.Color.DimGray;
+            this.usernameLabel.Location = new System.Drawing.Point(127, 98);
+            this.usernameLabel.Name = "usernameLabel";
+            this.usernameLabel.Size = new System.Drawing.Size(104, 30);
+            this.usernameLabel.TabIndex = 39;
+            this.usernameLabel.Text = "Username :";
+            // 
+            // username
+            // 
+            this.username.Location = new System.Drawing.Point(285, 98);
+            this.username.Name = "username";
+            this.username.Size = new System.Drawing.Size(200, 22);
+            this.username.TabIndex = 2;
+            // 
+            // emailLabel
+            // 
+            this.emailLabel.AutoSize = true;
+            this.emailLabel.Enabled = false;
+            this.emailLabel.Font = new System.Drawing.Font("Bebas Neue", 15F);
+            this.emailLabel.ForeColor = System.Drawing.Color.DimGray;
+            this.emailLabel.Location = new System.Drawing.Point(127, 143);
+            this.emailLabel.Name = "emailLabel";
+            this.emailLabel.Size = new System.Drawing.Size(68, 30);
+            this.emailLabel.TabIndex = 41;
+            this.emailLabel.Text = "Email :";
+            // 
+            // email
+            // 
+            this.email.Location = new System.Drawing.Point(285, 143);
+            this.email.Name = "email";
+            this.email.Size = new System.Drawing.Size(280, 22);
+            this.email.TabIndex = 4;
+            // 
+            // signUpButton
+            // 
+            this.signUpButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.signUpButton.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.signUpButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.signUpButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.signUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.signUpButton.Font = new System.Drawing.Font("Bebas Neue", 15F);
+            this.signUpButton.ForeColor = System.Drawing.Color.DimGray;
+            this.signUpButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.signUpButton.Location = new System.Drawing.Point(650, 475);
+            this.signUpButton.Name = "signUpButton";
+            this.signUpButton.Size = new System.Drawing.Size(248, 44);
+            this.signUpButton.TabIndex = 9;
+            this.signUpButton.Text = "Sign Up";
+            this.signUpButton.UseVisualStyleBackColor = true;
             // 
             // parentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(236)))), ((int)(((byte)(215)))));
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(920, 540);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.parentProfilePanel);
@@ -260,19 +310,15 @@
             this.Load += new System.EventHandler(this.parentForm_Load);
             this.parentProfilePanel.ResumeLayout(false);
             this.parentProfilePanel.PerformLayout();
-            this.panel1.ResumeLayout(false);
+            this.childrenPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button parentImageButton;
-        private System.Windows.Forms.Button saveButton;
-        private System.Windows.Forms.Button importImageButton;
-        private System.Windows.Forms.TextBox parentName;
-        private System.Windows.Forms.Label parentNameLabel;
+        private System.Windows.Forms.TextBox firstName;
+        private System.Windows.Forms.Label firstNameLabel;
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Panel parentProfilePanel;
         private System.Windows.Forms.Label phoneNumberLabel;
@@ -282,8 +328,15 @@
         private System.Windows.Forms.Label passwordLabel;
         private System.Windows.Forms.TextBox password;
         private System.Windows.Forms.Label creditCardLabel;
-        private System.Windows.Forms.TextBox creditcard;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox creditCard;
+        private System.Windows.Forms.Panel childrenPanel;
         private System.Windows.Forms.Button addChildButton;
+        private System.Windows.Forms.Label lastNameLabel;
+        private System.Windows.Forms.TextBox lastName;
+        private System.Windows.Forms.Label emailLabel;
+        private System.Windows.Forms.TextBox email;
+        private System.Windows.Forms.Label usernameLabel;
+        private System.Windows.Forms.TextBox username;
+        private System.Windows.Forms.Button signUpButton;
     }
 }
