@@ -28,25 +28,17 @@ namespace Nursery_Management_System
 
         public void enableEditing(string state)
         {
+            this.editButton.Visible = false;
+            this.childProfilePanel.Enabled = true;
+            this.importImageButton.Visible = true;
+            this.saveButton.Visible = true;
+
             switch(state)
             {
                 case "parentSignUp":
                 {
-                    this.Text = "Nusery Management System - Child Sign Up";
-                    this.editButton.Visible = false;
+                    this.Text = "Nusery Management System - Child Sign Up";                    
                     this.roomNumber.Enabled = false;
-                    this.childProfilePanel.Enabled = true;
-                    this.importImageButton.Visible = true;
-                    this.saveButton.Visible = true;
-                }
-                break;
-
-                case "adminEdit":
-                {
-                    this.editButton.Visible = false;
-                    this.childProfilePanel.Enabled = true;
-                    this.importImageButton.Visible = true;
-                    this.saveButton.Visible = true;
                 }
                 break;
 
