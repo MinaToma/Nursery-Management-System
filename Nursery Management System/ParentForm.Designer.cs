@@ -143,6 +143,7 @@
             this.addChildButton.Text = " add child";
             this.addChildButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.addChildButton.UseVisualStyleBackColor = true;
+            this.addChildButton.Click += new System.EventHandler(this.addChildButton_Click);
             // 
             // phoneNumberLabel
             // 

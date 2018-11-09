@@ -11,11 +11,11 @@ using System.Data.SqlClient;
 
 namespace Nursery_Management_System
 {
-    public partial class ChildForm : Form
+    public partial class childForm : Form
     {
         string Gender, PicLocation;
         PictureBox PicBox = new PictureBox();
-        public ChildForm()
+        public childForm()
         {
             InitializeComponent();
             PicBox.Image = childImageButton.BackgroundImage;
@@ -24,6 +24,43 @@ namespace Nursery_Management_System
            // last two number the id of parent and the number of his childeren 
            //Q.laodChildData(ref PicBox, ref childName, ref roomNumber, 1, 0);
            // childImageButton.BackgroundImage = PicBox.Image;
+        }
+
+        public void enableEditing(string state)
+        {
+            switch(state)
+            {
+                case "parentSignUp":
+                {
+                    this.Text = "Nusery Management System - Child Sign Up";
+                    this.editButton.Visible = false;
+                    this.roomNumber.Enabled = false;
+                    this.childProfilePanel.Enabled = true;
+                    this.importImageButton.Visible = true;
+                    this.saveButton.Visible = true;
+                }
+                break;
+
+                case "adminEdit":
+                {
+                    this.editButton.Visible = false;
+                    this.childProfilePanel.Enabled = true;
+                    this.importImageButton.Visible = true;
+                    this.saveButton.Visible = true;
+                }
+                break;
+
+                default:
+                {
+
+                }
+                break;
+            }
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Program.signForm.Close();
         }
 
         private void nameLabel_Click(object sender, EventArgs e)
@@ -94,10 +131,7 @@ namespace Nursery_Management_System
 
         private void editButton_Click(object sender, EventArgs e)
         {
-            this.editButton.Visible = false;
-            this.childProfilePanel.Enabled = true;
-            this.importImageButton.Visible = true;
-            this.saveButton.Visible = true;
+            enableEditing("adminEdit");
         }
     }
 }

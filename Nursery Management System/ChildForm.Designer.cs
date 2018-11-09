@@ -1,6 +1,6 @@
 ﻿namespace Nursery_Management_System
 {
-    partial class ChildForm
+    partial class childForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChildForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(childForm));
             this.backButton = new System.Windows.Forms.Button();
             this.childProfilePanel = new System.Windows.Forms.Panel();
             this.genderPanel = new System.Windows.Forms.Panel();
@@ -412,7 +412,7 @@
             this.editButton.UseVisualStyleBackColor = false;
             this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
-            // Child
+            // childForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -423,7 +423,7 @@
             this.Controls.Add(this.editButton);
             this.Controls.Add(this.childProfilePanel);
             this.HelpButton = true;
-            this.Name = "Child";
+            this.Name = "childForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nusery Management System - Child Profile";
             this.Load += new System.EventHandler(this.Child_Load);
