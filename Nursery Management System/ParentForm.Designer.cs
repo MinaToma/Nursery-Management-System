@@ -1,6 +1,6 @@
 ﻿namespace Nursery_Management_System
 {
-    partial class ParentForm
+    partial class parentForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ParentForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(parentForm));
             this.parentImageButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
             this.importImageButton = new System.Windows.Forms.Button();
@@ -119,18 +119,18 @@
             this.backButton.AutoSize = true;
             this.backButton.BackColor = System.Drawing.Color.Transparent;
             this.backButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.backButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.backButton.FlatAppearance.BorderSize = 0;
             this.backButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.backButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backButton.Font = new System.Drawing.Font("Bebas Neue", 15F);
             this.backButton.Image = ((System.Drawing.Image)(resources.GetObject("backButton.Image")));
-            this.backButton.Location = new System.Drawing.Point(-1, -1);
+            this.backButton.Location = new System.Drawing.Point(2, 2);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(108, 90);
             this.backButton.TabIndex = 2;
             this.backButton.UseVisualStyleBackColor = false;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // parentProfilePanel
             // 
@@ -246,7 +246,7 @@
             this.creditcard.Size = new System.Drawing.Size(280, 22);
             this.creditcard.TabIndex = 29;
             // 
-            // ParentForm
+            // parentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -254,9 +254,10 @@
             this.ClientSize = new System.Drawing.Size(920, 540);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.parentProfilePanel);
-            this.Name = "ParentForm";
+            this.Name = "parentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nursery Management System - Sign Up as Parent";
+            this.Load += new System.EventHandler(this.parentForm_Load);
             this.parentProfilePanel.ResumeLayout(false);
             this.parentProfilePanel.PerformLayout();
             this.panel1.ResumeLayout(false);

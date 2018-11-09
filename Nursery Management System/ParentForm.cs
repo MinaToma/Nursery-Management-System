@@ -10,11 +10,30 @@ using System.Windows.Forms;
 
 namespace Nursery_Management_System
 {
-    public partial class ParentForm : Form
+    public partial class parentForm : Form
     {
-        public ParentForm()
+        public parentForm()
         {
             InitializeComponent();
+        }
+
+        private void parentForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Program.signForm.Close();
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            if(Program.globalType != "")
+                Program.parentLoggedInForm.Show();
+            else
+                Program.signUpForm.Show();
         }
     }
 }

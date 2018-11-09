@@ -1,6 +1,6 @@
 ﻿namespace Nursery_Management_System
 {
-    partial class Sign
+    partial class sign
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sign));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(sign));
             this.signButtons = new System.Windows.Forms.Panel();
             this.signUpButton = new System.Windows.Forms.Button();
             this.signInButton = new System.Windows.Forms.Button();
@@ -78,7 +78,7 @@
             this.signInButton.UseVisualStyleBackColor = false;
             this.signInButton.Click += new System.EventHandler(this.signIn_Click);
             // 
-            // Sign
+            // sign
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -86,7 +86,7 @@
             this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(920, 540);
             this.Controls.Add(this.signButtons);
-            this.Name = "Sign";
+            this.Name = "sign";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nursery Management System - Welcome!";
             this.Load += new System.EventHandler(this.Sign_Load);

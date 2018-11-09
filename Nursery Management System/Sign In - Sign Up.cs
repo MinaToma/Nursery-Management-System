@@ -11,16 +11,16 @@ using System.Windows.Forms;
 
 namespace Nursery_Management_System
 {
-    public partial class Sign : Form
+    public partial class sign : Form
     {
-        public Sign()
+        public sign()
         {
             InitializeComponent();
         }
 
         private void signIn_Click(object sender, EventArgs e)
         {
-            Program.signForm.Hide();
+            this.Hide();
             Program.signInForm.Show();
         }
 

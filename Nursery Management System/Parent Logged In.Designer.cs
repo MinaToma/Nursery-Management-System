@@ -49,6 +49,7 @@
             this.parentProfileButton.Text = "Profile";
             this.parentProfileButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.parentProfileButton.UseVisualStyleBackColor = false;
+            this.parentProfileButton.Click += new System.EventHandler(this.parentProfileButton_Click);
             // 
             // childrenButton
             // 
@@ -95,6 +96,7 @@
             this.signOutButton.Text = "Sign Out";
             this.signOutButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.signOutButton.UseVisualStyleBackColor = false;
+            this.signOutButton.Click += new System.EventHandler(this.signOutButton_Click);
             // 
             // parentLoggedIn
             // 

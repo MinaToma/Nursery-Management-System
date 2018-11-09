@@ -34,23 +34,24 @@
             this.usernameLabel = new System.Windows.Forms.Label();
             this.passwordLabel = new System.Windows.Forms.Label();
             this.loginButton = new System.Windows.Forms.Button();
+            this.backButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // usernameInput
             // 
-            this.usernameInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.usernameInput.Font = new System.Drawing.Font("Consolas", 13F);
             this.usernameInput.Location = new System.Drawing.Point(184, 316);
             this.usernameInput.Name = "usernameInput";
-            this.usernameInput.Size = new System.Drawing.Size(350, 32);
+            this.usernameInput.Size = new System.Drawing.Size(350, 33);
             this.usernameInput.TabIndex = 0;
             // 
             // passwordInput
             // 
-            this.passwordInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.passwordInput.Font = new System.Drawing.Font("Consolas", 13F);
             this.passwordInput.Location = new System.Drawing.Point(184, 377);
             this.passwordInput.Name = "passwordInput";
             this.passwordInput.PasswordChar = '*';
-            this.passwordInput.Size = new System.Drawing.Size(350, 32);
+            this.passwordInput.Size = new System.Drawing.Size(350, 33);
             this.passwordInput.TabIndex = 1;
             this.passwordInput.UseSystemPasswordChar = true;
             // 
@@ -99,6 +100,25 @@
             this.loginButton.UseVisualStyleBackColor = false;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
+            // backButton
+            // 
+            this.backButton.AutoSize = true;
+            this.backButton.BackColor = System.Drawing.Color.Transparent;
+            this.backButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.backButton.FlatAppearance.BorderSize = 0;
+            this.backButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.backButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backButton.Font = new System.Drawing.Font("Bebas Neue", 15F);
+            this.backButton.Image = ((System.Drawing.Image)(resources.GetObject("backButton.Image")));
+            this.backButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.backButton.Location = new System.Drawing.Point(2, 2);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(107, 90);
+            this.backButton.TabIndex = 7;
+            this.backButton.UseVisualStyleBackColor = false;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            // 
             // signIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -107,6 +127,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(920, 540);
+            this.Controls.Add(this.backButton);
             this.Controls.Add(this.passwordLabel);
             this.Controls.Add(this.usernameLabel);
             this.Controls.Add(this.loginButton);
@@ -129,5 +150,6 @@
         private System.Windows.Forms.Label usernameLabel;
         private System.Windows.Forms.Label passwordLabel;
         private System.Windows.Forms.Button loginButton;
+        private System.Windows.Forms.Button backButton;
     }
 }

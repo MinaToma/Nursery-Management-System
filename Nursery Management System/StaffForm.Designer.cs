@@ -1,6 +1,8 @@
-﻿namespace Nursery_Management_System
+﻿using System;
+
+namespace Nursery_Management_System
 {
-    partial class StaffForm
+    partial class staffForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +30,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StaffForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(staffForm));
             this.IDLabel = new System.Windows.Forms.Label();
             this.ID = new System.Windows.Forms.TextBox();
             this.lastNameLabel = new System.Windows.Forms.Label();
@@ -52,6 +54,7 @@
             // IDLabel
             // 
             resources.ApplyResources(this.IDLabel, "IDLabel");
+            this.IDLabel.ForeColor = System.Drawing.Color.DimGray;
             this.IDLabel.Name = "IDLabel";
             // 
             // ID
@@ -63,6 +66,7 @@
             // lastNameLabel
             // 
             resources.ApplyResources(this.lastNameLabel, "lastNameLabel");
+            this.lastNameLabel.ForeColor = System.Drawing.Color.DimGray;
             this.lastNameLabel.Name = "lastNameLabel";
             // 
             // lastName
@@ -73,6 +77,7 @@
             // phoneNumberLabel
             // 
             resources.ApplyResources(this.phoneNumberLabel, "phoneNumberLabel");
+            this.phoneNumberLabel.ForeColor = System.Drawing.Color.DimGray;
             this.phoneNumberLabel.Name = "phoneNumberLabel";
             // 
             // phoneNumber
@@ -84,6 +89,7 @@
             // emailLabel
             // 
             resources.ApplyResources(this.emailLabel, "emailLabel");
+            this.emailLabel.ForeColor = System.Drawing.Color.DimGray;
             this.emailLabel.Name = "emailLabel";
             // 
             // email
@@ -95,16 +101,19 @@
             // passwordLabel
             // 
             resources.ApplyResources(this.passwordLabel, "passwordLabel");
+            this.passwordLabel.ForeColor = System.Drawing.Color.DimGray;
             this.passwordLabel.Name = "passwordLabel";
             // 
             // password
             // 
             resources.ApplyResources(this.password, "password");
             this.password.Name = "password";
+            this.password.UseSystemPasswordChar = true;
             // 
             // usernameLabel
             // 
             resources.ApplyResources(this.usernameLabel, "usernameLabel");
+            this.usernameLabel.ForeColor = System.Drawing.Color.DimGray;
             this.usernameLabel.Name = "usernameLabel";
             // 
             // username
@@ -115,11 +124,11 @@
             // signUpButton
             // 
             this.signUpButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.signUpButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlText;
+            this.signUpButton.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.signUpButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.signUpButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.signUpButton, "signUpButton");
-            this.signUpButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.signUpButton.ForeColor = System.Drawing.Color.DimGray;
             this.signUpButton.Name = "signUpButton";
             this.signUpButton.UseVisualStyleBackColor = true;
             this.signUpButton.Click += new System.EventHandler(this.signUpButton_Click);
@@ -145,6 +154,7 @@
             // staffFirstNameLabel
             // 
             resources.ApplyResources(this.staffFirstNameLabel, "staffFirstNameLabel");
+            this.staffFirstNameLabel.ForeColor = System.Drawing.Color.DimGray;
             this.staffFirstNameLabel.Name = "staffFirstNameLabel";
             // 
             // staffProfilePanel
@@ -168,14 +178,13 @@
             resources.ApplyResources(this.staffProfilePanel, "staffProfilePanel");
             this.staffProfilePanel.Name = "staffProfilePanel";
             // 
-            // StaffForm
+            // staffForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(207)))), ((int)(((byte)(252)))));
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.staffProfilePanel);
-            this.Name = "StaffForm";
+            this.Name = "staffForm";
             this.staffProfilePanel.ResumeLayout(false);
             this.staffProfilePanel.PerformLayout();
             this.ResumeLayout(false);
@@ -202,5 +211,7 @@
         private System.Windows.Forms.Label lastNameLabel;
         private System.Windows.Forms.TextBox ID;
         private System.Windows.Forms.Label IDLabel;
+
+        public EventHandler StaffForm_Load { get; private set; }
     }
 }
