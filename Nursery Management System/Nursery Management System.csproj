@@ -57,6 +57,7 @@
     <Compile Include="ChildForm.Designer.cs">
       <DependentUpon>ChildForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="connectionString.cs" />
     <Compile Include="ImageRead.cs" />
     <Compile Include="Parent Logged In.cs">
       <SubType>Form</SubType>

@@ -22,9 +22,11 @@ namespace Nursery_Management_System
 
         public SQL()
         {
-            mConnection = new SqlConnection(@"Server=DESKTOP-2OGA27F; DataBase=Nursery; Integrated Security=true;");
+            connectionString st = new connectionString();
+            MessageBox.Show(st.serverName);
+            mConnection = new SqlConnection(@st.serverName);
         }
-            
+        
         public DataTable retrieveQuery(string query)
         {
             DataTable mDataTable = new DataTable();
@@ -48,7 +50,7 @@ namespace Nursery_Management_System
             return mDataTable;
         }
         
-        public void insertQuery(SqlCommand command)
+        public bool insertQuery(SqlCommand command)
         {
             mCommand = command;
             mCommand.Connection = mConnection;
@@ -60,12 +62,13 @@ namespace Nursery_Management_System
             catch
             {   
                 MessageBox.Show("There was an error while connecting to data base , please check your connection and try again", "Sql Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
             finally
             {
                 mConnection.Close();
             }
-            return;
+            return true;
         }
 
         public void updateQuery(SqlCommand command)
