@@ -64,15 +64,12 @@
     <Compile Include="Parent Logged In.Designer.cs">
       <DependentUpon>Parent Logged In.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-=======
     <Compile Include="Staff Logged In.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Staff Logged In.Designer.cs">
       <DependentUpon>Staff Logged In.cs</DependentUpon>
     </Compile>
->>>>>>> 9562463b9143906bfc21ba045251cf2ce3da7fc2
     <Compile Include="StaffForm.cs">
       <SubType>Form</SubType>
     </Compile>
