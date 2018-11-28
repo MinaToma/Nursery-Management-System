@@ -13,17 +13,11 @@ namespace Nursery_Management_System
 {
     public partial class childForm : Form
     {
-        string Gender, PicLocation;
-        PictureBox PicBox = new PictureBox();
+        string Gender;
+        string location;
         public childForm()
         {
             InitializeComponent();
-            PicBox.Image = childImageButton.BackgroundImage;
-            SQL Q = new SQL();
-
-           // last two number the id of parent and the number of his childeren 
-           //Q.laodChildData(ref PicBox, ref childName, ref roomNumber, 1, 0);
-           // childImageButton.BackgroundImage = PicBox.Image;
         }
 
         public void enableEditing(string state)
@@ -99,7 +93,13 @@ namespace Nursery_Management_System
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-       
+            SQLQuery mSQLQuery = new SQLQuery();
+            
+            Child child = new Child(childName.Text , Program.globalParent.firstName , Program.globalParent.id , -1 , Gender , DOBpicker.Value , location , Program.globalParent.pending);
+
+            mSQLQuery.insertChildData(child);
+
+            MessageBox.Show("Requset has been sent", "Request sent", MessageBoxButtons.OK, MessageBoxIcon.None);
         }
 
         private void childName_TextChanged_1(object sender, EventArgs e)
@@ -114,8 +114,21 @@ namespace Nursery_Management_System
 
         private void importImageButton_Click(object sender, EventArgs e)
         {
-            ImageRead img = new ImageRead();
-            PicLocation = img.PICc(ref PicBox);
+            /*ImageRead img = new ImageRead();
+            PicLocation = img.PICc(ref PicBox);*/
+        }
+
+        private void childImageButton_Click_2(object sender, EventArgs e)
+        {
+            OpenFileDialog getPictureLocation = new OpenFileDialog();
+            getPictureLocation.Filter = "JPG(*.JPG)|*.JPG";
+
+            if(getPictureLocation.ShowDialog() == DialogResult.OK)
+            {
+                location = getPictureLocation.FileName;
+                childImageButton.Image = Image.FromFile(getPictureLocation.FileName);
+            }
+
         }
 
         private void editButton_Click(object sender, EventArgs e)
