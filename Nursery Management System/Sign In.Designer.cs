@@ -29,30 +29,31 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(signIn));
-            this.usernameInput = new System.Windows.Forms.TextBox();
-            this.passwordInput = new System.Windows.Forms.TextBox();
+            this.username = new System.Windows.Forms.TextBox();
+            this.password = new System.Windows.Forms.TextBox();
             this.usernameLabel = new System.Windows.Forms.Label();
             this.passwordLabel = new System.Windows.Forms.Label();
             this.loginButton = new System.Windows.Forms.Button();
+            this.backButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // usernameInput
+            // username
             // 
-            this.usernameInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.usernameInput.Location = new System.Drawing.Point(184, 316);
-            this.usernameInput.Name = "usernameInput";
-            this.usernameInput.Size = new System.Drawing.Size(350, 32);
-            this.usernameInput.TabIndex = 0;
+            this.username.Font = new System.Drawing.Font("Consolas", 13F);
+            this.username.Location = new System.Drawing.Point(184, 316);
+            this.username.Name = "username";
+            this.username.Size = new System.Drawing.Size(350, 33);
+            this.username.TabIndex = 0;
             // 
-            // passwordInput
+            // password
             // 
-            this.passwordInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.passwordInput.Location = new System.Drawing.Point(184, 377);
-            this.passwordInput.Name = "passwordInput";
-            this.passwordInput.PasswordChar = '*';
-            this.passwordInput.Size = new System.Drawing.Size(350, 32);
-            this.passwordInput.TabIndex = 1;
-            this.passwordInput.UseSystemPasswordChar = true;
+            this.password.Font = new System.Drawing.Font("Consolas", 13F);
+            this.password.Location = new System.Drawing.Point(184, 377);
+            this.password.Name = "password";
+            this.password.PasswordChar = '*';
+            this.password.Size = new System.Drawing.Size(350, 33);
+            this.password.TabIndex = 1;
+            this.password.UseSystemPasswordChar = true;
             // 
             // usernameLabel
             // 
@@ -99,19 +100,38 @@
             this.loginButton.UseVisualStyleBackColor = false;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
+            // backButton
+            // 
+            this.backButton.AutoSize = true;
+            this.backButton.BackColor = System.Drawing.Color.Transparent;
+            this.backButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.backButton.FlatAppearance.BorderSize = 0;
+            this.backButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.backButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backButton.Font = new System.Drawing.Font("Bebas Neue", 15F);
+            this.backButton.Image = ((System.Drawing.Image)(resources.GetObject("backButton.Image")));
+            this.backButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.backButton.Location = new System.Drawing.Point(2, 2);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(107, 90);
+            this.backButton.TabIndex = 7;
+            this.backButton.UseVisualStyleBackColor = false;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            // 
             // signIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(920, 540);
+            this.Controls.Add(this.backButton);
             this.Controls.Add(this.passwordLabel);
             this.Controls.Add(this.usernameLabel);
             this.Controls.Add(this.loginButton);
-            this.Controls.Add(this.passwordInput);
-            this.Controls.Add(this.usernameInput);
+            this.Controls.Add(this.password);
+            this.Controls.Add(this.username);
             this.Font = new System.Drawing.Font("Helvetica", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "signIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -124,10 +144,11 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox passwordInput;
-        private System.Windows.Forms.TextBox usernameInput;
+        private System.Windows.Forms.TextBox password;
+        private System.Windows.Forms.TextBox username;
         private System.Windows.Forms.Label usernameLabel;
         private System.Windows.Forms.Label passwordLabel;
         private System.Windows.Forms.Button loginButton;
+        private System.Windows.Forms.Button backButton;
     }
 }

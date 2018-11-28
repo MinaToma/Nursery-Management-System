@@ -11,10 +11,14 @@ namespace Nursery_Management_System
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
-        public static Sign signForm = new Sign();
-        public static signUp signUpForm = new signUp();
-        public static StaffForm staffSignUpForm = new StaffForm();
+        public static sign signForm = new sign();
         public static signIn signInForm = new signIn();
+        public static parentLoggedIn parentLoggedInForm = new parentLoggedIn();
+        public static parentForm parentProfileForm = new parentForm();
+        public static signUp signUpForm = new signUp();
+        public static staffForm staffSignUpForm = new staffForm();
+        public static parentForm parentSignUpForm = new parentForm();
+        public static childForm childSignUpForm = new childForm();
         public static Parent globalParent = new Parent();
         public static Staff globalStaff = new Staff();
         public static Admin globalAdmin = new Admin();
@@ -25,9 +29,7 @@ namespace Nursery_Management_System
         {
             Application.EnableVisualStyles();
             //Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(/*new Sign()*/ signForm);
-            //Application.Run(new ParentForm());
-           // Application.Run(new ChildForm());
+            Application.Run(signForm);
         }
     }
 }

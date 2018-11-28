@@ -29,13 +29,20 @@ namespace Nursery_Management_System
 
         private void signInButton_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Program.parentSignUpForm.Show();
         }
 
         private void staffSignUp_Click(object sender, EventArgs e)
         {
             this.Hide();
             Program.staffSignUpForm.Show();
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.signForm.Show();
         }
     }
 }

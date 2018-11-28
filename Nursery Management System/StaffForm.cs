@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Nursery_Management_System
 {
-    public partial class StaffForm : Form
+    public partial class staffForm : Form
     {
-        public StaffForm()
+        public staffForm()
         {
             InitializeComponent();
         }
@@ -20,14 +20,14 @@ namespace Nursery_Management_System
         private void signUpButton_Click(object sender, EventArgs e)
         {
             SQLQuery mSQLQuery = new SQLQuery();
-            if(mSQLQuery.checkForUsername(username.Text) == true)
+            if (mSQLQuery.checkForUsername(username.Text) == true)
             {
                 MessageBox.Show("Username already exists", "Wrong Username or Password", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                Staff staff = new Staff( Convert.ToInt64(ID.Text) , firstName.Text , lastName.Text, phoneNumber.Text, email.Text, -1 , 1 , "Staff");
-                mSQLQuery.insertStaffData(staff , "Staff");
+                Staff staff = new Staff(Convert.ToInt64(ID.Text), firstName.Text, lastName.Text, phoneNumber.Text, email.Text, -1, 1, "Staff");
+                mSQLQuery.insertStaffData(staff, "Staff");
 
                 mSQLQuery.insertUser(username.Text, password.Text, "Staff", staff.id);
                 MessageBox.Show("Requset has been sent", "Request sent", MessageBoxButtons.OK, MessageBoxIcon.None);
