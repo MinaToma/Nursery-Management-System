@@ -72,7 +72,10 @@
             // nextButton
             // 
             this.nextButton.BackColor = System.Drawing.Color.Transparent;
+            this.nextButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.nextButton.FlatAppearance.BorderSize = 0;
+            this.nextButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.nextButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.nextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.nextButton.Font = new System.Drawing.Font("Bebas Neue", 15F);
             this.nextButton.Image = ((System.Drawing.Image)(resources.GetObject("nextButton.Image")));
@@ -85,7 +88,10 @@
             // previousButton
             // 
             this.previousButton.BackColor = System.Drawing.Color.Transparent;
+            this.previousButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.previousButton.FlatAppearance.BorderSize = 0;
+            this.previousButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.previousButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.previousButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.previousButton.Font = new System.Drawing.Font("Bebas Neue", 15F);
             this.previousButton.Image = ((System.Drawing.Image)(resources.GetObject("previousButton.Image")));
