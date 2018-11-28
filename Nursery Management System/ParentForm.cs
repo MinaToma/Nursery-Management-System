@@ -41,5 +41,10 @@ namespace Nursery_Management_System
             Program.childSignUpForm.Show();
             Program.childSignUpForm.enableEditing("parentSignUp");
         }
+
+        private void parentProfilePanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
