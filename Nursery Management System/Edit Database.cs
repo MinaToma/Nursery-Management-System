@@ -15,41 +15,17 @@ namespace Nursery_Management_System
         public editDatabase()
         {
             InitializeComponent();
-            editDatabaseControl.DrawItem += mina;
+
+            SQLQuery mSQLQuery = new SQLQuery();
+
+            
         }
 
         private void editDatabase_Load(object sender, EventArgs e)
         {
 
         }
-
-        private void mina(object sender, DrawItemEventArgs e)
-        {
-            MessageBox.Show("haha");
-            //get tabpage
-            TabPage tabPages = editDatabaseControl.TabPages[e.Index];
-            Graphics graphics = e.Graphics;
-            Brush textBrush = new SolidBrush(Color.Green); //fore color brush
-            Rectangle tabBounds = editDatabaseControl.GetTabRect(e.Index);
-            if (e.State == DrawItemState.Selected)
-            {
-                graphics.FillRectangle(Brushes.SkyBlue, e.Bounds); //fill background color
-            }
-            else
-            {
-                textBrush = new System.Drawing.SolidBrush(e.ForeColor);
-                e.DrawBackground();
-            }
-            Font tabFont = new Font("Book Antiqua", 12, FontStyle.Italic | FontStyle.Bold, GraphicsUnit.Pixel);
-            StringFormat strFormat = new StringFormat();
-            strFormat.Alignment = StringAlignment.Near;
-            strFormat.LineAlignment = StringAlignment.Near;
-            // draw text
-            graphics.DrawString(tabPages.Text, tabFont, textBrush, tabBounds, new StringFormat(strFormat));
-            graphics.Dispose();
-            textBrush.Dispose();
-        }
-
+        
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             base.OnFormClosing(e);

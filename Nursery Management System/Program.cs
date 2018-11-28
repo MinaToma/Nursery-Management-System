@@ -31,7 +31,7 @@ namespace Nursery_Management_System
         {
             Application.EnableVisualStyles();
             //Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(editDataBaseForm);
+            Application.Run(signForm);
         }
     }
 }
