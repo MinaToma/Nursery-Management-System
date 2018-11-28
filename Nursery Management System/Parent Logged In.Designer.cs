@@ -65,6 +65,7 @@
             this.childrenButton.Text = "Children";
             this.childrenButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.childrenButton.UseVisualStyleBackColor = false;
+            this.childrenButton.Click += new System.EventHandler(this.childrenButton_Click);
             // 
             // parentFeedbackButton
             // 
