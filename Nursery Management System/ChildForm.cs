@@ -97,9 +97,6 @@ namespace Nursery_Management_System
             Gender = "Male";
         }
 
-        //string Gender;
-        public string cString = "Data Source=MARIAMS-LAPTOP;Initial Catalog = Nursery; Integrated Security = True";
-
         private void saveButton_Click(object sender, EventArgs e)
         {
        
