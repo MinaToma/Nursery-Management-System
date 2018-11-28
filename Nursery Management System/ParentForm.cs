@@ -46,5 +46,22 @@ namespace Nursery_Management_System
         {
 
         }
+
+        private void signUpButton_Click(object sender, EventArgs e)
+        {
+            SQLQuery mSQLQuery = new SQLQuery();
+            if (mSQLQuery.checkForUsername(firstName.Text) == true)
+            {
+                MessageBox.Show("Username already exists", "Wrong Username or Password", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                Parent parent = new Parent(Convert.ToInt64(ID.Text), firstName.Text, lastName.Text, phoneNumber.Text, email.Text, address.Text, creditCard.Text, 1);
+                mSQLQuery.insertParentData(parent);
+
+                mSQLQuery.insertUser(username.Text, password.Text, "Parent", parent.id);
+                MessageBox.Show("Requset has been sent", "Request sent", MessageBoxButtons.OK, MessageBoxIcon.None);
+            }
+        }
     }
 }

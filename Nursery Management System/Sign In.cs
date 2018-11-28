@@ -33,9 +33,11 @@ namespace Nursery_Management_System
             else
             {
                 MessageBox.Show("Hello, " + username.Text + "!" , "Logged In Successfully", MessageBoxButtons.OK, MessageBoxIcon.None);
+                this.Hide();
                 if (Program.globalType == "Staff")
                 {
                     //open staff form
+                    Program.staffLoggedInForm.Show();
                 }
                 else if(Program.globalType == "Admin")
                 {
@@ -44,7 +46,6 @@ namespace Nursery_Management_System
                 else if(Program.globalType == "Parent")
                 {
                     //open parent form
-                    this.Hide();
                     Program.parentLoggedInForm.Show();
                 }
             }

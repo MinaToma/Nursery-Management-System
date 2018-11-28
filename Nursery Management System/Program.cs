@@ -14,7 +14,7 @@ namespace Nursery_Management_System
         public static sign signForm = new sign();
         public static signIn signInForm = new signIn();
         public static parentLoggedIn parentLoggedInForm = new parentLoggedIn();
-        public static parentForm parentProfileForm = new parentForm();
+        public static staffLoggedIn staffLoggedInForm = new staffLoggedIn(); 
         public static signUp signUpForm = new signUp();
         public static staffForm staffSignUpForm = new staffForm();
         public static parentForm parentSignUpForm = new parentForm();

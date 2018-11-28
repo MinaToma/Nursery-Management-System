@@ -25,7 +25,7 @@ namespace Nursery_Management_System
         private void parentProfileButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Program.parentProfileForm.Show();
+            Program.parentSignUpForm.Show();
         }
 
         private void signOutButton_Click(object sender, EventArgs e)
