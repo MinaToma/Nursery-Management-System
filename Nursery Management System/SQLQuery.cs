@@ -29,21 +29,21 @@ namespace Nursery_Management_System
             if (type == "Parent")
             {
                 Int64 id = Convert.ToInt64(dt.Rows[0]["parentID"].ToString());
-                Program.globalParent = getParentByID(id).ElementAt(0);
+                Program.globalParent = parentToLinkedList(getParentByID(id)).ElementAt(0);
                 if (Program.globalParent.pending == 1)
                     return false;
             }
             else if (type == "Staff")
             {
                 Int64 id = Convert.ToInt64(dt.Rows[0]["staffID"].ToString());
-                Program.globalStaff = getStaffByID(id).ElementAt(0);
+                Program.globalStaff = staffToLinkedList(getStaffByID(id)).ElementAt(0);
                 if (Program.globalStaff.pending == 1)
                     return false;
             }
             else if(type == "Admin")
             {
                 Int64 id = Convert.ToInt64(dt.Rows[0]["staffID"].ToString());
-                Program.globalAdmin.ToAdmin(getStaffByID(id).ElementAt(0));
+                Program.globalAdmin.ToAdmin(staffToLinkedList(getStaffByID(id)).ElementAt(0));
                 if (Program.globalStaff.pending == 1)
                     return false;
             }
@@ -180,13 +180,18 @@ namespace Nursery_Management_System
 
         /****************  RETRIEVING CHILD DATA FROM DATABASE  ****************/
 
-        private LinkedList<Child> getChild(string query)
+        private DataTable getChild(string query)
         {
             SQL sql = new SQL();
 
             DataTable dt = new DataTable();
             dt = sql.retrieveQuery(query);
 
+            return dt;
+        }
+        
+        public LinkedList<Child> childToLinkedList(DataTable dt)
+        {
             LinkedList<Child> child = new LinkedList<Child>();
             foreach (DataRow dr in dt.Rows)
             {
@@ -208,35 +213,35 @@ namespace Nursery_Management_System
         }
 
         //uses specific query to select all children from database
-        public LinkedList<Child> getAllChildren()
+        public DataTable getAllChildren()
         {
             string query = "select * from Child";
             return getChild(query);
         }
 
         //uses specific query to select child by ID from database
-        public LinkedList<Child> getChildByID(int id)
+        public DataTable getChildByID(int id)
         {
             string query = "select * from Child where childID = " + Convert.ToString(id);
             return getChild(query);
         }
 
         //uses specific query to select child by parent's ID from database
-        public LinkedList<Child> getChildByParentID(Int64 id)
+        public DataTable getChildByParentID(Int64 id)
         {
             string query = "select * from Child where parentID = " + Convert.ToString(id);   
             return getChild(query);
         }
 
         //uses specific query to select child by room's ID from database
-        public LinkedList<Child> getChildByRoomID(int id)
+        public DataTable getChildByRoomID(int id)
         {
             string query = "select * from Child where roomID = " + Convert.ToString(id);
             return getChild(query);
         }
 
         //uses specific query to select pending child by parent's ID from database
-        public LinkedList<Child> getPendingChildByParentID(Int64 id)
+        public DataTable getPendingChildByParentID(Int64 id)
         {
             string query = "select * from Child where parentID = " + Convert.ToString(id) + " and childIsPending = 1";
             return getChild(query);
@@ -244,13 +249,19 @@ namespace Nursery_Management_System
 
         /****************  RETRIEVING PARENT DATA FROM DATABASE  ****************/
 
-        private LinkedList<Parent> getParent(string query)
+        private DataTable getParent(string query)
         {
             SQL sql = new SQL();
 
             DataTable dt = new DataTable();
             dt = sql.retrieveQuery(query);
+            
+            return dt;
+        }
 
+
+        public LinkedList<Parent> parentToLinkedList(DataTable dt)
+        {
             LinkedList<Parent> parent = new LinkedList<Parent>();
             foreach (DataRow dr in dt.Rows)
             {
@@ -267,26 +278,25 @@ namespace Nursery_Management_System
 
                 parent.AddLast(currentParent);
             }
-
             return parent;
         }
 
         //uses specific query to select all parents from database
-        public LinkedList<Parent> getAllParent()
+        public DataTable getAllParent()
         {
             string query = "select * from Parent";
             return getParent(query);
         }
 
         //uses specific query to select parent by ID from database
-        public LinkedList<Parent> getParentByID(Int64 id)
+        public DataTable getParentByID(Int64 id)
         {
             string query = "select * from Parent where parentID = " + Convert.ToString(id);
             return getParent(query);
         }
 
         //uses specific query to select pending parents from database
-        public LinkedList<Parent> getPendingParent()
+        public DataTable getPendingParent()
         {
             string query = "select * from Parent where parentIsPending = 1";
             return getParent(query);
@@ -294,13 +304,18 @@ namespace Nursery_Management_System
 
         /****************  RETRIEVING STAFF DATA FROM DATABASE  ****************/
 
-        private LinkedList<Staff> getStaff(string query)
+        private DataTable getStaff(string query)
         {
             SQL sql = new SQL();
 
             DataTable dt = new DataTable();
             dt = sql.retrieveQuery(query);
 
+            return dt;
+        }
+
+        public LinkedList<Staff> staffToLinkedList(DataTable dt)
+        {
             LinkedList<Staff> staff = new LinkedList<Staff>();
             foreach (DataRow dr in dt.Rows)
             {
@@ -324,46 +339,46 @@ namespace Nursery_Management_System
 
                 staff.AddLast(currentStaff);
             }
-            
+
             return staff;
         }
 
         //uses specific query to select all staff members from database
-        public LinkedList<Staff> getAllStaff()
+        public DataTable getAllStaff()
         {
             string query = "select * from Staff";
             return getStaff(query);
         }
 
         //uses specific query to select staff member type from database (admin, staff)
-        public LinkedList<Staff> getStaffByType(string type)
+        public DataTable getStaffByType(string type)
         {
             string query = "select * from Staff where staffType = " + type;
             return getStaff(query);
         }
 
         //uses specific query to select staff member by ID from database
-        public LinkedList<Staff> getStaffByID(Int64 id)
+        public DataTable getStaffByID(Int64 id)
         {
             string query = "select * from Staff where staffID = " + Convert.ToString(id);
             return getStaff(query);
         }
 
         //uses specific query to select staff member by room ID from database
-        public LinkedList<Staff> getStaffByRoomID(int id)
+        public DataTable getStaffByRoomID(int id)
         {
             LinkedList<Room> room = new LinkedList<Room>();
-            room = getRoomByID(id);
+            room = roomToLinkedList(getRoomByID(id));
 
             if (room.Count() == 0)
-                return new LinkedList<Staff>(); 
+                return new DataTable(); 
 
             string query = "select * from Staff where staffID = " + Convert.ToString(room.ElementAt(0).staffID);
             return getStaff(query);
         }
 
         //uses specific query to select pending staff member requests from database
-        public LinkedList<Staff> getPendingStaff()
+        public DataTable getPendingStaff()
         {
             string query = "";
             return getStaff(query);
@@ -371,20 +386,25 @@ namespace Nursery_Management_System
 
         /****************  RETRIEVING ROOM DATA FROM DATABASE  ****************/
 
-        private LinkedList<Room> getRoom(string query)
+        private DataTable getRoom(string query)
         {
             SQL sql = new SQL();
 
             DataTable dt = new DataTable();
             dt = sql.retrieveQuery(query);
 
+            return dt;
+        }
+
+        public LinkedList<Room> roomToLinkedList(DataTable dt)
+        {
             LinkedList<Room> room = new LinkedList<Room>();
             foreach (DataRow dr in dt.Rows)
             {
                 Room currentRoom = new Room();
 
                 currentRoom.id = Convert.ToInt32(dr["roomID"].ToString());
-                currentRoom.number = Convert.ToInt32(dr["roomNumber"].ToString()); 
+                currentRoom.number = Convert.ToInt32(dr["roomNumber"].ToString());
                 currentRoom.staffID = Convert.ToInt32(dr["roomStaffID"].ToString());
 
                 room.AddLast(currentRoom);
@@ -393,21 +413,21 @@ namespace Nursery_Management_System
         }
 
         //uses specific query to select all rooms from database
-        public LinkedList<Room> getAllRooms()
+        public DataTable getAllRooms()
         {
             string query = "select * from Room";
             return getRoom(query);
         }
 
         //uses specific query to select room by ID from database
-        public LinkedList<Room> getRoomByID(int id)
+        public DataTable getRoomByID(int id)
         {
             string query = "select * from Room where roomID = " + Convert.ToString(id);
             return getRoom(query);
         }
 
         //uses specific query to select room by staff member's ID from database
-        public LinkedList<Room> getRoomByStaffID(Int64 id)
+        public DataTable getRoomByStaffID(Int64 id)
         {
             string query = "select * from Room where roomStaffID = " + Convert.ToString(id);
             return getRoom(query);

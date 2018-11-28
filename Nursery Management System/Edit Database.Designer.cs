@@ -42,11 +42,8 @@
             this.salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.editDatabaseControl = new System.Windows.Forms.TabControl();
             this.staffTableView = new System.Windows.Forms.DataGridView();
-<<<<<<< HEAD
             this.rooms = new System.Windows.Forms.TabPage();
             this.roomsTable = new System.Windows.Forms.DataGridView();
-=======
->>>>>>> bd4a7a8d95772e11b6db46d22c511de5733a26ed
             this.children.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.childrenTable)).BeginInit();
             this.parents.SuspendLayout();
@@ -55,11 +52,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.staffTable)).BeginInit();
             this.editDatabaseControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.staffTableView)).BeginInit();
-<<<<<<< HEAD
             this.rooms.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roomsTable)).BeginInit();
-=======
->>>>>>> bd4a7a8d95772e11b6db46d22c511de5733a26ed
             this.SuspendLayout();
             // 
             // children
@@ -81,14 +75,11 @@
             this.childrenTable.Location = new System.Drawing.Point(3, 3);
             this.childrenTable.Name = "childrenTable";
             this.childrenTable.RowTemplate.Height = 24;
-<<<<<<< HEAD
             this.childrenTable.Size = new System.Drawing.Size(906, 474);
             this.childrenTable.TabIndex = 0;
-=======
             this.childrenTable.Size = new System.Drawing.Size(791, 474);
             this.childrenTable.TabIndex = 0;
             this.childrenTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.childrenTable_CellContentClick);
->>>>>>> bd4a7a8d95772e11b6db46d22c511de5733a26ed
             // 
             // parents
             // 
@@ -109,11 +100,9 @@
             this.parentsTable.Location = new System.Drawing.Point(3, 3);
             this.parentsTable.Name = "parentsTable";
             this.parentsTable.RowTemplate.Height = 24;
-<<<<<<< HEAD
             this.parentsTable.Size = new System.Drawing.Size(906, 474);
-=======
             this.parentsTable.Size = new System.Drawing.Size(791, 474);
->>>>>>> bd4a7a8d95772e11b6db46d22c511de5733a26ed
+
             this.parentsTable.TabIndex = 0;
             // 
             // staff
@@ -185,21 +174,15 @@
             this.editDatabaseControl.Controls.Add(this.staff);
             this.editDatabaseControl.Controls.Add(this.parents);
             this.editDatabaseControl.Controls.Add(this.children);
-<<<<<<< HEAD
             this.editDatabaseControl.Controls.Add(this.rooms);
-=======
->>>>>>> bd4a7a8d95772e11b6db46d22c511de5733a26ed
             this.editDatabaseControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.editDatabaseControl.Font = new System.Drawing.Font("Bebas Neue", 15F);
             this.editDatabaseControl.Location = new System.Drawing.Point(0, 0);
             this.editDatabaseControl.Name = "editDatabaseControl";
             this.editDatabaseControl.Padding = new System.Drawing.Point(10, 10);
             this.editDatabaseControl.SelectedIndex = 0;
-<<<<<<< HEAD
             this.editDatabaseControl.Size = new System.Drawing.Size(920, 540);
-=======
             this.editDatabaseControl.Size = new System.Drawing.Size(805, 540);
->>>>>>> bd4a7a8d95772e11b6db46d22c511de5733a26ed
             this.editDatabaseControl.TabIndex = 0;
             // 
             // staffTableView
@@ -211,7 +194,6 @@
             this.staffTableView.Size = new System.Drawing.Size(240, 150);
             this.staffTableView.TabIndex = 0;
             this.staffTableView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-<<<<<<< HEAD
             // 
             // rooms
             // 
@@ -234,8 +216,6 @@
             this.roomsTable.RowTemplate.Height = 24;
             this.roomsTable.Size = new System.Drawing.Size(906, 474);
             this.roomsTable.TabIndex = 0;
-=======
->>>>>>> bd4a7a8d95772e11b6db46d22c511de5733a26ed
             // 
             // editDatabase
             // 
@@ -255,11 +235,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.staffTable)).EndInit();
             this.editDatabaseControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.staffTableView)).EndInit();
-<<<<<<< HEAD
             this.rooms.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.roomsTable)).EndInit();
-=======
->>>>>>> bd4a7a8d95772e11b6db46d22c511de5733a26ed
             this.ResumeLayout(false);
 
         }

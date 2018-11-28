@@ -64,7 +64,7 @@ namespace Nursery_Management_System
         private void signUpButton_Click(object sender, EventArgs e)
         {
             SQLQuery mSQLQuery = new SQLQuery();
-            int numberOfChildren = mSQLQuery.getChildByParentID(Convert.ToInt64(ID.Text)).Count;
+            int numberOfChildren = mSQLQuery.childToLinkedList(mSQLQuery.getChildByParentID(Convert.ToInt64(ID.Text))).Count;
             if (mSQLQuery.checkForUsername(firstName.Text) == true)
             {
                 MessageBox.Show("Username already exists", "Wrong Username or Password", MessageBoxButtons.OK, MessageBoxIcon.Error);
