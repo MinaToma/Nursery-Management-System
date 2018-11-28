@@ -45,17 +45,10 @@
             this.signOutButton.Font = new System.Drawing.Font("Bebas Neue", 15F);
             this.signOutButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.signOutButton.Image = ((System.Drawing.Image)(resources.GetObject("signOutButton.Image")));
-<<<<<<< HEAD
-            this.signOutButton.Location = new System.Drawing.Point(614, 270);
+            this.signOutButton.Location = new System.Drawing.Point(611, 270);
             this.signOutButton.Name = "signOutButton";
-            this.signOutButton.Size = new System.Drawing.Size(307, 270);
-            this.signOutButton.TabIndex = 6;
-=======
-            this.signOutButton.Location = new System.Drawing.Point(402, 270);
-            this.signOutButton.Name = "signOutButton";
-            this.signOutButton.Size = new System.Drawing.Size(402, 270);
+            this.signOutButton.Size = new System.Drawing.Size(193, 270);
             this.signOutButton.TabIndex = 7;
->>>>>>> bd4a7a8d95772e11b6db46d22c511de5733a26ed
             this.signOutButton.Text = "Sign Out";
             this.signOutButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.signOutButton.UseVisualStyleBackColor = false;
@@ -69,13 +62,8 @@
             this.adminFeedbackButton.Image = ((System.Drawing.Image)(resources.GetObject("adminFeedbackButton.Image")));
             this.adminFeedbackButton.Location = new System.Drawing.Point(1, 270);
             this.adminFeedbackButton.Name = "adminFeedbackButton";
-<<<<<<< HEAD
-            this.adminFeedbackButton.Size = new System.Drawing.Size(307, 270);
-            this.adminFeedbackButton.TabIndex = 4;
-=======
             this.adminFeedbackButton.Size = new System.Drawing.Size(402, 270);
             this.adminFeedbackButton.TabIndex = 6;
->>>>>>> bd4a7a8d95772e11b6db46d22c511de5733a26ed
             this.adminFeedbackButton.Text = "Feedback";
             this.adminFeedbackButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.adminFeedbackButton.UseVisualStyleBackColor = false;
@@ -87,17 +75,10 @@
             this.editDatabase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editDatabase.Font = new System.Drawing.Font("Bebas Neue", 15F);
             this.editDatabase.Image = ((System.Drawing.Image)(resources.GetObject("editDatabase.Image")));
-<<<<<<< HEAD
-            this.editDatabase.Location = new System.Drawing.Point(614, 0);
-            this.editDatabase.Name = "editDatabase";
-            this.editDatabase.Size = new System.Drawing.Size(307, 270);
-            this.editDatabase.TabIndex = 3;
-=======
             this.editDatabase.Location = new System.Drawing.Point(402, 0);
             this.editDatabase.Name = "editDatabase";
             this.editDatabase.Size = new System.Drawing.Size(402, 270);
             this.editDatabase.TabIndex = 5;
->>>>>>> bd4a7a8d95772e11b6db46d22c511de5733a26ed
             this.editDatabase.Text = "Edit Database";
             this.editDatabase.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.editDatabase.UseVisualStyleBackColor = false;
@@ -112,13 +93,8 @@
             this.adminProfileButton.Image = ((System.Drawing.Image)(resources.GetObject("adminProfileButton.Image")));
             this.adminProfileButton.Location = new System.Drawing.Point(1, 0);
             this.adminProfileButton.Name = "adminProfileButton";
-<<<<<<< HEAD
-            this.adminProfileButton.Size = new System.Drawing.Size(307, 270);
-            this.adminProfileButton.TabIndex = 1;
-=======
             this.adminProfileButton.Size = new System.Drawing.Size(402, 270);
             this.adminProfileButton.TabIndex = 4;
->>>>>>> bd4a7a8d95772e11b6db46d22c511de5733a26ed
             this.adminProfileButton.Text = "Profile";
             this.adminProfileButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.adminProfileButton.UseVisualStyleBackColor = false;
@@ -156,13 +132,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
-            this.ClientSize = new System.Drawing.Size(920, 540);
+            this.ClientSize = new System.Drawing.Size(805, 540);
             this.Controls.Add(this.pendingRequests);
             this.Controls.Add(this.button2);
-=======
-            this.ClientSize = new System.Drawing.Size(805, 540);
->>>>>>> bd4a7a8d95772e11b6db46d22c511de5733a26ed
             this.Controls.Add(this.signOutButton);
             this.Controls.Add(this.adminFeedbackButton);
             this.Controls.Add(this.editDatabase);
