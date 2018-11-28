@@ -23,7 +23,6 @@ namespace Nursery_Management_System
         public SQL()
         {
             connectionString st = new connectionString();
-            MessageBox.Show(st.serverName);
             mConnection = new SqlConnection(@st.serverName);
         }
         

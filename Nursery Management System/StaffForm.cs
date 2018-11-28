@@ -36,7 +36,21 @@ namespace Nursery_Management_System
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
-            Program.signForm.Close();
+            base.OnFormClosing(e);
+
+            if (e.CloseReason == CloseReason.WindowsShutDown) return;
+
+            switch (MessageBox.Show(this, "Are you sure you want to close?", "Closing", MessageBoxButtons.YesNo))
+            {
+                case DialogResult.No:
+                    e.Cancel = true;
+                    break;
+                case DialogResult.Yes:
+                    Program.signForm.Dispose();
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void backButton_Click(object sender, EventArgs e)
@@ -46,6 +60,11 @@ namespace Nursery_Management_System
         }
 
         private void staffForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void staffProfilePanel_Paint(object sender, PaintEventArgs e)
         {
 
         }

@@ -82,7 +82,6 @@
     <Compile Include="Edit Database.Designer.cs">
       <DependentUpon>Edit Database.cs</DependentUpon>
     </Compile>
-    <Compile Include="ImageRead.cs" />
     <Compile Include="Parent Logged In.cs">
       <SubType>Form</SubType>
     </Compile>
