@@ -20,6 +20,7 @@ namespace Nursery_Management_System
         public static parentForm parentSignUpForm = new parentForm();
         public static childForm childSignUpForm = new childForm();
         public static Parent globalParent = new Parent();
+        public static editDatabase ed = new editDatabase();
         public static Staff globalStaff = new Staff();
         public static Admin globalAdmin = new Admin();
         public static string globalType = "";
@@ -29,7 +30,7 @@ namespace Nursery_Management_System
         {
             Application.EnableVisualStyles();
             //Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(signForm);
+            Application.Run(ed);
         }
     }
 }
