@@ -44,5 +44,10 @@ namespace Nursery_Management_System
             this.Hide();
             Program.signUpForm.Show();
         }
+
+        private void staffForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
