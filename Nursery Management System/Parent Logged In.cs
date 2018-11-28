@@ -33,5 +33,10 @@ namespace Nursery_Management_System
             this.Hide();
             Program.signForm.Show();
         }
+
+        private void childrenButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
