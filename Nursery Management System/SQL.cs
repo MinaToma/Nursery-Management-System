@@ -22,10 +22,6 @@ namespace Nursery_Management_System
 
         public SQL()
         {
-<<<<<<< HEAD
-=======
-            
->>>>>>> 9562463b9143906bfc21ba045251cf2ce3da7fc2
             mConnection = new SqlConnection(@"Server=DESKTOP-2OGA27F; DataBase=Nursery; Integrated Security=true;");
         }
             
