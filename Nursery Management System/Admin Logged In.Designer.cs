@@ -43,9 +43,9 @@
             this.signOutButton.Font = new System.Drawing.Font("Bebas Neue", 15F);
             this.signOutButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.signOutButton.Image = ((System.Drawing.Image)(resources.GetObject("signOutButton.Image")));
-            this.signOutButton.Location = new System.Drawing.Point(460, 270);
+            this.signOutButton.Location = new System.Drawing.Point(402, 270);
             this.signOutButton.Name = "signOutButton";
-            this.signOutButton.Size = new System.Drawing.Size(460, 270);
+            this.signOutButton.Size = new System.Drawing.Size(402, 270);
             this.signOutButton.TabIndex = 7;
             this.signOutButton.Text = "Sign Out";
             this.signOutButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -60,7 +60,7 @@
             this.adminFeedbackButton.Image = ((System.Drawing.Image)(resources.GetObject("adminFeedbackButton.Image")));
             this.adminFeedbackButton.Location = new System.Drawing.Point(1, 270);
             this.adminFeedbackButton.Name = "adminFeedbackButton";
-            this.adminFeedbackButton.Size = new System.Drawing.Size(460, 270);
+            this.adminFeedbackButton.Size = new System.Drawing.Size(402, 270);
             this.adminFeedbackButton.TabIndex = 6;
             this.adminFeedbackButton.Text = "Feedback";
             this.adminFeedbackButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -73,13 +73,14 @@
             this.editDatabase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editDatabase.Font = new System.Drawing.Font("Bebas Neue", 15F);
             this.editDatabase.Image = ((System.Drawing.Image)(resources.GetObject("editDatabase.Image")));
-            this.editDatabase.Location = new System.Drawing.Point(460, 0);
+            this.editDatabase.Location = new System.Drawing.Point(402, 0);
             this.editDatabase.Name = "editDatabase";
-            this.editDatabase.Size = new System.Drawing.Size(460, 270);
+            this.editDatabase.Size = new System.Drawing.Size(402, 270);
             this.editDatabase.TabIndex = 5;
             this.editDatabase.Text = "Edit Database";
             this.editDatabase.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.editDatabase.UseVisualStyleBackColor = false;
+            this.editDatabase.Click += new System.EventHandler(this.editDatabase_Click);
             // 
             // adminProfileButton
             // 
@@ -90,7 +91,7 @@
             this.adminProfileButton.Image = ((System.Drawing.Image)(resources.GetObject("adminProfileButton.Image")));
             this.adminProfileButton.Location = new System.Drawing.Point(1, 0);
             this.adminProfileButton.Name = "adminProfileButton";
-            this.adminProfileButton.Size = new System.Drawing.Size(460, 270);
+            this.adminProfileButton.Size = new System.Drawing.Size(402, 270);
             this.adminProfileButton.TabIndex = 4;
             this.adminProfileButton.Text = "Profile";
             this.adminProfileButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -98,15 +99,16 @@
             // 
             // adminLoggedIn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(920, 540);
+            this.ClientSize = new System.Drawing.Size(805, 540);
             this.Controls.Add(this.signOutButton);
             this.Controls.Add(this.adminFeedbackButton);
             this.Controls.Add(this.editDatabase);
             this.Controls.Add(this.adminProfileButton);
             this.Name = "adminLoggedIn";
             this.Text = "Nursery Management System - Logged In as Admin";
+            this.Load += new System.EventHandler(this.adminLoggedIn_Load);
             this.ResumeLayout(false);
 
         }

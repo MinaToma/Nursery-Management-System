@@ -177,6 +177,7 @@ namespace Nursery_Management_System
             this.staffProfilePanel.Controls.Add(this.firstName);
             resources.ApplyResources(this.staffProfilePanel, "staffProfilePanel");
             this.staffProfilePanel.Name = "staffProfilePanel";
+            this.staffProfilePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.staffProfilePanel_Paint);
             // 
             // staffForm
             // 

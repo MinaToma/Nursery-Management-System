@@ -130,7 +130,7 @@
     <value>NoControl</value>
   </data>
   <data name="IDLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>186, 185</value>
+    <value>163, 185</value>
   </data>
   <data name="IDLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>114, 30</value>
@@ -157,10 +157,10 @@
     <value>Consolas, 8pt</value>
   </data>
   <data name="ID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>335, 187</value>
+    <value>293, 187</value>
   </data>
   <data name="ID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>281, 23</value>
+    <value>246, 23</value>
   </data>
   <data name="ID.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -187,7 +187,7 @@
     <value>NoControl</value>
   </data>
   <data name="lastNameLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>186, 133</value>
+    <value>163, 133</value>
   </data>
   <data name="lastNameLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 30</value>
@@ -214,10 +214,10 @@
     <value>Consolas, 8pt</value>
   </data>
   <data name="lastName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>335, 133</value>
+    <value>293, 133</value>
   </data>
   <data name="lastName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>281, 23</value>
+    <value>246, 23</value>
   </data>
   <data name="lastName.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -244,7 +244,7 @@
     <value>NoControl</value>
   </data>
   <data name="phoneNumberLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>186, 234</value>
+    <value>163, 234</value>
   </data>
   <data name="phoneNumberLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 30</value>
@@ -271,10 +271,10 @@
     <value>Consolas, 8pt</value>
   </data>
   <data name="phoneNumber.Location" type="System.Drawing.Point, System.Drawing">
-    <value>335, 236</value>
+    <value>293, 236</value>
   </data>
   <data name="phoneNumber.Size" type="System.Drawing.Size, System.Drawing">
-    <value>281, 23</value>
+    <value>246, 23</value>
   </data>
   <data name="phoneNumber.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -301,7 +301,7 @@
     <value>NoControl</value>
   </data>
   <data name="emailLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>186, 284</value>
+    <value>163, 284</value>
   </data>
   <data name="emailLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 30</value>
@@ -328,10 +328,10 @@
     <value>Consolas, 8pt</value>
   </data>
   <data name="email.Location" type="System.Drawing.Point, System.Drawing">
-    <value>335, 286</value>
+    <value>293, 286</value>
   </data>
   <data name="email.Size" type="System.Drawing.Size, System.Drawing">
-    <value>281, 23</value>
+    <value>246, 23</value>
   </data>
   <data name="email.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -358,7 +358,7 @@
     <value>NoControl</value>
   </data>
   <data name="passwordLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>186, 382</value>
+    <value>163, 382</value>
   </data>
   <data name="passwordLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>103, 30</value>
@@ -385,10 +385,10 @@
     <value>Consolas, 8pt</value>
   </data>
   <data name="password.Location" type="System.Drawing.Point, System.Drawing">
-    <value>335, 382</value>
+    <value>293, 382</value>
   </data>
   <data name="password.Size" type="System.Drawing.Size, System.Drawing">
-    <value>281, 23</value>
+    <value>246, 23</value>
   </data>
   <data name="password.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -415,7 +415,7 @@
     <value>NoControl</value>
   </data>
   <data name="usernameLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>186, 332</value>
+    <value>163, 332</value>
   </data>
   <data name="usernameLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 30</value>
@@ -442,10 +442,10 @@
     <value>Consolas, 8pt</value>
   </data>
   <data name="username.Location" type="System.Drawing.Point, System.Drawing">
-    <value>335, 332</value>
+    <value>293, 332</value>
   </data>
   <data name="username.Size" type="System.Drawing.Size, System.Drawing">
-    <value>281, 23</value>
+    <value>246, 23</value>
   </data>
   <data name="username.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -472,10 +472,10 @@
     <value>NoControl</value>
   </data>
   <data name="signUpButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>629, 453</value>
+    <value>550, 453</value>
   </data>
   <data name="signUpButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>248, 44</value>
+    <value>217, 44</value>
   </data>
   <data name="signUpButton.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -499,10 +499,10 @@
     <value>Consolas, 8pt</value>
   </data>
   <data name="firstName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>335, 82</value>
+    <value>293, 82</value>
   </data>
   <data name="firstName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>281, 23</value>
+    <value>246, 23</value>
   </data>
   <data name="firstName.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -566,7 +566,7 @@
     <value>2, 2</value>
   </data>
   <data name="backButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 90</value>
+    <value>94, 90</value>
   </data>
   <data name="backButton.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -593,7 +593,7 @@
     <value>NoControl</value>
   </data>
   <data name="staffFirstNameLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>186, 82</value>
+    <value>163, 82</value>
   </data>
   <data name="staffFirstNameLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>112, 30</value>
@@ -620,7 +620,7 @@
     <value>1, 2</value>
   </data>
   <data name="staffProfilePanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>920, 540</value>
+    <value>805, 540</value>
   </data>
   <data name="staffProfilePanel.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -641,7 +641,7 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 16</value>
+    <value>7, 16</value>
   </data>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -19614,7 +19614,7 @@
     <value>Stretch</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>920, 540</value>
+    <value>805, 540</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

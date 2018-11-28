@@ -43,9 +43,9 @@
             this.signOutButton.Font = new System.Drawing.Font("Bebas Neue", 15F);
             this.signOutButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.signOutButton.Image = ((System.Drawing.Image)(resources.GetObject("signOutButton.Image")));
-            this.signOutButton.Location = new System.Drawing.Point(460, 270);
+            this.signOutButton.Location = new System.Drawing.Point(402, 270);
             this.signOutButton.Name = "signOutButton";
-            this.signOutButton.Size = new System.Drawing.Size(460, 270);
+            this.signOutButton.Size = new System.Drawing.Size(402, 270);
             this.signOutButton.TabIndex = 7;
             this.signOutButton.Text = "Sign Out";
             this.signOutButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -60,7 +60,7 @@
             this.staffFeedbackButton.Image = ((System.Drawing.Image)(resources.GetObject("staffFeedbackButton.Image")));
             this.staffFeedbackButton.Location = new System.Drawing.Point(1, 270);
             this.staffFeedbackButton.Name = "staffFeedbackButton";
-            this.staffFeedbackButton.Size = new System.Drawing.Size(460, 270);
+            this.staffFeedbackButton.Size = new System.Drawing.Size(402, 270);
             this.staffFeedbackButton.TabIndex = 6;
             this.staffFeedbackButton.Text = "Feedback";
             this.staffFeedbackButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -73,13 +73,14 @@
             this.roomButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roomButton.Font = new System.Drawing.Font("Bebas Neue", 15F);
             this.roomButton.Image = ((System.Drawing.Image)(resources.GetObject("roomButton.Image")));
-            this.roomButton.Location = new System.Drawing.Point(460, 0);
+            this.roomButton.Location = new System.Drawing.Point(402, 0);
             this.roomButton.Name = "roomButton";
-            this.roomButton.Size = new System.Drawing.Size(460, 270);
+            this.roomButton.Size = new System.Drawing.Size(402, 270);
             this.roomButton.TabIndex = 5;
             this.roomButton.Text = "Room";
             this.roomButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.roomButton.UseVisualStyleBackColor = false;
+            this.roomButton.Click += new System.EventHandler(this.roomButton_Click);
             // 
             // staffProfileButton
             // 
@@ -90,7 +91,7 @@
             this.staffProfileButton.Image = ((System.Drawing.Image)(resources.GetObject("staffProfileButton.Image")));
             this.staffProfileButton.Location = new System.Drawing.Point(1, 0);
             this.staffProfileButton.Name = "staffProfileButton";
-            this.staffProfileButton.Size = new System.Drawing.Size(460, 270);
+            this.staffProfileButton.Size = new System.Drawing.Size(402, 270);
             this.staffProfileButton.TabIndex = 4;
             this.staffProfileButton.Text = "Profile";
             this.staffProfileButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -99,15 +100,16 @@
             // 
             // staffLoggedIn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(920, 540);
+            this.ClientSize = new System.Drawing.Size(805, 540);
             this.Controls.Add(this.signOutButton);
             this.Controls.Add(this.staffFeedbackButton);
             this.Controls.Add(this.roomButton);
             this.Controls.Add(this.staffProfileButton);
             this.Name = "staffLoggedIn";
             this.Text = "Nursery Management System - Logged In as Staff ";
+            this.Load += new System.EventHandler(this.staffLoggedIn_Load);
             this.ResumeLayout(false);
 
         }
