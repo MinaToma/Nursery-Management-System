@@ -48,7 +48,7 @@ namespace Nursery_Management_System
 
         private void Sign_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

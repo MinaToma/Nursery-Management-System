@@ -63,6 +63,7 @@
     <Compile Include="ChildForm.Designer.cs">
       <DependentUpon>ChildForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="connectionString.cs" />
     <Compile Include="Edit Database.cs">
       <SubType>Form</SubType>
     </Compile>

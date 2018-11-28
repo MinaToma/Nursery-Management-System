@@ -15,8 +15,8 @@ namespace Nursery_Management_System
         public string image { get; set; }
         
         public Child() {}
-        public Child(int _id , String _firstName , string _lastName , Int64 _parentID , int _roomID , string _gender , DateTime _DOB , string _image , int _pending) : 
-            base(_id , _firstName , _lastName , _pending)
+        public Child(String _firstName , string _lastName , Int64 _parentID , int _roomID , string _gender , DateTime _DOB , string _image , int _pending) : 
+            base( 1 , _firstName , _lastName , _pending)
         {
             parentID = _parentID;
             roomID = _roomID;
