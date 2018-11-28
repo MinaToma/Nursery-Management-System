@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin Logged In.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin Logged In.Designer.cs">
+      <DependentUpon>Admin Logged In.cs</DependentUpon>
+    </Compile>
     <Compile Include="Child.cs" />
     <Compile Include="ChildForm.cs">
       <SubType>Form</SubType>
@@ -58,12 +64,23 @@
       <DependentUpon>ChildForm.cs</DependentUpon>
     </Compile>
     <Compile Include="connectionString.cs" />
+    <Compile Include="Edit Database.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit Database.Designer.cs">
+      <DependentUpon>Edit Database.cs</DependentUpon>
+    </Compile>
     <Compile Include="ImageRead.cs" />
     <Compile Include="Parent Logged In.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Parent Logged In.Designer.cs">
       <DependentUpon>Parent Logged In.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Staff Logged In.cs">
       <SubType>Form</SubType>
@@ -77,8 +94,14 @@
     <Compile Include="StaffForm.Designer.cs">
       <DependentUpon>StaffForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Admin Logged In.resx">
+      <DependentUpon>Admin Logged In.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChildForm.resx">
       <DependentUpon>ChildForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit Database.resx">
+      <DependentUpon>Edit Database.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parent Logged In.resx">
       <DependentUpon>Parent Logged In.cs</DependentUpon>
@@ -99,6 +122,10 @@
     </Compile>
     <EmbeddedResource Include="ParentForm.resx">
       <DependentUpon>ParentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Sign In - Sign Up.resx">
       <DependentUpon>Sign In - Sign Up.cs</DependentUpon>
