@@ -1,4 +1,6 @@
-﻿namespace Nursery_Management_System
+﻿using System;
+
+namespace Nursery_Management_System
 {
     partial class adminLoggedIn
     {
@@ -34,7 +36,7 @@
             this.editDatabase = new System.Windows.Forms.Button();
             this.adminProfileButton = new System.Windows.Forms.Button();
             this.pendingRequests = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.analyticsButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // signOutButton
@@ -114,20 +116,20 @@
             this.pendingRequests.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.pendingRequests.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // analyticsButton
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(220)))), ((int)(((byte)(206)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Bebas Neue", 15F);
-            this.button2.Location = new System.Drawing.Point(307, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(307, 270);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Analytics";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.analyticsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(220)))), ((int)(((byte)(206)))));
+            this.analyticsButton.FlatAppearance.BorderSize = 0;
+            this.analyticsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.analyticsButton.Font = new System.Drawing.Font("Bebas Neue", 15F);
+            this.analyticsButton.Location = new System.Drawing.Point(307, 0);
+            this.analyticsButton.Name = "analyticsButton";
+            this.analyticsButton.Size = new System.Drawing.Size(307, 270);
+            this.analyticsButton.TabIndex = 2;
+            this.analyticsButton.Text = "Analytics";
+            this.analyticsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.analyticsButton.UseVisualStyleBackColor = false;
+            this.analyticsButton.Click += new System.EventHandler(this.analyticsButton_Click);
             // 
             // adminLoggedIn
             // 
@@ -135,7 +137,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(920, 540);
             this.Controls.Add(this.pendingRequests);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.analyticsButton);
             this.Controls.Add(this.signOutButton);
             this.Controls.Add(this.adminFeedbackButton);
             this.Controls.Add(this.editDatabase);
@@ -147,6 +149,11 @@
 
         }
 
+        private void analyticsButton_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
 
         private System.Windows.Forms.Button signOutButton;
@@ -154,6 +161,6 @@
         private System.Windows.Forms.Button editDatabase;
         private System.Windows.Forms.Button adminProfileButton;
         private System.Windows.Forms.Button pendingRequests;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button analyticsButton;
     }
 }
