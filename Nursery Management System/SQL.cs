@@ -11,21 +11,18 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.IO;
 using System.Drawing.Imaging;
-using Nursery_Management_System;
 
 namespace Nursery_Management_System
 {
     class SQL
     {
-        private Server server  = new Server();
         private SqlConnection mConnection;
         public SqlCommand mCommand; 
         private SqlDataAdapter mAdapter;
 
         public SQL()
         {
-            
-            mConnection = new SqlConnection(@server.ToString());
+            mConnection = new SqlConnection(@"Server=DESKTOP-2OGA27F; DataBase=Nursery; Integrated Security=true;");
         }
             
         public DataTable retrieveQuery(string query)

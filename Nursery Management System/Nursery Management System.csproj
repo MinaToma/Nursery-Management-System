@@ -64,7 +64,6 @@
     <Compile Include="Parent Logged In.Designer.cs">
       <DependentUpon>Parent Logged In.cs</DependentUpon>
     </Compile>
-    <Compile Include="SQLSeverName.cs" />
     <Compile Include="StaffForm.cs">
       <SubType>Form</SubType>
     </Compile>
