@@ -50,6 +50,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin Feedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin Feedback.Designer.cs">
+      <DependentUpon>Admin Feedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pending Requests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pending Requests.Designer.cs">
+      <DependentUpon>Pending Requests.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin Logged In.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +106,12 @@
     <Compile Include="StaffForm.Designer.cs">
       <DependentUpon>StaffForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Admin Feedback.resx">
+      <DependentUpon>Admin Feedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pending Requests.resx">
+      <DependentUpon>Pending Requests.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin Logged In.resx">
       <DependentUpon>Admin Logged In.cs</DependentUpon>
     </EmbeddedResource>

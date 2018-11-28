@@ -52,6 +52,8 @@
             this.address = new System.Windows.Forms.TextBox();
             this.childrenPanel = new System.Windows.Forms.Panel();
             this.addChildButton = new System.Windows.Forms.Button();
+            this.acceptButton = new System.Windows.Forms.Button();
+            this.declineButton = new System.Windows.Forms.Button();
             this.parentProfilePanel.SuspendLayout();
             this.childrenPanel.SuspendLayout();
             this.SuspendLayout();
@@ -96,6 +98,8 @@
             // parentProfilePanel
             // 
             this.parentProfilePanel.BackColor = System.Drawing.Color.Transparent;
+            this.parentProfilePanel.Controls.Add(this.declineButton);
+            this.parentProfilePanel.Controls.Add(this.acceptButton);
             this.parentProfilePanel.Controls.Add(this.IDLabel);
             this.parentProfilePanel.Controls.Add(this.ID);
             this.parentProfilePanel.Controls.Add(this.signUpButton);
@@ -323,6 +327,40 @@
             this.addChildButton.UseVisualStyleBackColor = true;
             this.addChildButton.Click += new System.EventHandler(this.addChildButton_Click);
             // 
+            // acceptButton
+            // 
+            this.acceptButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.acceptButton.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.acceptButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.acceptButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.acceptButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.acceptButton.Font = new System.Drawing.Font("Bebas Neue", 15F);
+            this.acceptButton.ForeColor = System.Drawing.Color.DimGray;
+            this.acceptButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.acceptButton.Location = new System.Drawing.Point(650, 401);
+            this.acceptButton.Name = "acceptButton";
+            this.acceptButton.Size = new System.Drawing.Size(248, 44);
+            this.acceptButton.TabIndex = 44;
+            this.acceptButton.Text = "Accept";
+            this.acceptButton.UseVisualStyleBackColor = true;
+            // 
+            // declineButton
+            // 
+            this.declineButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.declineButton.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.declineButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.declineButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.declineButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.declineButton.Font = new System.Drawing.Font("Bebas Neue", 15F);
+            this.declineButton.ForeColor = System.Drawing.Color.DimGray;
+            this.declineButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.declineButton.Location = new System.Drawing.Point(650, 475);
+            this.declineButton.Name = "declineButton";
+            this.declineButton.Size = new System.Drawing.Size(248, 44);
+            this.declineButton.TabIndex = 45;
+            this.declineButton.Text = "Decline";
+            this.declineButton.UseVisualStyleBackColor = true;
+            // 
             // parentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -368,5 +406,7 @@
         private System.Windows.Forms.Button signUpButton;
         private System.Windows.Forms.Label IDLabel;
         private System.Windows.Forms.TextBox ID;
+        private System.Windows.Forms.Button declineButton;
+        private System.Windows.Forms.Button acceptButton;
     }
 }
