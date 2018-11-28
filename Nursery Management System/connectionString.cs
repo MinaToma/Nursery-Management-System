@@ -16,7 +16,7 @@ namespace Nursery_Management_System
         {
             try
             {
-                StreamReader sr = new StreamReader(@"E:\IS Project\Nursery-Management-System\Nursery Management System\ServerName\serverName.txt");
+                StreamReader sr = new StreamReader(@"ServerName\serverName.txt");
                 serverName = "Server=" + sr.ReadLine().ToString() + "; DataBase=Nursery; Integrated Security=true;";
             }
             catch
