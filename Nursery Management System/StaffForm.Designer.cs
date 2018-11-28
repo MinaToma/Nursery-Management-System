@@ -185,6 +185,7 @@ namespace Nursery_Management_System
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.staffProfilePanel);
             this.Name = "staffForm";
+            this.Load += new System.EventHandler(this.staffForm_Load);
             this.staffProfilePanel.ResumeLayout(false);
             this.staffProfilePanel.PerformLayout();
             this.ResumeLayout(false);

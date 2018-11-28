@@ -50,6 +50,8 @@
             this.address = new System.Windows.Forms.TextBox();
             this.childrenPanel = new System.Windows.Forms.Panel();
             this.addChildButton = new System.Windows.Forms.Button();
+            this.IDLabel = new System.Windows.Forms.Label();
+            this.ID = new System.Windows.Forms.TextBox();
             this.parentProfilePanel.SuspendLayout();
             this.childrenPanel.SuspendLayout();
             this.SuspendLayout();
@@ -94,6 +96,8 @@
             // parentProfilePanel
             // 
             this.parentProfilePanel.BackColor = System.Drawing.Color.Transparent;
+            this.parentProfilePanel.Controls.Add(this.IDLabel);
+            this.parentProfilePanel.Controls.Add(this.ID);
             this.parentProfilePanel.Controls.Add(this.signUpButton);
             this.parentProfilePanel.Controls.Add(this.firstNameLabel);
             this.parentProfilePanel.Controls.Add(this.firstName);
@@ -229,7 +233,7 @@
             // 
             this.creditCard.Location = new System.Drawing.Point(285, 185);
             this.creditCard.Name = "creditCard";
-            this.creditCard.Size = new System.Drawing.Size(280, 22);
+            this.creditCard.Size = new System.Drawing.Size(200, 22);
             this.creditCard.TabIndex = 5;
             // 
             // phoneNumberLabel
@@ -297,6 +301,27 @@
             this.addChildButton.UseVisualStyleBackColor = true;
             this.addChildButton.Click += new System.EventHandler(this.addChildButton_Click);
             // 
+            // IDLabel
+            // 
+            this.IDLabel.AutoSize = true;
+            this.IDLabel.Font = new System.Drawing.Font("Bebas Neue", 15F);
+            this.IDLabel.ForeColor = System.Drawing.Color.DimGray;
+            this.IDLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.IDLabel.Location = new System.Drawing.Point(503, 182);
+            this.IDLabel.Name = "IDLabel";
+            this.IDLabel.Size = new System.Drawing.Size(114, 30);
+            this.IDLabel.TabIndex = 43;
+            this.IDLabel.Text = "National ID :";
+            // 
+            // ID
+            // 
+            this.ID.Font = new System.Drawing.Font("Consolas", 8F);
+            this.ID.Location = new System.Drawing.Point(652, 184);
+            this.ID.Name = "ID";
+            this.ID.Size = new System.Drawing.Size(200, 23);
+            this.ID.TabIndex = 42;
+            this.ID.UseWaitCursor = true;
+            // 
             // parentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -340,5 +365,7 @@
         private System.Windows.Forms.Label usernameLabel;
         private System.Windows.Forms.TextBox username;
         private System.Windows.Forms.Button signUpButton;
+        private System.Windows.Forms.Label IDLabel;
+        private System.Windows.Forms.TextBox ID;
     }
 }
