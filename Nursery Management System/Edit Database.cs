@@ -22,6 +22,13 @@ namespace Nursery_Management_System
 
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        
+
         //private void editDatabaseControl_DrawItem(object sender, System.Windows.Forms.DrawItemEventArgs e)
         //{
         //    Font f;
