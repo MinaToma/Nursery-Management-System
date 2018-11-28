@@ -26,22 +26,25 @@ namespace Nursery_Management_System
 
             string type = dt.Rows[0]["userType"].ToString();
 
-            if (type == "Parent")
+            if (type.Equals("Parent"))
             {
+                Program.globalType = "Parent";
                 Int64 id = Convert.ToInt64(dt.Rows[0]["parentID"].ToString());
                 Program.globalParent = parentToLinkedList(getParentByID(id)).ElementAt(0);
                 if (Program.globalParent.pending == 1)
                     return false;
             }
-            else if (type == "Staff")
+            else if (type.Equals("Staff"))
             {
+                Program.globalType = "Staff";
                 Int64 id = Convert.ToInt64(dt.Rows[0]["staffID"].ToString());
                 Program.globalStaff = staffToLinkedList(getStaffByID(id)).ElementAt(0);
                 if (Program.globalStaff.pending == 1)
                     return false;
             }
-            else if(type == "Admin")
+            else if(type.Equals("Admin"))
             {
+                Program.globalType = "Admin";
                 Int64 id = Convert.ToInt64(dt.Rows[0]["staffID"].ToString());
                 Program.globalAdmin.ToAdmin(staffToLinkedList(getStaffByID(id)).ElementAt(0));
                 if (Program.globalStaff.pending == 1)

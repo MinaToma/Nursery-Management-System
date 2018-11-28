@@ -20,6 +20,12 @@ namespace Nursery_Management_System
         private void editDatabase_Click(object sender, EventArgs e)
         {
             this.Hide();
+            SQLQuery mSQLQuery = new SQLQuery();
+            Program.editDataBaseForm.staffTable.DataSource = mSQLQuery.getAllStaff();
+            Program.editDataBaseForm.parentsTable.DataSource = mSQLQuery.getAllParent();
+            Program.editDataBaseForm.childrenTable.DataSource = mSQLQuery.getAllChildren();
+            Program.editDataBaseForm.roomsTable.DataSource = mSQLQuery.getAllRooms();
+
             Program.editDataBaseForm.Show();
         }
 

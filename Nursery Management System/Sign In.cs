@@ -48,17 +48,17 @@ namespace Nursery_Management_System
             {
                 MessageBox.Show("Hello, " + username.Text + "!" , "Logged In Successfully", MessageBoxButtons.OK, MessageBoxIcon.None);
                 this.Hide();
-                if (Program.globalType == "Staff")
+                if (Program.globalType.Equals("Staff"))
                 {
                     //open staff form
                     Program.staffLoggedInForm.Show();
                 }
-                else if(Program.globalType == "Admin")
+                else if(Program.globalType.Equals("Admin"))
                 {
                     //open admin form
                     Program.adminLoggedInForm.Show();
                 }
-                else if(Program.globalType == "Parent")
+                else if(Program.globalType.Equals("Parent"))
                 {
                     //open parent form
                     Program.parentLoggedInForm.Show();
