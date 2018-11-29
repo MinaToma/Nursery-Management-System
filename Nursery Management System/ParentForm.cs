@@ -64,6 +64,7 @@ namespace Nursery_Management_System
         private void signUpButton_Click(object sender, EventArgs e)
         {
             SQLQuery mSQLQuery = new SQLQuery();
+            ValidateData vaild = new ValidateData();
             int numberOfChildren = mSQLQuery.childToLinkedList(mSQLQuery.getChildByParentID(Convert.ToInt64(ID.Text))).Count;
             if (mSQLQuery.checkForUsername(firstName.Text) == true)
             {
@@ -72,6 +73,22 @@ namespace Nursery_Management_System
             else if(numberOfChildren == 0)
             {
                 MessageBox.Show("Parent should have at least one Child", "No Children" , MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (!vaild.checkMails(email.Text))
+            {
+                MessageBox.Show("Please Enter correct email", "Invaild email", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (!vaild.checkNationalID(ID.Text))
+            {
+                MessageBox.Show("Please Enter correct ID", "Invaild ID", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (!vaild.checkPhoneNum(phoneNumber.Text))
+            {
+                MessageBox.Show("Please Enter correct Phone Number", "Invaild Phone Number", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if(!vaild.checkCreditCardt(creditCard.Text))
+            {
+                MessageBox.Show("Please Enter correct Credit Card", "Invaild Credit Card", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -83,6 +100,11 @@ namespace Nursery_Management_System
                 mSQLQuery.insertUser(username.Text, password.Text, "Parent", parent.id);
                 MessageBox.Show("Requset has been sent", "Request sent", MessageBoxButtons.OK, MessageBoxIcon.None);
             }
+        }
+
+        private void acceptButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

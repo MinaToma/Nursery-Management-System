@@ -20,9 +20,22 @@ namespace Nursery_Management_System
         private void signUpButton_Click(object sender, EventArgs e)
         {
             SQLQuery mSQLQuery = new SQLQuery();
+            ValidateData vaild = new ValidateData();
             if (mSQLQuery.checkForUsername(username.Text) == true)
             {
-                MessageBox.Show("Username already exists", "Wrong Username or Password", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Username already exists", "Wrong Username", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if(!vaild.checkMails(email.Text))
+            {
+                MessageBox.Show("Please Enter correct email", "Invaild email", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if(!vaild.checkNationalID(ID.Text))
+            {
+                MessageBox.Show("Please Enter correct ID", "Invaild ID", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if(!vaild.checkPhoneNum(phoneNumber.Text))
+            {
+                MessageBox.Show("Please Enter correct Phone Number", "Invaild Phone Number", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {

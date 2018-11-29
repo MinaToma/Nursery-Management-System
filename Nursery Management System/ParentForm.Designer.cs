@@ -33,6 +33,8 @@
             this.firstNameLabel = new System.Windows.Forms.Label();
             this.backButton = new System.Windows.Forms.Button();
             this.parentProfilePanel = new System.Windows.Forms.Panel();
+            this.declineButton = new System.Windows.Forms.Button();
+            this.acceptButton = new System.Windows.Forms.Button();
             this.IDLabel = new System.Windows.Forms.Label();
             this.ID = new System.Windows.Forms.TextBox();
             this.signUpButton = new System.Windows.Forms.Button();
@@ -52,8 +54,6 @@
             this.address = new System.Windows.Forms.TextBox();
             this.childrenPanel = new System.Windows.Forms.Panel();
             this.addChildButton = new System.Windows.Forms.Button();
-            this.acceptButton = new System.Windows.Forms.Button();
-            this.declineButton = new System.Windows.Forms.Button();
             this.parentProfilePanel.SuspendLayout();
             this.childrenPanel.SuspendLayout();
             this.SuspendLayout();
@@ -69,11 +69,11 @@
             // 
             this.firstNameLabel.AutoSize = true;
             this.firstNameLabel.Enabled = false;
-            this.firstNameLabel.Font = new System.Drawing.Font("Bebas Neue", 15F);
+            this.firstNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.firstNameLabel.ForeColor = System.Drawing.Color.DimGray;
             this.firstNameLabel.Location = new System.Drawing.Point(127, 53);
             this.firstNameLabel.Name = "firstNameLabel";
-            this.firstNameLabel.Size = new System.Drawing.Size(112, 30);
+            this.firstNameLabel.Size = new System.Drawing.Size(151, 29);
             this.firstNameLabel.TabIndex = 16;
             this.firstNameLabel.Text = "First Name :";
             // 
@@ -86,7 +86,7 @@
             this.backButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.backButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backButton.Font = new System.Drawing.Font("Bebas Neue", 15F);
+            this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.backButton.Image = ((System.Drawing.Image)(resources.GetObject("backButton.Image")));
             this.backButton.Location = new System.Drawing.Point(2, 2);
             this.backButton.Name = "backButton";
@@ -127,15 +127,50 @@
             this.parentProfilePanel.TabIndex = 3;
             this.parentProfilePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.parentProfilePanel_Paint);
             // 
+            // declineButton
+            // 
+            this.declineButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.declineButton.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.declineButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.declineButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.declineButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.declineButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.declineButton.ForeColor = System.Drawing.Color.DimGray;
+            this.declineButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.declineButton.Location = new System.Drawing.Point(650, 475);
+            this.declineButton.Name = "declineButton";
+            this.declineButton.Size = new System.Drawing.Size(248, 44);
+            this.declineButton.TabIndex = 45;
+            this.declineButton.Text = "Decline";
+            this.declineButton.UseVisualStyleBackColor = true;
+            // 
+            // acceptButton
+            // 
+            this.acceptButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.acceptButton.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.acceptButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.acceptButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.acceptButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.acceptButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.acceptButton.ForeColor = System.Drawing.Color.DimGray;
+            this.acceptButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.acceptButton.Location = new System.Drawing.Point(650, 401);
+            this.acceptButton.Name = "acceptButton";
+            this.acceptButton.Size = new System.Drawing.Size(248, 44);
+            this.acceptButton.TabIndex = 44;
+            this.acceptButton.Text = "Accept";
+            this.acceptButton.UseVisualStyleBackColor = true;
+            this.acceptButton.Click += new System.EventHandler(this.acceptButton_Click);
+            // 
             // IDLabel
             // 
             this.IDLabel.AutoSize = true;
-            this.IDLabel.Font = new System.Drawing.Font("Bebas Neue", 15F);
+            this.IDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.IDLabel.ForeColor = System.Drawing.Color.DimGray;
             this.IDLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.IDLabel.Location = new System.Drawing.Point(506, 185);
             this.IDLabel.Name = "IDLabel";
-            this.IDLabel.Size = new System.Drawing.Size(114, 30);
+            this.IDLabel.Size = new System.Drawing.Size(151, 29);
             this.IDLabel.TabIndex = 43;
             this.IDLabel.Text = "National ID :";
             // 
@@ -155,7 +190,7 @@
             this.signUpButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.signUpButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.signUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.signUpButton.Font = new System.Drawing.Font("Bebas Neue", 15F);
+            this.signUpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.signUpButton.ForeColor = System.Drawing.Color.DimGray;
             this.signUpButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.signUpButton.Location = new System.Drawing.Point(650, 475);
@@ -170,11 +205,11 @@
             // 
             this.lastNameLabel.AutoSize = true;
             this.lastNameLabel.Enabled = false;
-            this.lastNameLabel.Font = new System.Drawing.Font("Bebas Neue", 15F);
+            this.lastNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.lastNameLabel.ForeColor = System.Drawing.Color.DimGray;
             this.lastNameLabel.Location = new System.Drawing.Point(506, 53);
             this.lastNameLabel.Name = "lastNameLabel";
-            this.lastNameLabel.Size = new System.Drawing.Size(106, 30);
+            this.lastNameLabel.Size = new System.Drawing.Size(150, 29);
             this.lastNameLabel.TabIndex = 37;
             this.lastNameLabel.Text = "Last Name :";
             // 
@@ -189,11 +224,11 @@
             // 
             this.usernameLabel.AutoSize = true;
             this.usernameLabel.Enabled = false;
-            this.usernameLabel.Font = new System.Drawing.Font("Bebas Neue", 15F);
+            this.usernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.usernameLabel.ForeColor = System.Drawing.Color.DimGray;
             this.usernameLabel.Location = new System.Drawing.Point(127, 98);
             this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(104, 30);
+            this.usernameLabel.Size = new System.Drawing.Size(144, 29);
             this.usernameLabel.TabIndex = 39;
             this.usernameLabel.Text = "Username :";
             // 
@@ -208,11 +243,11 @@
             // 
             this.passwordLabel.AutoSize = true;
             this.passwordLabel.Enabled = false;
-            this.passwordLabel.Font = new System.Drawing.Font("Bebas Neue", 15F);
+            this.passwordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.passwordLabel.ForeColor = System.Drawing.Color.DimGray;
             this.passwordLabel.Location = new System.Drawing.Point(506, 98);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(103, 30);
+            this.passwordLabel.Size = new System.Drawing.Size(138, 29);
             this.passwordLabel.TabIndex = 30;
             this.passwordLabel.Text = "Password :";
             // 
@@ -228,11 +263,11 @@
             // 
             this.emailLabel.AutoSize = true;
             this.emailLabel.Enabled = false;
-            this.emailLabel.Font = new System.Drawing.Font("Bebas Neue", 15F);
+            this.emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.emailLabel.ForeColor = System.Drawing.Color.DimGray;
             this.emailLabel.Location = new System.Drawing.Point(127, 143);
             this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(68, 30);
+            this.emailLabel.Size = new System.Drawing.Size(92, 29);
             this.emailLabel.TabIndex = 41;
             this.emailLabel.Text = "Email :";
             // 
@@ -247,11 +282,11 @@
             // 
             this.creditCardLabel.AutoSize = true;
             this.creditCardLabel.Enabled = false;
-            this.creditCardLabel.Font = new System.Drawing.Font("Bebas Neue", 15F);
+            this.creditCardLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.creditCardLabel.ForeColor = System.Drawing.Color.DimGray;
             this.creditCardLabel.Location = new System.Drawing.Point(127, 185);
             this.creditCardLabel.Name = "creditCardLabel";
-            this.creditCardLabel.Size = new System.Drawing.Size(119, 30);
+            this.creditCardLabel.Size = new System.Drawing.Size(155, 29);
             this.creditCardLabel.TabIndex = 28;
             this.creditCardLabel.Text = "Credit Card :";
             // 
@@ -266,11 +301,11 @@
             // 
             this.phoneNumberLabel.AutoSize = true;
             this.phoneNumberLabel.Enabled = false;
-            this.phoneNumberLabel.Font = new System.Drawing.Font("Bebas Neue", 15F);
+            this.phoneNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.phoneNumberLabel.ForeColor = System.Drawing.Color.DimGray;
             this.phoneNumberLabel.Location = new System.Drawing.Point(127, 223);
             this.phoneNumberLabel.Name = "phoneNumberLabel";
-            this.phoneNumberLabel.Size = new System.Drawing.Size(140, 30);
+            this.phoneNumberLabel.Size = new System.Drawing.Size(197, 29);
             this.phoneNumberLabel.TabIndex = 34;
             this.phoneNumberLabel.Text = "Phone Number :";
             // 
@@ -285,11 +320,11 @@
             // 
             this.addressLabel.AutoSize = true;
             this.addressLabel.Enabled = false;
-            this.addressLabel.Font = new System.Drawing.Font("Bebas Neue", 15F);
+            this.addressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.addressLabel.ForeColor = System.Drawing.Color.DimGray;
             this.addressLabel.Location = new System.Drawing.Point(127, 261);
             this.addressLabel.Name = "addressLabel";
-            this.addressLabel.Size = new System.Drawing.Size(89, 30);
+            this.addressLabel.Size = new System.Drawing.Size(120, 29);
             this.addressLabel.TabIndex = 32;
             this.addressLabel.Text = "Address :";
             // 
@@ -316,7 +351,7 @@
             this.addChildButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.addChildButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.addChildButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addChildButton.Font = new System.Drawing.Font("Bebas Neue", 13F);
+            this.addChildButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.addChildButton.Image = ((System.Drawing.Image)(resources.GetObject("addChildButton.Image")));
             this.addChildButton.Location = new System.Drawing.Point(21, 30);
             this.addChildButton.Name = "addChildButton";
@@ -326,40 +361,6 @@
             this.addChildButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.addChildButton.UseVisualStyleBackColor = true;
             this.addChildButton.Click += new System.EventHandler(this.addChildButton_Click);
-            // 
-            // acceptButton
-            // 
-            this.acceptButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.acceptButton.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.acceptButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.acceptButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.acceptButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.acceptButton.Font = new System.Drawing.Font("Bebas Neue", 15F);
-            this.acceptButton.ForeColor = System.Drawing.Color.DimGray;
-            this.acceptButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.acceptButton.Location = new System.Drawing.Point(650, 401);
-            this.acceptButton.Name = "acceptButton";
-            this.acceptButton.Size = new System.Drawing.Size(248, 44);
-            this.acceptButton.TabIndex = 44;
-            this.acceptButton.Text = "Accept";
-            this.acceptButton.UseVisualStyleBackColor = true;
-            // 
-            // declineButton
-            // 
-            this.declineButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.declineButton.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.declineButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.declineButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.declineButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.declineButton.Font = new System.Drawing.Font("Bebas Neue", 15F);
-            this.declineButton.ForeColor = System.Drawing.Color.DimGray;
-            this.declineButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.declineButton.Location = new System.Drawing.Point(650, 475);
-            this.declineButton.Name = "declineButton";
-            this.declineButton.Size = new System.Drawing.Size(248, 44);
-            this.declineButton.TabIndex = 45;
-            this.declineButton.Text = "Decline";
-            this.declineButton.UseVisualStyleBackColor = true;
             // 
             // parentForm
             // 
