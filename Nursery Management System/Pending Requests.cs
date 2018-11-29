@@ -48,5 +48,11 @@ namespace Nursery_Management_System
             this.Hide();
             Program.adminLoggedInForm.Show();
         }
+
+        private void backButtonParents_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.adminLoggedInForm.Show();
+        }
     }
 }
