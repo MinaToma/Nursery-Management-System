@@ -52,8 +52,18 @@ namespace Nursery_Management_System
 
         private void addChildButton_Click(object sender, EventArgs e)
         {
-            Program.childSignUpForm.Show();
-            Program.childSignUpForm.enableEditing("parentSignUp");
+            SQLQuery mSQLQuery = new SQLQuery();
+            ValidateData vaild = new ValidateData();
+            string headProblemOfData = "", promblemInData = "";
+            if (vaild.vaildDataForParent(firstName.Text, email.Text, ID.Text, phoneNumber.Text, creditCard.Text,  ref headProblemOfData, ref promblemInData))
+            {
+                MessageBox.Show(promblemInData, headProblemOfData, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                Program.childSignUpForm.Show();
+                Program.childSignUpForm.enableEditing("parentSignUp");
+            }
         }
 
         private void parentProfilePanel_Paint(object sender, PaintEventArgs e)
@@ -66,29 +76,10 @@ namespace Nursery_Management_System
             SQLQuery mSQLQuery = new SQLQuery();
             ValidateData vaild = new ValidateData();
             int numberOfChildren = mSQLQuery.childToLinkedList(mSQLQuery.getChildByParentID(Convert.ToInt64(ID.Text))).Count;
-            if (mSQLQuery.checkForUsername(firstName.Text) == true)
+            string headProblemOfData="", promblemInData="";
+            if(vaild.vaildDataForParent(firstName.Text,email.Text,ID.Text,phoneNumber.Text,creditCard.Text,numberOfChildren,ref headProblemOfData,ref promblemInData))
             {
-                MessageBox.Show("Username already exists", "Wrong Username or Password", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if(numberOfChildren == 0)
-            {
-                MessageBox.Show("Parent should have at least one Child", "No Children" , MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if (!vaild.checkMails(email.Text))
-            {
-                MessageBox.Show("Please Enter correct email", "Invaild email", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if (!vaild.checkNationalID(ID.Text))
-            {
-                MessageBox.Show("Please Enter correct ID", "Invaild ID", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if (!vaild.checkPhoneNum(phoneNumber.Text))
-            {
-                MessageBox.Show("Please Enter correct Phone Number", "Invaild Phone Number", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if(!vaild.checkCreditCardt(creditCard.Text))
-            {
-                MessageBox.Show("Please Enter correct Credit Card", "Invaild Credit Card", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(promblemInData, headProblemOfData, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {

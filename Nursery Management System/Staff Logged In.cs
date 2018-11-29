@@ -51,5 +51,11 @@ namespace Nursery_Management_System
         {
 
         }
+
+        private void signOutButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.signForm.Show();
+        }
     }
 }

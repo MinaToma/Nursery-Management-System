@@ -108,12 +108,18 @@ namespace Nursery_Management_System
         private void saveButton_Click(object sender, EventArgs e)
         {
             SQLQuery mSQLQuery = new SQLQuery();
-            
-            Child child = new Child(childName.Text , Program.globalParent.firstName , Program.globalParent.id , -1 , Gender , DOBpicker.Value , location , Program.globalParent.pending);
-
-            mSQLQuery.insertChildData(child);
+            if (childName.Text.Length >= 2)
+            {
+                Child child = new Child(childName.Text, Program.globalParent.firstName, Program.globalParent.id, -1, Gender, DOBpicker.Value, location, Program.globalParent.pending);
+                mSQLQuery.insertChildData(child);
 
             MessageBox.Show("Requset has been sent", "Request sent", MessageBoxButtons.OK, MessageBoxIcon.None);
+            }
+            else
+            {
+                MessageBox.Show("Please Enter atleast 2 letter", "Invaild Child Name", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void childName_TextChanged_1(object sender, EventArgs e)
@@ -130,6 +136,7 @@ namespace Nursery_Management_System
         {
             /*ImageRead img = new ImageRead();
             PicLocation = img.PICc(ref PicBox);*/
+            
         }
 
         private void childImageButton_Click_2(object sender, EventArgs e)
@@ -137,7 +144,7 @@ namespace Nursery_Management_System
             OpenFileDialog getPictureLocation = new OpenFileDialog();
             getPictureLocation.Filter = "JPG(*.JPG)|*.JPG";
 
-            if(getPictureLocation.ShowDialog() == DialogResult.OK)
+            if (getPictureLocation.ShowDialog() == DialogResult.OK)
             {
                 location = getPictureLocation.FileName;
                 childImageButton.Image = Image.FromFile(getPictureLocation.FileName);
@@ -148,6 +155,13 @@ namespace Nursery_Management_System
         private void editButton_Click(object sender, EventArgs e)
         {
             enableEditing("adminEdit");
+
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.parentSignUpForm.Show();
         }
     }
 }

@@ -21,21 +21,10 @@ namespace Nursery_Management_System
         {
             SQLQuery mSQLQuery = new SQLQuery();
             ValidateData vaild = new ValidateData();
-            if (mSQLQuery.checkForUsername(username.Text) == true)
+            string headProblemOfData = "", promblemInData = "";
+            if (vaild.vaildDataForStaff(firstName.Text, email.Text, ID.Text, phoneNumber.Text, ref headProblemOfData, ref promblemInData))
             {
-                MessageBox.Show("Username already exists", "Wrong Username", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if(!vaild.checkMails(email.Text))
-            {
-                MessageBox.Show("Please Enter correct email", "Invaild email", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if(!vaild.checkNationalID(ID.Text))
-            {
-                MessageBox.Show("Please Enter correct ID", "Invaild ID", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if(!vaild.checkPhoneNum(phoneNumber.Text))
-            {
-                MessageBox.Show("Please Enter correct Phone Number", "Invaild Phone Number", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(promblemInData, headProblemOfData, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {

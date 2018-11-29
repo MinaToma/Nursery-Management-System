@@ -8,8 +8,10 @@ namespace Nursery_Management_System
 {
     class ValidateData
     {
-        public bool checkMails(string mail)
+        private bool checkMails(string mail)
         {
+            if (mail.Length < 6)
+                return false;
             int posOFdind = -1;
             for(int i=0; i<mail.Length; i++)
             {
@@ -24,7 +26,7 @@ namespace Nursery_Management_System
                 return true;
             return false;
         }
-        public bool checkPhoneNum(string phoneNum)
+        private bool checkPhoneNum(string phoneNum)
         {
 
             if(phoneNum.Length!=11 || phoneNum[0]!='0' || phoneNum[1]!='1' || !(phoneNum[2]=='0' || phoneNum[2] == '1' || phoneNum[2] == '2' || phoneNum[2] == '5'))
@@ -37,7 +39,7 @@ namespace Nursery_Management_System
             }
             return true;
         }
-        public bool checkNationalID(string ID)
+        private bool checkNationalID(string ID)
         {
             for (int i = 0; i < ID.Length; i++)
             {
@@ -50,7 +52,7 @@ namespace Nursery_Management_System
             return true;
 
         }
-        public bool checkCreditCardt(string ID)
+        private bool checkCreditCardt(string ID)
         {
             for (int i = 0; i < ID.Length; i++)
             {
@@ -62,6 +64,136 @@ namespace Nursery_Management_System
                 return false;
             return true;
 
+        }
+        public bool vaildDataForParent(string firstName, string email, string ID,string phoneNumber, string creditCard , int numberOfChildren , ref string headProblem , ref string problem)
+        {
+            SQLQuery mSQLQuery = new SQLQuery();
+            if (firstName.Length == 0 || email.Length == 0 || ID.Length == 0 || phoneNumber.Length == 0 || creditCard.Length == 0)
+            {
+                headProblem = "Wrong in data";
+                problem = "Please continue your data";
+                return true;
+            }
+            else if (mSQLQuery.checkForUsername(firstName) == true)
+            {
+                headProblem = "Wrong Username or Password";
+                problem = "Username already exists";
+                return true;
+            }
+            else if (numberOfChildren == 0)
+            {
+                problem = "Parent should have at least one Child";
+                headProblem = "No Children";
+                return true;
+            }
+            else if (!checkMails(email))
+            {
+                problem = "Please Enter correct email";
+                headProblem="Invaild email";
+                return true;
+            }
+            else if (!checkNationalID(ID))
+            {
+                problem = "Please Enter correct ID";
+                headProblem="Invaild ID";
+                return true;
+            }
+            else if (!checkPhoneNum(phoneNumber))
+            {
+                problem = "Please Enter correct Phone Number";
+                headProblem = "Invaild Phone Number";
+                return true;
+            }
+            else if (!checkCreditCardt(creditCard))
+            {
+                problem = "Please Enter correct Credit Card";
+                headProblem = "Invaild Credit Card";
+                return true;
+            }
+
+
+            return false;
+        }
+        public bool vaildDataForParent(string firstName, string email, string ID, string phoneNumber, string creditCard,  ref string headProblem, ref string problem)
+        {
+            SQLQuery mSQLQuery = new SQLQuery();
+            if(firstName.Length==0 || email.Length == 0 || ID.Length == 0 || phoneNumber.Length == 0 || creditCard.Length == 0  )
+            {
+                headProblem = "Wrong in data";
+                problem = "Please continue your data";
+                return true;
+            }
+            else if (mSQLQuery.checkForUsername(firstName) == true)
+            {
+                headProblem = "Wrong Username or Password";
+                problem = "Username already exists";
+                return true;
+            }
+            else if (!checkMails(email))
+            {
+                problem = "Please Enter correct email";
+                headProblem = "Invaild email";
+                return true;
+            }
+            else if (!checkNationalID(ID))
+            {
+                problem = "Please Enter correct ID";
+                headProblem = "Invaild ID";
+                return true;
+            }
+            else if (!checkPhoneNum(phoneNumber))
+            {
+                problem = "Please Enter correct Phone Number";
+                headProblem = "Invaild Phone Number";
+                return true;
+            }
+            else if (!checkCreditCardt(creditCard))
+            {
+                problem = "Please Enter correct Credit Card";
+                headProblem = "Invaild Credit Card";
+                return true;
+            }
+
+
+            return false;
+        }
+        public bool vaildDataForStaff(string firstName, string email, string ID, string phoneNumber, ref string headProblem, ref string problem)
+        {
+            SQLQuery mSQLQuery = new SQLQuery();
+            if (firstName.Length == 0 || email.Length == 0 || ID.Length == 0 || phoneNumber.Length == 0 )
+            {
+                headProblem = "Wrong in data";
+                problem = "Please continue your data";
+                return true;
+            }
+            else if (mSQLQuery.checkForUsername(firstName) == true)
+            {
+                headProblem = "Wrong Username or Password";
+                problem = "Username already exists";
+                return true;
+            }
+            else if (!checkMails(email))
+            {
+                problem = "Please Enter correct email";
+                headProblem = "Invaild email";
+                return true;
+            }
+            else if (!checkNationalID(ID))
+            {
+                problem = "Please Enter correct ID";
+                headProblem = "Invaild ID";
+                return true;
+            }
+            else if (!checkPhoneNum(phoneNumber))
+            {
+                problem = "Please Enter correct Phone Number";
+                headProblem = "Invaild Phone Number";
+                return true;
+            }
+            
+
+
+            return false;
         }
 
     }
