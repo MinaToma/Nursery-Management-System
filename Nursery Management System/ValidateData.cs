@@ -22,7 +22,7 @@ namespace Nursery_Management_System
                 }
             }
             int size = mail.Length;
-            if (mail[size - 1] == 'm' && mail[size - 2] == 'o' && mail[size - 3] == 'c' && mail[size - 3] == '.' && size - 5 > posOFdind && posOFdind != -1 && posOFdind > 0)
+            if (mail[size - 1] == 'm' && mail[size - 2] == 'o' && mail[size - 3] == 'c' && mail[size - 4] == '.' && size - 5 > posOFdind && posOFdind != -1 && posOFdind > 0)
                 return true;
             return false;
         }
@@ -65,16 +65,16 @@ namespace Nursery_Management_System
             return true;
 
         }
-        public bool vaildDataForParent(string firstName, string email, string ID,string phoneNumber, string creditCard , int numberOfChildren , ref string headProblem , ref string problem)
+        public bool vaildDataForParent(string username, string email, string ID,string phoneNumber, string creditCard , int numberOfChildren , ref string headProblem , ref string problem)
         {
             SQLQuery mSQLQuery = new SQLQuery();
-            if (firstName.Length == 0 || email.Length == 0 || ID.Length == 0 || phoneNumber.Length == 0 || creditCard.Length == 0)
+            if (username.Length == 0 || email.Length == 0 || ID.Length == 0 || phoneNumber.Length == 0 || creditCard.Length == 0)
             {
                 headProblem = "Wrong in data";
                 problem = "Please continue your data";
                 return true;
             }
-            else if (mSQLQuery.checkForUsername(firstName) == true)
+            else if (mSQLQuery.checkForUsername(username) == true)
             {
                 headProblem = "Wrong Username or Password";
                 problem = "Username already exists";

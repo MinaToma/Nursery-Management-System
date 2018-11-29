@@ -55,7 +55,7 @@ namespace Nursery_Management_System
             SQLQuery mSQLQuery = new SQLQuery();
             ValidateData vaild = new ValidateData();
             string headProblemOfData = "", promblemInData = "";
-            if (vaild.vaildDataForParent(firstName.Text, email.Text, ID.Text, phoneNumber.Text, creditCard.Text,  ref headProblemOfData, ref promblemInData))
+            if (vaild.vaildDataForParent(username.Text, email.Text, ID.Text, phoneNumber.Text, creditCard.Text,  ref headProblemOfData, ref promblemInData))
             {
                 MessageBox.Show(promblemInData, headProblemOfData, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
