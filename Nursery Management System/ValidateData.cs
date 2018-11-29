@@ -20,7 +20,7 @@ namespace Nursery_Management_System
                 }
             }
             int size = mail.Length;
-            if (mail[size - 1] == 'm' && mail[size - 2] == 'o' && mail[size - 3] == 'c' && size - 4 > posOFdind && posOFdind != -1 && posOFdind > 0)
+            if (mail[size - 1] == 'm' && mail[size - 2] == 'o' && mail[size - 3] == 'c' && mail[size - 3] == '.' && size - 5 > posOFdind && posOFdind != -1 && posOFdind > 0)
                 return true;
             return false;
         }
@@ -45,7 +45,7 @@ namespace Nursery_Management_System
                     return false;
 
             }
-            if (ID.Length != 11 || !(ID[0] == '2' || ID[0] == '3'))
+            if (ID.Length != 11     || !(ID[0] == '2' || ID[0] == '3'))
                 return false;
             return true;
 

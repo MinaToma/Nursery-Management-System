@@ -24,6 +24,7 @@ namespace Nursery_Management_System
         public static editDatabase editDataBaseForm = new editDatabase();
         public static Staff globalStaff = new Staff();
         public static Admin globalAdmin = new Admin();
+        public static adminPendingRequests adminPendingRequestsForm = new adminPendingRequests();
         public static string globalType = "";
 
         [STAThread]

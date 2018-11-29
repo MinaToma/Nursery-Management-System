@@ -28,24 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminPendingRequests));
             this.pendingRequestsControl = new System.Windows.Forms.TabControl();
             this.staff = new System.Windows.Forms.TabPage();
-            this.parents = new System.Windows.Forms.TabPage();
-            this.staffRequests = new System.Windows.Forms.DataGridView();
-            this.parentsRequests = new System.Windows.Forms.DataGridView();
+            this.child = new System.Windows.Forms.TabPage();
+            this.backButtonStaff = new System.Windows.Forms.Button();
+            this.backButtonChild = new System.Windows.Forms.Button();
             this.pendingRequestsControl.SuspendLayout();
             this.staff.SuspendLayout();
-            this.parents.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.staffRequests)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.parentsRequests)).BeginInit();
+            this.child.SuspendLayout();
             this.SuspendLayout();
             // 
             // pendingRequestsControl
             // 
             this.pendingRequestsControl.Controls.Add(this.staff);
-            this.pendingRequestsControl.Controls.Add(this.parents);
+            this.pendingRequestsControl.Controls.Add(this.child);
             this.pendingRequestsControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pendingRequestsControl.Font = new System.Drawing.Font("Bebas Neue", 15F);
+            this.pendingRequestsControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.pendingRequestsControl.Location = new System.Drawing.Point(0, 0);
             this.pendingRequestsControl.Name = "pendingRequestsControl";
             this.pendingRequestsControl.Padding = new System.Drawing.Point(10, 10);
@@ -55,47 +54,65 @@
             // 
             // staff
             // 
-            this.staff.Controls.Add(this.staffRequests);
-            this.staff.Location = new System.Drawing.Point(4, 53);
+            this.staff.Controls.Add(this.backButtonStaff);
+            this.staff.Location = new System.Drawing.Point(4, 52);
             this.staff.Name = "staff";
             this.staff.Padding = new System.Windows.Forms.Padding(3);
-            this.staff.Size = new System.Drawing.Size(912, 483);
+            this.staff.Size = new System.Drawing.Size(912, 484);
             this.staff.TabIndex = 0;
             this.staff.Text = "Staff";
             this.staff.UseVisualStyleBackColor = true;
             // 
-            // parents
+            // child
             // 
-            this.parents.Controls.Add(this.parentsRequests);
-            this.parents.Location = new System.Drawing.Point(4, 53);
-            this.parents.Name = "parents";
-            this.parents.Padding = new System.Windows.Forms.Padding(3);
-            this.parents.Size = new System.Drawing.Size(912, 483);
-            this.parents.TabIndex = 1;
-            this.parents.Text = "Parents";
-            this.parents.UseVisualStyleBackColor = true;
+            this.child.Controls.Add(this.backButtonChild);
+            this.child.Location = new System.Drawing.Point(4, 52);
+            this.child.Name = "child";
+            this.child.Padding = new System.Windows.Forms.Padding(3);
+            this.child.Size = new System.Drawing.Size(912, 484);
+            this.child.TabIndex = 1;
+            this.child.Text = "Child";
+            this.child.UseVisualStyleBackColor = true;
             // 
-            // staffRequests
+            // backButtonStaff
             // 
-            this.staffRequests.AllowUserToOrderColumns = true;
-            this.staffRequests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.staffRequests.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.staffRequests.Location = new System.Drawing.Point(3, 3);
-            this.staffRequests.Name = "staffRequests";
-            this.staffRequests.RowTemplate.Height = 24;
-            this.staffRequests.Size = new System.Drawing.Size(906, 477);
-            this.staffRequests.TabIndex = 0;
+            this.backButtonStaff.AutoSize = true;
+            this.backButtonStaff.BackColor = System.Drawing.Color.Transparent;
+            this.backButtonStaff.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.backButtonStaff.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.backButtonStaff.FlatAppearance.BorderSize = 0;
+            this.backButtonStaff.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.backButtonStaff.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.backButtonStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backButtonStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.backButtonStaff.Image = ((System.Drawing.Image)(resources.GetObject("backButtonStaff.Image")));
+            this.backButtonStaff.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.backButtonStaff.Location = new System.Drawing.Point(6, 386);
+            this.backButtonStaff.Name = "backButtonStaff";
+            this.backButtonStaff.Size = new System.Drawing.Size(107, 90);
+            this.backButtonStaff.TabIndex = 10;
+            this.backButtonStaff.UseVisualStyleBackColor = false;
+            this.backButtonStaff.Click += new System.EventHandler(this.backButtonStaff_Click);
             // 
-            // parentsRequests
+            // backButtonChild
             // 
-            this.parentsRequests.AllowUserToOrderColumns = true;
-            this.parentsRequests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.parentsRequests.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.parentsRequests.Location = new System.Drawing.Point(3, 3);
-            this.parentsRequests.Name = "parentsRequests";
-            this.parentsRequests.RowTemplate.Height = 24;
-            this.parentsRequests.Size = new System.Drawing.Size(906, 477);
-            this.parentsRequests.TabIndex = 1;
+            this.backButtonChild.AutoSize = true;
+            this.backButtonChild.BackColor = System.Drawing.Color.Transparent;
+            this.backButtonChild.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.backButtonChild.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.backButtonChild.FlatAppearance.BorderSize = 0;
+            this.backButtonChild.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.backButtonChild.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.backButtonChild.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backButtonChild.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.backButtonChild.Image = ((System.Drawing.Image)(resources.GetObject("backButtonChild.Image")));
+            this.backButtonChild.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.backButtonChild.Location = new System.Drawing.Point(6, 386);
+            this.backButtonChild.Name = "backButtonChild";
+            this.backButtonChild.Size = new System.Drawing.Size(107, 90);
+            this.backButtonChild.TabIndex = 10;
+            this.backButtonChild.UseVisualStyleBackColor = false;
+            this.backButtonChild.Click += new System.EventHandler(this.backButtonChild_Click);
             // 
             // adminPendingRequests
             // 
@@ -107,9 +124,9 @@
             this.Text = "Nursery Management System - Pending Requests";
             this.pendingRequestsControl.ResumeLayout(false);
             this.staff.ResumeLayout(false);
-            this.parents.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.staffRequests)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.parentsRequests)).EndInit();
+            this.staff.PerformLayout();
+            this.child.ResumeLayout(false);
+            this.child.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -118,8 +135,8 @@
 
         private System.Windows.Forms.TabControl pendingRequestsControl;
         private System.Windows.Forms.TabPage staff;
-        private System.Windows.Forms.TabPage parents;
-        private System.Windows.Forms.DataGridView staffRequests;
-        private System.Windows.Forms.DataGridView parentsRequests;
+        private System.Windows.Forms.TabPage child;
+        private System.Windows.Forms.Button backButtonStaff;
+        private System.Windows.Forms.Button backButtonChild;
     }
 }

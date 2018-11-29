@@ -52,6 +52,20 @@ namespace Nursery_Management_System
         {
 
         }
-                
+
+        private void pendingRequests_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.adminPendingRequestsForm.Show();
+
+        }
+
+        private void signOutButton_Click(object sender, EventArgs e)
+        {
+
+            this.Hide(); 
+            Program.signForm.Show();
+
+        }
     }
 }
