@@ -56,6 +56,7 @@
     <Compile Include="Admin Feedback.Designer.cs">
       <DependentUpon>Admin Feedback.cs</DependentUpon>
     </Compile>
+    <Compile Include="ImageOperation.cs" />
     <Compile Include="Pending Requests.cs">
       <SubType>Form</SubType>
     </Compile>

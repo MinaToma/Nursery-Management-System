@@ -45,6 +45,8 @@ namespace Nursery_Management_System
         {
             this.Hide();
             Program.parentSignUpForm.Show();
+           
+            
         }
 
         private void staffSignUp_Click(object sender, EventArgs e)

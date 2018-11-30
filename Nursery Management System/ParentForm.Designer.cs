@@ -142,7 +142,8 @@
             this.declineButton.Size = new System.Drawing.Size(248, 44);
             this.declineButton.TabIndex = 45;
             this.declineButton.Text = "Decline";
-            this.declineButton.UseVisualStyleBackColor = true;
+            this.declineButton.UseVisualStyleBackColor = false;
+            this.declineButton.Click += new System.EventHandler(this.declineButton_Click);
             // 
             // acceptButton
             // 

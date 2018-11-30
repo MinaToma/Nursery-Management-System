@@ -23,6 +23,7 @@ namespace Nursery_Management_System
             gender = _gender;
             DOB = _DOB;
             image = _image;
+            
         }
     }
 }

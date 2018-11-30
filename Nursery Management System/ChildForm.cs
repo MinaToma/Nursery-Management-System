@@ -8,17 +8,32 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
+
+
 
 namespace Nursery_Management_System
 {
     public partial class childForm : Form
     {
-        string Gender;
-        string location;
+        string Gender= "Female";
+        string location=""; 
+        
         public childForm()
         {
             InitializeComponent();
+
+            // make location of pictuer is default
+            Image image= childImageButton.Image;
+            ImageOperation OP = new ImageOperation();
+
+            location = OP.ImageToString(image) ;
+            
+
+
         }
+        
+
 
         public void enableEditing(string state)
         {
@@ -110,10 +125,16 @@ namespace Nursery_Management_System
             SQLQuery mSQLQuery = new SQLQuery();
             if (childName.Text.Length >= 2)
             {
-                Child child = new Child(childName.Text, Program.globalParent.firstName, Program.globalParent.id, -1, Gender, DOBpicker.Value, location, Program.globalParent.pending);
-                mSQLQuery.insertChildData(child);
+                //hild child = new Child(childName.Text, Program.globalParent.firstName, Program.globalParent.id, -1, Gender, DOBpicker.Value, location, Program.globalParent.pending);
 
-            MessageBox.Show("Requset has been sent", "Request sent", MessageBoxButtons.OK, MessageBoxIcon.None);
+                // mSQLQuery.insertChildData(child);
+                
+                Program.parentSignUpForm.ChildOfParent(childName.Text, DOBpicker.Value , Gender, location);
+                            
+                MessageBox.Show("Requset has been sent", "Request sent", MessageBoxButtons.OK, MessageBoxIcon.None);
+                this.Hide();
+
+
             }
             else
             {
@@ -136,7 +157,9 @@ namespace Nursery_Management_System
         {
             /*ImageRead img = new ImageRead();
             PicLocation = img.PICc(ref PicBox);*/
+
             
+
         }
 
         private void childImageButton_Click_2(object sender, EventArgs e)
@@ -146,9 +169,13 @@ namespace Nursery_Management_System
 
             if (getPictureLocation.ShowDialog() == DialogResult.OK)
             {
-                location = getPictureLocation.FileName;
+                ImageOperation OP = new ImageOperation();
+
+                location = OP.ImageToString(Image.FromFile(getPictureLocation.FileName));
                 childImageButton.Image = Image.FromFile(getPictureLocation.FileName);
+                
             }
+           
 
         }
 
