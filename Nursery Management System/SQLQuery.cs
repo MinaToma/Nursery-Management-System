@@ -383,7 +383,7 @@ namespace Nursery_Management_System
         //uses specific query to select pending staff member requests from database
         public DataTable getPendingStaff()
         {
-            string query = "";
+            string query = "select * from Staff where staffIsPending = 1";
             return getStaff(query);
         }
 

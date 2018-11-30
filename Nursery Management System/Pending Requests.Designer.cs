@@ -36,6 +36,16 @@
             this.backButtonChild = new System.Windows.Forms.Button();
             this.Parents = new System.Windows.Forms.TabPage();
             this.backButtonParents = new System.Windows.Forms.Button();
+            this.staffListView = new System.Windows.Forms.ListView();
+            this.staffFirstName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.staffLastName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.staffPhoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.staffEmail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.parentsListView = new System.Windows.Forms.ListView();
+            this.parentsFirstName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.parentsLastName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.parentsPhoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.parentsEmail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pendingRequestsControl.SuspendLayout();
             this.staff.SuspendLayout();
             this.child.SuspendLayout();
@@ -58,6 +68,7 @@
             // 
             // staff
             // 
+            this.staff.Controls.Add(this.staffListView);
             this.staff.Controls.Add(this.backButtonStaff);
             this.staff.Location = new System.Drawing.Point(4, 52);
             this.staff.Name = "staff";
@@ -80,9 +91,9 @@
             this.backButtonStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.backButtonStaff.Image = ((System.Drawing.Image)(resources.GetObject("backButtonStaff.Image")));
             this.backButtonStaff.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.backButtonStaff.Location = new System.Drawing.Point(6, 386);
+            this.backButtonStaff.Location = new System.Drawing.Point(32, 407);
             this.backButtonStaff.Name = "backButtonStaff";
-            this.backButtonStaff.Size = new System.Drawing.Size(107, 90);
+            this.backButtonStaff.Size = new System.Drawing.Size(56, 56);
             this.backButtonStaff.TabIndex = 10;
             this.backButtonStaff.UseVisualStyleBackColor = false;
             this.backButtonStaff.Click += new System.EventHandler(this.backButtonStaff_Click);
@@ -120,6 +131,7 @@
             // 
             // Parents
             // 
+            this.Parents.Controls.Add(this.parentsListView);
             this.Parents.Controls.Add(this.backButtonParents);
             this.Parents.Location = new System.Drawing.Point(4, 52);
             this.Parents.Name = "Parents";
@@ -149,6 +161,72 @@
             this.backButtonParents.UseVisualStyleBackColor = false;
             this.backButtonParents.Click += new System.EventHandler(this.backButtonParents_Click);
             // 
+            // staffListView
+            // 
+            this.staffListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.staffFirstName,
+            this.staffLastName,
+            this.staffPhoneNumber,
+            this.staffEmail});
+            this.staffListView.Location = new System.Drawing.Point(-4, 0);
+            this.staffListView.Name = "staffListView";
+            this.staffListView.Size = new System.Drawing.Size(916, 401);
+            this.staffListView.TabIndex = 11;
+            this.staffListView.UseCompatibleStateImageBehavior = false;
+            // 
+            // staffFirstName
+            // 
+            this.staffFirstName.Text = "First Name";
+            this.staffFirstName.Width = 120;
+            // 
+            // staffLastName
+            // 
+            this.staffLastName.Text = "Last Name";
+            this.staffLastName.Width = 120;
+            // 
+            // staffPhoneNumber
+            // 
+            this.staffPhoneNumber.Text = "Phone Number";
+            this.staffPhoneNumber.Width = 150;
+            // 
+            // staffEmail
+            // 
+            this.staffEmail.Text = "Email";
+            this.staffEmail.Width = 240;
+            // 
+            // parentsListView
+            // 
+            this.parentsListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.parentsFirstName,
+            this.parentsLastName,
+            this.parentsPhoneNumber,
+            this.parentsEmail});
+            this.parentsListView.Location = new System.Drawing.Point(-4, 0);
+            this.parentsListView.Name = "parentsListView";
+            this.parentsListView.Size = new System.Drawing.Size(916, 401);
+            this.parentsListView.TabIndex = 12;
+            this.parentsListView.UseCompatibleStateImageBehavior = false;
+            // 
+            // parentsFirstName
+            // 
+            this.parentsFirstName.Text = "First Name";
+            this.parentsFirstName.Width = 120;
+            // 
+            // parentsLastName
+            // 
+            this.parentsLastName.Text = "Last Name";
+            this.parentsLastName.Width = 120;
+            // 
+            // parentsPhoneNumber
+            // 
+            this.parentsPhoneNumber.Text = "Phone Number";
+            this.parentsPhoneNumber.Width = 150;
+            // 
+            // parentsEmail
+            // 
+            this.parentsEmail.Text = "Email";
+            this.parentsEmail.Width = 240;
+            // 
             // adminPendingRequests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -177,5 +255,15 @@
         private System.Windows.Forms.Button backButtonChild;
         private System.Windows.Forms.TabPage Parents;
         private System.Windows.Forms.Button backButtonParents;
+        private System.Windows.Forms.ListView staffListView;
+        private System.Windows.Forms.ColumnHeader staffFirstName;
+        private System.Windows.Forms.ColumnHeader staffLastName;
+        private System.Windows.Forms.ColumnHeader staffPhoneNumber;
+        private System.Windows.Forms.ColumnHeader staffEmail;
+        private System.Windows.Forms.ListView parentsListView;
+        private System.Windows.Forms.ColumnHeader parentsFirstName;
+        private System.Windows.Forms.ColumnHeader parentsLastName;
+        private System.Windows.Forms.ColumnHeader parentsPhoneNumber;
+        private System.Windows.Forms.ColumnHeader parentsEmail;
     }
 }

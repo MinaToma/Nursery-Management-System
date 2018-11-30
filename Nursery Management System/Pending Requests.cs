@@ -15,6 +15,42 @@ namespace Nursery_Management_System
         public adminPendingRequests()
         {
             InitializeComponent();
+            DataTable pennding = new DataTable();
+            SQLQuery MyQuery = new SQLQuery();
+
+            // staff pennding list veiw load
+            pennding = MyQuery.getPendingStaff();
+            foreach(DataRow row in pennding.Rows)
+            {
+                ListViewItem item = new ListViewItem(row[1].ToString());
+                for (int i = 2; i <= 4; i++)
+                {
+                    item.SubItems.Add(row[i].ToString());
+                }
+                staffListView.Items.Add(item);
+            }
+            staffListView.View = View.Details;
+            staffListView.FullRowSelect = true;
+
+            // parents pennding list veiw  laod
+            pennding = MyQuery.getPendingParent();
+            foreach (DataRow row in pennding.Rows)
+            {
+                ListViewItem item = new ListViewItem(row[1].ToString());
+                for (int i = 2; i <= 4; i++)
+                {
+                    item.SubItems.Add(row[i].ToString());
+                }
+                parentsListView.Items.Add(item);
+            }
+            parentsListView.View = View.Details;
+            parentsListView.FullRowSelect = true;
+
+            // Child Pending listview laod
+
+
+
+
         }
 
         
@@ -54,5 +90,6 @@ namespace Nursery_Management_System
             this.Hide();
             Program.adminLoggedInForm.Show();
         }
+
     }
 }
